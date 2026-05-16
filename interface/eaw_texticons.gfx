@@ -1,0 +1,591 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_eaw_text"
+		texturefile = "gfx/texticons/eaw_text.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_coin_text"
+		texturefile = "gfx/texticons/coin_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_loot_text"
+		texturefile = "gfx/texticons/loot_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_helmet_text"
+		texturefile = "gfx/texticons/helmet_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_infequip_text"
+		texturefile = "gfx/texticons/infequip_small.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_iou_text"
+		texturefile = "gfx/texticons/iou_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_lovetax_text"
+		texturefile = "gfx/texticons/lovetax_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_support_eq_texticon"
+		texturefile = "gfx/texticons/support_eq_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_spike_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_spike.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_rarity_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_rarity.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_rainbow_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_rainbow.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flutters_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_flutters.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_applejack_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_applejack.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_pinkie_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_pinkie.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trixie_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_trixie.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_starlight_icon_text"
+		texturefile = "gfx/interface/ideas/ELF/ELF_starlight.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Marsilio_icon_text"
+		texturefile = "gfx/texticons/CHN_Marsilio.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Second_Wind_icon_text"
+		texturefile = "gfx/texticons/CHN_Second_Wind.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Octavia_icon_text"
+		texturefile = "gfx/texticons/CHN_Octavia.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Jachs_icon_text"
+		texturefile = "gfx/texticons/CHN_Jachs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Finicus_icon_text"
+		texturefile = "gfx/texticons/CHN_Finicus.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Alcippe_icon_text"
+		texturefile = "gfx/texticons/CHN_Alcippe.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_Gloriosa_icon_text"
+		texturefile = "gfx/texticons/CHN_Gloriosa.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_bigger_than_or_equal_to_icon_text"
+		texturefile = "gfx/texticons/bigger_than_or_equal_to.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_approximately_equal_text"
+		texturefile = "gfx/texticons/approximately_equal.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_loveharvest_text"
+		texturefile = "gfx/texticons/loveharvest_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_CanterlotCommissariat_icon_text"
+		texturefile = "gfx/texticons/CHN_CanterlotCommissariat.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_FAT_texticon_sectarianism"
+		texturefile = "gfx/texticons/FAT_texticon_sectarianism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_FAT_texticon_reconstruction"
+		texturefile = "gfx/texticons/FAT_texticon_reconstruction.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_FAT_texticon_archonates"
+		texturefile = "gfx/texticons/FAT_texticon_archonates.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_FAT_texticon_loyalists"
+		texturefile = "gfx/texticons/FAT_texticon_loyalists.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_FAT_texticon_regionalists"
+		texturefile = "gfx/texticons/FAT_texticon_regionalists.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_opium_text"
+		texturefile = "gfx/texticons/opium.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_line_break" ##for state lore descs
+		texturefile = "gfx/texticons/hoi_16mbs_line_break.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sycee_text" ##not actually a sycee
+		texturefile = "gfx/texticons/kirin_coin_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_kir_skull_text"
+		texturefile = "gfx/texticons/kirin_skull_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_kir_book_text"
+		texturefile = "gfx/texticons/kirin_book_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_toaster_text"
+		texturefile = "gfx/texticons/toaster_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_wheat_texticon"
+		texturefile = "gfx/texticons/wheat_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_pragmatist"
+		texturefile = "gfx/texticons/pragmatist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_orthodox"
+		texturefile = "gfx/texticons/orthodox.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_evolutionary"
+		texturefile = "gfx/texticons/evolutionary.tga"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_steel_texticon"
+		texturefile = "gfx/interface/decisions/decision_steel.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_rubber_texticon"
+		texturefile = "gfx/interface/decisions/decision_rubber.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_tungsten_texticon"
+		texturefile = "gfx/interface/decisions/decision_tungsten.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_chromium_texticon"
+		texturefile = "gfx/interface/decisions/decision_chromium.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_aluminium_texticon"
+		texturefile = "gfx/interface/decisions/decision_aluminium.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_oil_texticon"
+		texturefile = "gfx/interface/decisions/decision_oil.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_coal_texticon"
+		texturefile = "gfx/interface/decisions/decision_coal.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_decision_crystal_texticon"
+		texturefile = "gfx/interface/decisions/crystals.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_truck_text"
+		texturefile = "gfx/texticons/truck_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_mana_text"
+		texturefile = "gfx/texticons/mana_texticon.tga"
+		legacy_lazy_load = no
+	}	
+    spriteType = {
+		name = "GFX_stg_stl_texticon"
+		texturefile = "gfx/texticons/stg_stl.tga"
+		legacy_lazy_load = no
+	}
+    spriteType = {
+		name = "GFX_STL_EQS_texticon"
+		texturefile = "gfx/texticons/STL_EQS.tga"
+		legacy_lazy_load = no
+	}
+    spriteType = {
+		name = "GFX_griffoniaviirad_text"
+		texturefile = "gfx/texticons/griffonia_viirad.tga"
+		legacy_lazy_load = no
+	}
+    spriteType = {
+		name = "GFX_infinityyellow_text"
+		texturefile = "gfx/texticons/infinityyellow.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_infiltrator_text"
+		texturefile = "gfx/texticons/infiltrators_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_REDACTED"
+		texturefile = "gfx/texticons/redaction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pearl_texticon"
+		texturefile = "gfx/texticons/pearl_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_coffee_texticon"
+		texturefile = "gfx/texticons/coffee_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_cotton_texticon"
+		texturefile = "gfx/texticons/cotton_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_faience_texticon"
+		texturefile = "gfx/texticons/faience_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gold_texticon"
+		texturefile = "gfx/texticons/gold_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ivory_texticon"
+		texturefile = "gfx/texticons/ivory_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_spices_texticon"
+		texturefile = "gfx/texticons/spices_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sugar_texticon"
+		texturefile = "gfx/texticons/sugar_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tea_texticon"
+		texturefile = "gfx/texticons/tea_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_textiles_texticon"
+		texturefile = "gfx/texticons/textiles_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tobacco_texticon"
+		texturefile = "gfx/texticons/tobacco_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_communism_texticon"
+		texturefile = "gfx/texticons/communism_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_harmony_texticon"
+		texturefile = "gfx/texticons/harmony_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_neutrality_texticon"
+		texturefile = "gfx/texticons/neutrality_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_supremacy_texticon"
+		texturefile = "gfx/texticons/supremacy_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_caravan_texticon"
+		texturefile = "gfx/texticons/caravan_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_house_texticon"
+		texturefile = "gfx/texticons/house_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_glass_texticon"
+		texturefile = "gfx/texticons/glass_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_mountain_texticon"
+		texturefile = "gfx/texticons/mountain_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_port_texticon"
+		texturefile = "gfx/texticons/port_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sea_texticon"
+		texturefile = "gfx/texticons/sea_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gunandshield_texticon"
+		texturefile = "gfx/texticons/gunandshield_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_alchemy_texticon"
+		texturefile = "gfx/texticons/alchemy_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_miningsf_texticon"
+		texturefile = "gfx/texticons/miningsf.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_war_support"
+		texturefile = "gfx/texticons/war_support_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_locator_item_texticon"
+		textureFile = "gfx/interface/decisionview/locator_item_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trident_texticon"
+		texturefile = "gfx/texticons/trident_texticon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_sanity_texticon"
+		texturefile = "gfx/texticons/sanity.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHN_texticon"
+		texturefile = "gfx/texticons/CHN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_dice_texticon"
+		texturefile = "gfx/texticons/die.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_loyalty_texticon"
+		texturefile = "gfx/texticons/loyalty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_generosity_texticon"
+		texturefile = "gfx/texticons/generosity.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_laughter_texticon"
+		texturefile = "gfx/texticons/laughter.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_honesty_texticon"
+		texturefile = "gfx/texticons/honesty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_magic_texticon"
+		texturefile = "gfx/texticons/magic.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_kindness_texticon"
+		texturefile = "gfx/texticons/kindness.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_fear_texticon"
+		texturefile = "gfx/texticons/fear.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_magic_power_texticon"
+		texturefile = "gfx/texticons/magic_power.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_biomass_texticon"
+		texturefile = "gfx/texticons/yummy.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_pyro_texticon"
+		texturefile = "gfx/texticons/pyro.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_casualty_texticon"
+		texturefile = "gfx/texticons/casualty.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_political_violence_texticon"
+		texturefile = "gfx/texticons/political_violence.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_heavy_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_infantry_icon_small.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_airship_text"
+		texturefile = "gfx/texticons/airship_texticon.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_steelpaw_paranoia_texticon"
+		texturefile = "gfx/texticons/steelpaw_paranoia.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EQS_SOL_flag_texticon"
+		texturefile = "gfx/texticons/EQS_SOL_flag.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_weather_magic_texticon"
+		texturefile = "gfx/texticons/weather_magic_icon.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_Canterlot_State_Lore_Image"
+		texturefile = "gfx/texticons/Canterlot_State_Lore_Image.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Griffenheim_state_lore"
+		texturefile = "gfx/texticons/Griffenheim_state_lore.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Mount_Aris_state_lore"
+		texturefile = "gfx/texticons/Mount_Aris_state_lore.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Vesalipolis_state_lore"
+		texturefile = "gfx/texticons/Vesalipolis_state_lore.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Manehattan_state_lore"
+		texturefile = "gfx/texticons/Manehattan_state_lore.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Canterlot_state_lore"
+		texturefile = "gfx/texticons/Canterlot_state_lore.tga"
+		legacy_lazy_load = no
+	}
+	
+	#These are not bugged, please don't mess with them. -Blue
+	spriteType = {
+		name = "GFX__"
+		texturefile = "gfx/interface/diplo_menu_fake_bg.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX___"
+		texturefile = "gfx/interface/diplo_factions_fake_bg.dds"
+		legacy_lazy_load = no
+	}
+}

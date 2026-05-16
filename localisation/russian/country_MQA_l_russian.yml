@@ -1,0 +1,64 @@
+﻿l_russian:
+
+ #Leaders
+ MQA_ceyda_vatosoa:0 "Сейда Ватосоа"
+ MQA_yuce_ranomasina:0 "Юдже Раномасина"
+ MQA_rainilaiarivony:0 "Райнилайаривони"
+ MQA_celik_varatra:0 "Челик Варатра"
+ MQA_aziz_rakoto:0 "Азиз Ракото"
+ MQA_beyza_fasika:0 "Бейза Фасика"
+ MQA_derya_orana:0 "Дерья Орана"
+
+ #Ideas
+ MQA_rusty_fleet:0 "Национальный оборонительный флот"
+ MQA_rusty_fleet_desc:0 "Наш флот – настоящая гордость морей, способный одолеть любого соперника... конечно, если бы у нас хватало средств на его содержание."
+ MQA_newly_opened_country:0 "Конец Ады Сокатры"
+ MQA_newly_opened_country_desc:0 "The Turtle War, or Ady Sokatra in Sambovatan, "
+ MQA_lessons_of_independence_war:0 "Национальная оборонительная армия"
+ MQA_lessons_of_independence_war_desc:0 "Первоначальной угрозы больше нет, но частое использование армии против граждан подорвало их мораль."
+ MQA_gate_to_zebrica:0 "Перламутровые врата Зебрики"
+ MQA_gate_to_zebrica_desc:0 "Хотя наши экономические соперники из Фетизии на востоке теперь контролируют почти всю торговлю юго-восточной Зебрики, Самбовато по-прежнему является традиционным хранителем вод Мирного моря и Больших Рогов. Именно наш национальный оборонительный флот защищает эти прибыльные морские пути, по которым товары с континента попадают на международный рынок... разумеется, за определённые комиссионные.\n\nИ хотя все дороги ведут в Роам, любым кораблям всё же нужно миновать Самбовато!"
+ MQA_ravaged_environment:0 "Опустошённая окружающая среда"
+ MQA_ravaged_environment_desc:0 "Несмотря на все наши усилия по поддержанию здорового баланса, сильное давление представителей военно-морского флота на программу переработки топлива привело к массовой и нерациональной вырубке лесов и утрате природной красоты Самбовато."
+ MQA_organic_gassification:0 "Органическая газификация"
+ MQA_organic_gassification_desc:0 "У нас нет природных ресурсов, так что пришлось задействовать любые органические материалы для производства биогаза, невзирая на возможные долгосрочные последствия для местной флоры и фауны."
+
+ ### Designers ###
+ MQA_light_tank_maker:0 "Производитель лёгких танков"
+ MQA_medium_tank_maker:0 "Производитель средних танков"
+ MQA_heavy_tank_maker:0 "Производитель тяжёлых танков"
+ MQA_heavy_ships:0 "Производитель линейного кораблей"
+ MQA_trade_protection:0 "Производитель эскортов"
+ MQA_coast_protection:0 "Производитель судов береговой обороны"
+ MQA_pew_pew_shooty_planes:0 "Производитель штурмовиков"
+ MQA_cheap_planes:0 "Производитель дальней авиации"
+ MQA_heavy_planes:0 "Производитель тяжёлой авиации"
+ MQA_factory_company:0 "Промышленная компания"
+ MQA_electronics:0 "Электронная компания"
+ MQA_gotta_make_oil_somehow:0 "Нефтяная компания"
+ MQA_gun_making:0 "Производитель стрелкового оружия"
+ MQA_massive_cannon_making:0 "Производитель артиллерии"
+
+ ### Leader Descriptions ###
+ POLITICS_Ceyda_desc:0 "Сейда Ватосоа, единственная дочь покойного мпанджака Серкана Ватосоа, была коронована в ноябре 1006 года. Никто не ожидал, что в столь юном возрасте она проявит суровость, твёрдость и административный талант, необходимые для управления неспокойным Самбовато. Но у новой правительницы есть открытый ум, решимость и харизма, благодаря которой её прозвали «Эбонитовой жемчужиной Самбовато».\n\nСейда родилась в грозу летней ночью 988 года и с самого детства была окружена роскошью и богатствами клана Ватосоа. Однако её мать умерла при подозрительных обстоятельствах, так что юная Сейда оказалась единственной наследницей. Её отец Серкан держал дочь подальше от политики, махинаций и придворных интриг. Так она выросла образованной и красивой, хотя и эксцентричной светской кобылой, ставшей популярным лицом монархии благодаря щедрым вечеринкам и празднествам. Молодая принцесса время от времени отдыхала вместе со своей лучшей подругой у бассейна или наблюдала за манёврами могучего национального оборонительного флота с балкона, выходящего на море, в промежутках между занятиями с лучшими наставниками, которых только можно было нанять за деньги. Однако после внезапной смерти отца в конце 1006 года Консультативный Совет призвал её занять трон.\n\nИ в этот момент, когда молодая королева готовится впервые в жизни войти в палаты Национального Собрания, дабы встретиться лицом к лицу с этими якобы альтруистичными и благонамеренными министрами и определить курс её страны в эти неспокойные времена, она думает про себя...\n\n«Ну нет у меня опыта... Ну и что? Разве политика, в конце концов, не просто ещё одна вечеринка, в тонкостях которой следует разобраться?»"
+ ### Unfinished Leader Descriptions ### 
+ #POLITICS_Rainilaiarivony_desc:0 "Tribal Chief of the Commune."
+ #POLITICS_Yuce_desc:0 "A Guy for Expansionism."
+
+ ### General & Admiral Descriptions ###
+ MQA_rano_desc:0 "§YBorn§!:  May 27, 951 in Tsenalakana\n\n§YRank§!: Amiraly Lehibe\n\n§YBiography§!: Having come into the world facing the sea on the lively shores of the city of a hundred markets and a thousand boats, the eventual ascension of Yüce Ranomasina to the rank of Grand Admiral and consequently that of Commander of the National Protection Navy of Sambovato, a title whose power and influence is claimed to only be topped by that of Mpanjaka itself, was manifestly assured from his dawn, for he had the celestial destiny of being born into the noble Ranomasina clan, a family of accomplished mariners whose great princely Maroseranana ancestors once ruled the southern stretches of the island and its many ports before kowtowing first to the great Mpanjaka of Sambovato, then their Senturyan suzerains as their most loyal servants on the deep blue waves for centuries thereafter.\n\nAnd thus, just like his father and grandfather before him, Yüce enrolled into the then Senturyan Navy at a young age, experiencing a meteoric rise to the rank of second officer by the age of 25 before the Great Mutiny gradually consumed his home around him. It is said within the court whispers that on the night of his promotion ceremony to first officer, the young commander burst out of his cabin a completely different zebra, suddenly rallying his ship's crew before mutinying and sending their centaur superiors overboard into the sea before declaring his zealous allegiance not to the traditional Mpanjaka, enfeebled and sidelined by centuries of humiliating submission over in the royal highlands, but to the new, young and vigorous Mpanjaka over in Akorandriakarova, one hailing from his beloved coast and sea where his people truly belonged, Serkan Vatosoa.\n\nHis fervent loyalty to the new dynasty was handsomely rewarded after the success of the Great Mutiny and the affirmation of independence from the Kingdom of Senturya, being entrusted first the full command of the newly acquired Senturyan fleet present in Sambovato as its first Grand Admiral, then that of the Committee of National Protection tasked with overseeing the nation's military upkeep and modernization before the Mpanjaka's untimely death in late 1006. The middle-aged admiral now stands tall as a pagoda mast as one of the court's most powerful advisors, with critics and supporters alike noting his particular uncle-like fondness for Serkan's daughter Ceyda as well as his strong belief in the rebirth of Sambovato's glorious thalassocratic past.\n\n§YPortrait By§!: Ryan"
+ ### Unfinished General & Admiral Descriptions ###
+ #MQA_celik_desc:0 "Old General in his 60s Basically a old was good but now strange guy. RYAN"
+ #MQA_aziz_desc:0 "Aspiring officer in his 30s Basically a drill general. RYAN"
+ #MQA_orana_desc:0 "Old navy admiral in his 60s Basically a friendly Uncle. RYAN"
+ #MQA_Fasika_desc:0 "Young aspiring girl from the special forces. SESEK"
+
+ #Events
+ sambovato.1.t:0 "Sambovatan Air Show?"
+ sambovato.1.d:0 "My Queen, we got a proposal to make. Have you heard of this new invention called Flighters? It's a magnificent new piece of technology that opens up the Skies for even those that are not blessed with wings! We should host a grand fair having the Pilots of those so-called Fighter Plains demonstrate their skill and their command over those flight machines. I asked some of the Pilots, they say they will start with a so-called formation flight, and the Grand Final will be the best two of them flying in sync followed by fireworks. There is of course the slight chance that the people could see this show of splendor as a waste of the fuel we created by our exploitations, but is that enough of a reason to give up such a clear sign of progress for our Nation?"
+ sambovato.1.a:0 "I must see these Flying Machines!"
+ sambovato.1.b:0 "Nonsense Zebras can't fly..."
+ sambovato.2.t:0 "In memory of the Air Show"
+ sambovato.2.d:0 "The queen was truly delighted with your display of skill and formally asked if you and your comrades would like to become the first members of the new Royal Air Force. Your Machines would be supplied and tended to by our technicians and you could use the newly built Airfield as you please as long as you are ready in case the Queen or the Country need your Aid. Oh, and of course in the case of newly developed Aircraft, you would be the first to use them since you would be part of her Air Force."
+ sambovato.2.a:0 "Fuel and trying out new Aircraft? Sign us in!"
+ sambovato.2.b:0 "We would rather just be paid and leave."

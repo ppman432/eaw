@@ -1,0 +1,202 @@
+﻿capital = 75
+
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	tech_pegasi = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	tech_support = 1
+	fuel_silos = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_engineers = 1
+	#trench_warfare = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	guerrila_warfare_enable = 1
+	basic_train = 1
+}
+#set_grand_doctrine = grand_battleplan
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		air_torpedoe_1 = 1
+		bba_early_transport_plane = 1
+	}
+
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			early_transport_plane = 1
+		}
+	}
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	torpedo_gunboats = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	protected_cruisers = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	pre_dreadnoughts = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	#basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_torpedo = 1
+	#improved_airplane_launcher = 1
+	sonar = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_armor_scheme = 1
+	mtg_transport = 1
+	basic_fire_control_system = 1
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 1000
+	producer = EQS
+}
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 500
+	producer = EQS
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 50
+	producer = EQS
+}
+set_convoys = 90
+set_popularities = {
+	democratic = 77
+	fascism = 4
+	communism = 19
+	neutrality = 0
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_country_flag = has_custom_advisors
+
+set_country_flag = has_custom_spymaster
+add_ideas = {
+	pony_race
+	modern_society
+	proper_science_base
+	no_lack_of_scientists
+	no_poverty
+	ELF_harmonic_resistance_idea
+	ELF_ours_is_an_invincible_army
+	ELF_invincible_army_surrender_limit_idea
+	#ELF_revanchism_meter_considerable
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+recruit_character = ELF_starlight_and_trixie
+recruit_character = ELF_trixie_lulamoon
+recruit_character = ELF_firefly
+recruit_character = ELF_fairy_light
+recruit_character = ELF_flash_force
+recruit_character = ELF_duty_price
+recruit_character = ELF_kyanite_arc
+recruit_character = ELF_maverick_flare
+recruit_character = ELF_purple_dart
+recruit_character = ELF_fairweather_breeze
+recruit_character = ELF_totally_not_lysia
+recruit_character = ELF_coloratura
+recruit_character = ELF_fine_line
+recruit_character = ELF_uncle_orange
+recruit_character = ELF_aunt_orange
+recruit_character = ELF_harshwhinny
+recruit_character = ELF_joe_pescolt
+recruit_character = ELF_cloud_kicker
+recruit_character = ELF_babs_seed
+recruit_character = ELF_sweetie_belle
+recruit_character = ELF_scootaloo
+recruit_character = ELF_apple_bloom
+recruit_character = ELF_on_stage
+recruit_character = ELF_wind_walker
+recruit_character = ELF_misty_fly
+recruit_character = ELF_lightning_dust
+recruit_character = ELF_vapor_trail
+recruit_character = ELF_night_thunder
+recruit_character = ELF_tall_order
+recruit_character = ELF_raspberry_beret
+recruit_character = ELF_mr_stripes
+recruit_character = ELF_sunny_shine
+recruit_character = ELF_moondancer
+recruit_character = ELF_night_light
+recruit_character = ELF_duke_dapper
+recruit_character = ELF_word_filter
+ 
+
+set_rule = {
+	can_generate_female_aces = yes
+	can_generate_female_unit_leaders  = yes
+	can_generate_female_country_leaders = yes
+}
+
+### Variants ###
+equestrian_breakaways_tanks = yes
+equestrian_breakaways_planes = yes
+equestrian_breakaways_ships = yes

@@ -1,0 +1,21 @@
+﻿
+division_template = {
+	name = "Arma Minune"		#THIS MIRACLE WEAPON WILL WIN THE WAR FOR US!
+	
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+	}
+	priority = 2
+	support = {
+	}
+}
+units = {
+	division = {
+		name = "Arma Minune"
+		location = 7572
+		division_template = "Arma Minune"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.001
+	}
+
+}

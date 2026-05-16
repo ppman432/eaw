@@ -1,0 +1,358 @@
+﻿add_namespace = great_lakes
+
+country_event = { #Gold mines depleted
+	id = great_lakes.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.1"}
+	title = great_lakes.1.t
+	desc = great_lakes.1.d
+	picture = GFX_event_cave
+	trigger = {
+		date > 1011.6.6
+		has_idea = MAZ_gold_mines
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	option = {
+		name = great_lakes.1.a
+		remove_ideas = MAZ_gold_mines
+		set_global_flag = MAZ_gold_mines_depleted
+	}
+}
+news_event = { ### Non-aligned Ugabi conquers Great Lakes
+	id = great_lakes.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.2"}
+    title = great_lakes.2.t
+    desc = great_lakes.2.d
+	
+    picture = GFX_news_ponies_advance
+	###Placeholder image
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = great_lakes.2.a
+		trigger = {
+			original_tag = ZUG
+		}
+	}
+	option = {
+		name = great_lakes.2.b
+		trigger = {
+			NOT = { original_tag = ZUG }
+		}
+	}
+}
+
+news_event = { ### Harmony Ugabi conquers Great Lakes
+	id = great_lakes.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.3"}
+    title = great_lakes.3.t
+    desc = great_lakes.3.d
+	
+    picture = GFX_news_ponies_advance
+	###Placeholder image
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = great_lakes.3.a
+		trigger = {
+			original_tag = ZUG
+		}
+	}
+	option = {
+		name = great_lakes.3.b
+		trigger = {
+			NOT = { original_tag = ZUG }
+		}
+	}
+}
+
+news_event = { ### Supremacist Ugabi conquers Great Lakes
+	id = great_lakes.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.4"}
+    title = great_lakes.4.t
+    desc = great_lakes.4.d
+	
+    picture = GFX_news_ponies_advance
+	###Placeholder image
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = great_lakes.4.a
+		trigger = {
+			original_tag = ZUG
+		}
+	}
+	option = {
+		name = great_lakes.4.b
+		trigger = {
+			NOT = { original_tag = ZUG }
+		}
+	}
+}
+country_event = { #Placeholder event for ALO-TIM war
+	id = great_lakes.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.5"}
+	title = great_lakes.5.t
+	desc = great_lakes.5.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = great_lakes.5.a
+		hidden_effect = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = TIM
+			}
+		}
+		declare_war_on = { type = annex_everything target = TIM }
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = TIM
+			value = -1000
+		}
+		TIM = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ALO
+				value = -1000
+			}
+			add_to_ROOT_potential_cores = yes
+			ALO = {
+				add_to_PREV_potential_cores = yes
+			}
+		}
+	}
+}
+country_event = { #Placeholder event for HAY-ZEL war
+	id = great_lakes.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.6"}
+	title = great_lakes.6.t
+	desc = great_lakes.6.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = great_lakes.6.a
+		hidden_effect = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = ZEL
+			}
+		}
+		declare_war_on = { type = annex_everything target = ZEL }
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = ZEL
+			value = -1000
+		}
+		ZEL = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = HAY
+				value = -1000
+			}
+			add_to_ROOT_potential_cores = yes
+			HAY = {
+				add_to_PREV_potential_cores = yes
+			}
+		}
+	}
+}
+country_event = { #Placeholder event for MSH-SON war
+	id = great_lakes.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.7"}
+	title = great_lakes.7.t
+	desc = great_lakes.7.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		date < 1008.01.01
+	}
+	option = {
+		name = great_lakes.7.a
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = SON
+				}
+			}
+			hidden_effect = {
+				create_wargoal = { 
+					type = annex_everything 
+					target = SON
+				}
+			}
+			declare_war_on = { type = annex_everything target = SON }
+		}
+		SON = {
+			add_to_ROOT_potential_cores = yes
+		}
+	}
+}
+country_event = { #Placeholder event for ZWA-ZUG war
+	id = great_lakes.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.8"}
+	title = great_lakes.8.t
+	desc = great_lakes.8.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = great_lakes.8.a
+		hidden_effect = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = ZUG
+			}
+		}
+		declare_war_on = { type = annex_everything target = ZUG }
+		ZUG = {
+			add_to_ROOT_potential_cores = yes
+			ZWA = {
+				add_to_PREV_potential_cores = yes
+			}
+		}
+	}
+}
+country_event = { #Gold mines taken!
+	id = great_lakes.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.9"}
+	title = great_lakes.9.t
+	desc = great_lakes.9.d
+	picture = GFX_event_cave
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = great_lakes.9.a
+		add_ideas = MAZ_gold_mines
+	}
+}
+news_event = { #Imperial Zar-Hay
+	id = great_lakes.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.10"}
+	title = great_lakes.10.t
+	desc = great_lakes.10.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.10.a
+	}
+}
+news_event = { #Aoranda
+	id = great_lakes.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.11"}
+	title = great_lakes.11.t
+	desc = great_lakes.11.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.11.a
+	}
+}
+news_event = { #Macigena
+	id = great_lakes.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.12"}
+	title = great_lakes.12.t
+	desc = great_lakes.12.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.12.a
+	}
+}
+news_event = { #Hayzeb
+	id = great_lakes.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.13"}
+	title = great_lakes.13.t
+	desc = great_lakes.13.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.13.a
+	}
+}
+news_event = { #Gelon-zornu
+	id = great_lakes.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.14"}
+	title = great_lakes.14.t
+	desc = great_lakes.14.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.14.a
+	}
+}
+news_event = { #Mazwi
+	id = great_lakes.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.15"}
+	title = great_lakes.15.t
+	desc = great_lakes.15.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.15.a
+	}
+}
+news_event = { #Timbucktu
+	id = great_lakes.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.16"}
+	title = great_lakes.16.t
+	desc = great_lakes.16.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.16.a
+	}
+}
+news_event = { #Alwani
+	id = great_lakes.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.17"}
+	title = great_lakes.17.t
+	desc = great_lakes.17.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.17.a
+	}
+}
+news_event = { #Mozzi
+	id = great_lakes.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event great_lakes.18"}
+	title = great_lakes.18.t
+	desc = great_lakes.18.d
+	#PLACEHOLDER IMAGE
+	picture = GFX_news_ponies_advance
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = great_lakes.18.a
+	}
+}

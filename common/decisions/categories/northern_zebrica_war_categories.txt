@@ -1,0 +1,27 @@
+north_zebrican_war = {
+	icon = usa_intervention_mandate
+	allowed = {
+	    OR = {
+			NZW_is_north_zebrican_tag = yes
+			original_tag = WNG
+		}
+	}
+	visible = {
+		NOT = {
+			HIP = {
+				has_country_flag = HIP_siren_takeover
+			}
+		}
+		has_global_flag = NZW_in_progress
+		OR = {
+			has_country_flag = NZW_war_participant
+			AND = {
+				original_tag = WNG
+				has_government = fascism
+			}
+		}
+	}
+	priority = {
+		base = 100
+	}
+}

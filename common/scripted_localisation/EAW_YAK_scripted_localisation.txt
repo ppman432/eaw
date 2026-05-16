@@ -1,0 +1,63 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#Yak_Speak_Good DO NOT IMPLEMENT BEFORE PROJECT POLAR EXPRESS IS CODE AND LOC COMPLETE EVERYWHERE ELSE
+
+#defined_text = {
+#	name = Yak_Speak_Good
+#	text = {
+#		trigger = {
+#			has_tech = tech_yak_industry_yak_speak_good #Advanced Linguistics Translation
+#		}
+#		localization_key = Yak_Speak_Good
+#	}
+#	text = {
+#		localization_key = Yak_Speak
+#	}
+#	
+#}
+
+defined_text = {
+	name = GetYakWarCrimesDesc
+	text = {
+		trigger = {
+			original_tag = YAK
+		}
+		localization_key = YAK_WAR_CRIMES_YAK_VERSION
+	}
+	text = {
+		trigger = {
+			original_tag = JAK
+		}
+		localization_key = YAK_WAR_CRIMES_JAK_VERSION
+	}
+	text = {
+		localization_key = YAK_WAR_CRIMES_GENERIC
+	}
+}
+
+defined_text = {
+	name = GetYakClanLoyaltyDesc
+	text = {
+		trigger = {
+			original_tag = YAK
+		}
+		localization_key = YAK_CLAN_LOYALTY_YAK_VERSION
+	}
+	text = {
+		trigger = {
+			original_tag = JAK
+		}
+		localization_key = YAK_CLAN_LOYALTY_JAK_VERSION
+	}
+	text = {
+		localization_key = YAK_CLAN_LOYALTY_GENERIC
+	}
+}

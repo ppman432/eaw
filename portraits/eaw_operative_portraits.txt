@@ -1,0 +1,1632 @@
+# When you add new generic portraits, please make sure to update the race system as well. You do it in the following way:
+# 1. Add new portraits to the portraits file (self-explainatory)
+# 2. Add corresponding GFX entries to `interface/eaw_portraits.gfx` (both regular and small - make sure small name is exactly `[REGULAR_NAME]_small`)
+# 3. Go to `common/scripted_localisation/EAW_race_scripted_localisation.txt`, find the scripted loc corresponding to the portraits you have added (eg. `Get_pony_navy_male_portrait` for pony admirals)
+#     3.1. Add a text entry corresponding to the added portrait, incrementing the `state` trigger by one each time
+#     3.2. Change the `max` comment to match the number of text entries
+# 4. Go to `common/scripted_effects/EAW_race_effects.txt`, find the effect(s) using the edited scripted loc (eg. `set_unit_leader_to_generic_pony`)
+#     4.1. Find the `meta_effect` block using the scripted loc
+#     4.2 Change the value in `set_temp_variable = { name_idx = VALUE }` called right before the `meta_effect` to match the new number of portraits
+# 
+# By doing those steps, we allow the race effects to match the portraits used by the game when generating generic leaders. If you are unsure about anything, let Yard1 know when you want to add new generic portraits. This applies to leaders and operatives.
+
+### Continents ###
+continent = {
+	name = europe #ponies
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+continent = {
+	name = asia #griffons
+	operative = {
+		male = {
+			"GFX_portrait_griffon_generic_operative_male_1"
+			"GFX_portrait_griffon_generic_operative_male_2"
+			"GFX_portrait_griffon_generic_operative_male_3"
+			"GFX_portrait_griffon_generic_operative_male_4"
+			"GFX_portrait_griffon_generic_operative_male_5"
+			"GFX_portrait_griffon_generic_operative_male_6"
+			"GFX_portrait_griffon_generic_operative_male_7"
+			"GFX_portrait_griffon_generic_operative_male_8"
+			"GFX_portrait_griffon_generic_operative_male_9"
+		}
+		female = {
+			"GFX_portrait_griffon_generic_operative_female_1"
+			"GFX_portrait_griffon_generic_operative_female_2"
+			"GFX_portrait_griffon_generic_operative_female_3"
+			"GFX_portrait_griffon_generic_operative_female_4"
+		}
+	}
+}
+continent = {
+	name = africa #zebras
+	operative = {
+		male = {
+			"GFX_portrait_zebra_generic_operative_male_1"
+			"GFX_portrait_zebra_generic_operative_male_2"
+			"GFX_portrait_zebra_generic_operative_male_3"
+			"GFX_portrait_zebra_generic_operative_male_4"
+		}
+		female = {
+			"GFX_portrait_zebra_generic_operative_female_1"
+			"GFX_portrait_zebra_generic_female_1"
+			"GFX_portrait_zebra_generic_female_2"
+			"GFX_portrait_zebra_generic_female_3"
+			"GFX_portrait_zebra_generic_female_4"
+			"GFX_portrait_zebra_generic_female_5"
+			"GFX_portrait_zebra_generic_female_6"
+		}
+	}
+}
+##### GRIFFONS! #####
+GRF = {
+	operative = {
+		male = {
+			"GFX_portrait_griffon_generic_operative_male_1"
+			"GFX_portrait_griffon_generic_operative_male_2"
+			"GFX_portrait_griffon_generic_operative_male_3"
+			"GFX_portrait_griffon_generic_operative_male_4"
+			"GFX_portrait_griffon_generic_operative_male_5"
+			"GFX_portrait_griffon_generic_operative_male_6"
+			"GFX_portrait_griffon_generic_operative_male_7"
+			"GFX_portrait_griffon_generic_operative_male_8"
+			"GFX_portrait_griffon_generic_operative_male_9"
+		}
+		female = {
+			"GFX_portrait_griffon_generic_operative_female_1"
+			"GFX_portrait_griffon_generic_operative_female_2"
+			"GFX_portrait_griffon_generic_operative_female_3"
+			"GFX_portrait_griffon_generic_operative_female_4"
+		}
+	}
+}
+GFF = {
+	operative = {
+		male = {
+			"GFX_portrait_griffon_generic_operative_male_1"
+			"GFX_portrait_griffon_generic_operative_male_2"
+			"GFX_portrait_griffon_generic_operative_male_3"
+			"GFX_portrait_griffon_generic_operative_male_4"
+			"GFX_portrait_griffon_generic_operative_male_5"
+			"GFX_portrait_griffon_generic_operative_male_6"
+			"GFX_portrait_griffon_generic_operative_male_7"
+			"GFX_portrait_griffon_generic_operative_male_8"
+			"GFX_portrait_griffon_generic_operative_male_9"
+		}
+		female = {
+			"GFX_portrait_griffon_generic_operative_female_1"
+			"GFX_portrait_griffon_generic_operative_female_2"
+			"GFX_portrait_griffon_generic_operative_female_3"
+			"GFX_portrait_griffon_generic_operative_female_4"
+		}
+	}
+}
+MER = {
+	operative = {
+		male = {
+			"GFX_portrait_griffon_generic_operative_male_1"
+			"GFX_portrait_griffon_generic_operative_male_2"
+			"GFX_portrait_griffon_generic_operative_male_3"
+			"GFX_portrait_griffon_generic_operative_male_4"
+			"GFX_portrait_griffon_generic_operative_male_5"
+			"GFX_portrait_griffon_generic_operative_male_6"
+			"GFX_portrait_griffon_generic_operative_male_7"
+			"GFX_portrait_griffon_generic_operative_male_8"
+			"GFX_portrait_griffon_generic_operative_male_9"
+		}
+		female = {
+			"GFX_portrait_griffon_generic_operative_female_1"
+			"GFX_portrait_griffon_generic_operative_female_2"
+			"GFX_portrait_griffon_generic_operative_female_3"
+			"GFX_portrait_griffon_generic_operative_female_4"
+		}
+	}
+}
+YAN = {
+	operative = {
+		male = {
+			"GFX_portrait_griffon_generic_operative_male_1"
+			"GFX_portrait_griffon_generic_operative_male_2"
+			"GFX_portrait_griffon_generic_operative_male_3"
+			"GFX_portrait_griffon_generic_operative_male_4"
+			"GFX_portrait_griffon_generic_operative_male_5"
+			"GFX_portrait_griffon_generic_operative_male_6"
+			"GFX_portrait_griffon_generic_operative_male_7"
+			"GFX_portrait_griffon_generic_operative_male_8"
+			"GFX_portrait_griffon_generic_operative_male_9"
+		}
+		female = {
+			"GFX_portrait_griffon_generic_operative_female_1"
+			"GFX_portrait_griffon_generic_operative_female_2"
+			"GFX_portrait_griffon_generic_operative_female_3"
+			"GFX_portrait_griffon_generic_operative_female_4"
+		}
+	}
+}
+### Changelings ###
+CHN = {
+	operative = {
+		male = {
+			"GFX_Portrait_Changelings_Generic_operative_male_1"
+			"GFX_Portrait_Changelings_Generic_operative_male_2"
+			"GFX_Portrait_Changelings_Generic_operative_male_3"
+			"GFX_Portrait_Changelings_Generic_operative_male_4"
+		}
+		female = {
+			"GFX_Portrait_Changelings_Generic_operative_female_1"
+			"GFX_Portrait_Changelings_Generic_operative_female_2"
+		}
+	}
+}
+### Changelings ###
+MAN = {
+	operative = {
+		male = {
+			"GFX_Portrait_Changelings_Generic_operative_male_1"
+			"GFX_Portrait_Changelings_Generic_operative_male_2"
+			"GFX_Portrait_Changelings_Generic_operative_male_3"
+			"GFX_Portrait_Changelings_Generic_operative_male_4"
+		}
+		female = {
+			"GFX_Portrait_Changelings_Generic_operative_female_1"
+			"GFX_Portrait_Changelings_Generic_operative_female_2"
+		}
+	}
+}
+### Good Changelings ###
+CCN = {
+	operative = {
+		male = {
+			"GFX_Portrait_Changelings_Generic_operative_male_1"
+			"GFX_Portrait_Changelings_Generic_operative_male_2"
+			"GFX_Portrait_Changelings_Generic_operative_male_3"
+			"GFX_Portrait_Changelings_Generic_operative_male_4"
+		}
+		female = {
+			"GFX_Portrait_Changelings_Generic_operative_female_1"
+			"GFX_Portrait_Changelings_Generic_operative_female_2"
+		}
+	}
+}
+### Greneclyf ###
+NCH = {
+	operative = {
+		male = {
+			"GFX_Portrait_Changelings_Generic_operative_male_1"
+			"GFX_Portrait_Changelings_Generic_operative_male_2"
+			"GFX_Portrait_Changelings_Generic_operative_male_3"
+			"GFX_Portrait_Changelings_Generic_operative_male_4"
+		}
+		female = {
+			"GFX_Portrait_Changelings_Generic_operative_female_1"
+			"GFX_Portrait_Changelings_Generic_operative_female_2"
+		}
+	}
+}
+#YAKISTAN
+YAK = {
+	operative = {
+		male = {
+			"GFX_yak1"
+			"GFX_yak3"
+			"GFX_yak4"
+			"GFX_yak8"
+			"GFX_portrait_yak_generic_operative_male_1"
+		}
+		female = {
+			"GFX_yak2"
+			"GFX_yak5"
+			"GFX_yak6"
+			"GFX_yak7"
+			"GFX_portrait_yak_generic_operative_female_1"
+		}
+	}
+}
+JAK = {
+	operative = {
+		male = {
+			"GFX_yak1"
+			"GFX_yak3"
+			"GFX_yak4"
+			"GFX_yak8"
+			"GFX_portrait_yak_generic_operative_male_1"
+		}
+		female = {
+			"GFX_yak2"
+			"GFX_yak5"
+			"GFX_yak6"
+			"GFX_yak7"
+			"GFX_portrait_yak_generic_operative_female_1"
+		}
+	}
+}
+### New Mareland ###
+EQC = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+### River Fed ###
+FIR = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+FBK = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+WAT = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+LSC = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+RCT = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+JHP = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+JRV = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+LCT = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+BAK = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+DEP = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+NIM = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+FRE = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+WIT = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+BAR = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+NTR = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+######## DOGGOS ########
+DMT = {
+	operative = {
+		male = {
+			"GFX_portrait_dog_generic_male_1"
+			"GFX_portrait_dog_generic_male_2"
+			"GFX_portrait_dog_generic_male_3"
+			"GFX_portrait_dog_generic_male_4"
+			"GFX_portrait_dog_generic_male_5"
+			"GFX_portrait_dog_generic_male_6"
+			"GFX_portrait_dog_generic_male_7"
+			"GFX_portrait_dog_generic_male_8"
+			"GFX_portrait_dog_generic_male_9"
+			"GFX_portrait_dog_generic_male_10"
+			"GFX_portrait_dog_generic_male_11"
+			"GFX_portrait_dog_generic_male_12"
+		}
+		female = {
+			"GFX_portrait_dog_generic_female_1"
+			"GFX_portrait_dog_generic_female_2"
+			"GFX_portrait_dog_generic_female_3"
+			"GFX_portrait_dog_generic_female_4"
+			"GFX_portrait_dog_generic_female_5"
+		}
+	}
+}
+BRZ = {
+	operative = {
+		male = {
+			"GFX_portrait_dog_generic_male_1"
+			"GFX_portrait_dog_generic_male_2"
+			"GFX_portrait_dog_generic_male_3"
+			"GFX_portrait_dog_generic_male_4"
+			"GFX_portrait_dog_generic_male_5"
+			"GFX_portrait_dog_generic_male_6"
+			"GFX_portrait_dog_generic_male_7"
+			"GFX_portrait_dog_generic_male_8"
+			"GFX_portrait_dog_generic_male_9"
+			"GFX_portrait_dog_generic_male_10"
+			"GFX_portrait_dog_generic_male_11"
+			"GFX_portrait_dog_generic_male_12"
+		}
+		female = {
+			"GFX_portrait_dog_generic_female_1"
+			"GFX_portrait_dog_generic_female_2"
+			"GFX_portrait_dog_generic_female_3"
+			"GFX_portrait_dog_generic_female_4"
+			"GFX_portrait_dog_generic_female_5"
+		}
+	}
+}
+######## YEENS ########
+HYE = {
+	operative = {
+		male = {
+			"GFX_portrait_hyena_generic_male_1"
+			"GFX_portrait_hyena_generic_male_2"
+			"GFX_portrait_hyena_generic_male_3"
+			"GFX_portrait_hyena_generic_male_4"
+		}
+		female = {
+			"GFX_portrait_hyena_generic_female_1"
+			"GFX_portrait_hyena_generic_female_2"
+			"GFX_portrait_hyena_generic_female_3"
+			"GFX_portrait_hyena_generic_female_4"
+			"GFX_portrait_hyena_generic_female_5"
+		}
+	}
+}
+GIF = {
+	operative = {
+		male = {
+			"GFX_portrait_hyena_generic_male_1"
+			"GFX_portrait_hyena_generic_male_2"
+			"GFX_portrait_hyena_generic_male_3"
+			"GFX_portrait_hyena_generic_male_4"
+		}
+		female = {
+			"GFX_portrait_hyena_generic_female_1"
+			"GFX_portrait_hyena_generic_female_2"
+			"GFX_portrait_hyena_generic_female_3"
+			"GFX_portrait_hyena_generic_female_4"
+			"GFX_portrait_hyena_generic_female_5"
+		}
+	}
+}
+######## DEET!!!! ########
+OLE = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+OLV = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+HRV = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+HIN = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+CTL = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+SAM = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+SPL = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+BRS = {
+	operative = {
+		male = {
+			"GFX_portrait_deer_generic_operative_male_1"
+			"GFX_portrait_deer_generic_operative_male_2"
+			"GFX_portrait_deer_generic_operative_male_3"
+			"GFX_portrait_deer_generic_operative_male_4"
+			"GFX_portrait_deer_generic_operative_male_5"
+			"GFX_portrait_deer_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_deer_generic_female_1"
+			"GFX_portrait_deer_generic_female_2"
+			"GFX_portrait_deer_generic_female_3"
+			"GFX_portrait_deer_generic_operative_female_1"
+			"GFX_portrait_deer_generic_operative_female_2"
+			"GFX_portrait_deer_generic_operative_female_3"
+			"GFX_portrait_deer_generic_operative_female_4"
+			"GFX_portrait_deer_generic_operative_female_5"
+		}
+	}
+}
+######## SKELETONS ########
+DED = {
+	operative = {
+		male = {
+			"GFX_Nezhit"
+		}
+		female = {
+			"GFX_Nezhit"
+		}
+	}
+}
+######## MINOTAURS ########
+MIT = {
+	operative = {
+		male = {
+			"GFX_portrait_minotaur_generic_operative_male_1"
+			"GFX_portrait_minotaur_generic_operative_male_2"
+			"GFX_portrait_minotaur_generic_operative_male_3"
+			"GFX_portrait_minotaur_generic_operative_male_4"
+			"GFX_portrait_minotaur_generic_operative_male_5"
+		}
+		female = {
+			"GFX_portrait_minotaur_generic_operative_female_1"
+		}
+	}
+}
+JAS = {
+	operative = {
+		male = {
+			"GFX_portrait_minotaur_generic_operative_male_1"
+			"GFX_portrait_minotaur_generic_operative_male_2"
+			"GFX_portrait_minotaur_generic_operative_male_3"
+			"GFX_portrait_minotaur_generic_operative_male_4"
+			"GFX_portrait_minotaur_generic_operative_male_5"
+		}
+		female = {
+			"GFX_portrait_minotaur_generic_operative_female_1"
+		}
+	}
+}
+######## HIPPOGRIFFS ########
+HIP = {
+	operative = {
+		male = {
+			"GFX_portrait_hippogriff_generic_operative_1"
+			"GFX_portrait_hippogriff_generic_operative_2"
+			"GFX_portrait_hippogriff_generic_operative_3"
+			"GFX_portrait_hippogriff_generic_operative_4"
+			"GFX_portrait_hippogriff_generic_operative_5"
+			"GFX_portrait_hippogriff_generic_operative_6"
+		}
+		female = {
+			"GFX_portrait_hippogriff_generic_operative_female_1"
+			"GFX_portrait_hippogriff_generic_operative_female_2"
+			"GFX_portrait_hippogriff_generic_operative_female_3"
+			"GFX_portrait_hippogriff_generic_operative_female_4"
+		}
+	}
+}
+WIN = {
+	operative = {
+		male = {
+			"GFX_portrait_hippogriff_generic_operative_1"
+			"GFX_portrait_hippogriff_generic_operative_2"
+			"GFX_portrait_hippogriff_generic_operative_3"
+			"GFX_portrait_hippogriff_generic_operative_4"
+			"GFX_portrait_hippogriff_generic_operative_5"
+			"GFX_portrait_hippogriff_generic_operative_6"
+		}
+		female = {
+			"GFX_portrait_hippogriff_generic_operative_female_1"
+			"GFX_portrait_hippogriff_generic_operative_female_2"
+			"GFX_portrait_hippogriff_generic_operative_female_3"
+			"GFX_portrait_hippogriff_generic_operative_female_4"
+		}
+	}
+}
+######## Gargoyles ########
+GAR = {
+	operative = {
+		male = {
+			"GFX_portrait_generic_gargoyle_scientist_male_1"
+			"GFX_portrait_generic_gargoyle_scientist_male_2"
+			"GFX_portrait_gargoyle_generic_operative_male_1"
+			"GFX_portrait_gargoyle_generic_operative_male_2"
+		}
+		female = {
+			"GFX_portrait_generic_gargoyle_scientist_female_1"
+			"GFX_portrait_generic_gargoyle_scientist_female_2"
+			"GFX_portrait_gargoyle_generic_operative_female_1"
+		}
+	}
+}
+######## Centaurs (Minotaurs as placeholder) ########
+CNT = {
+	operative = {
+		male = {
+			"GFX_portrait_minotaur_generic_operative_male_1"
+			"GFX_portrait_minotaur_generic_operative_male_2"
+			"GFX_portrait_minotaur_generic_operative_male_3"
+			"GFX_portrait_minotaur_generic_operative_male_4"
+			"GFX_portrait_minotaur_generic_operative_male_5"
+		}
+		female = {
+			"GFX_portrait_minotaur_generic_operative_female_1"
+		}
+	}
+}
+######## CATS ########
+ABY = {
+	operative = {
+		male = {
+			"GFX_portrait_cat_generic_operative_male_1"
+			"GFX_portrait_cat_generic_operative_male_2"
+			"GFX_portrait_cat_generic_operative_male_3"
+			"GFX_portrait_cat_generic_operative_male_4"
+			"GFX_portrait_cat_generic_operative_male_5"
+		}
+		female = {
+			"GFX_portrait_cat_generic_operative_female_1"
+			"GFX_portrait_cat_generic_operative_female_2"
+			"GFX_portrait_cat_generic_army_female_1"
+			"GFX_portrait_cat_generic_army_female_2"
+			"GFX_portrait_cat_generic_army_female_3"
+			"GFX_portrait_cat_generic_army_female_4"
+		}
+	}
+}
+KTZ = {
+	operative = {
+		male = {
+			"GFX_portrait_cat_generic_operative_male_1"
+			"GFX_portrait_cat_generic_operative_male_2"
+			"GFX_portrait_cat_generic_operative_male_3"
+			"GFX_portrait_cat_generic_operative_male_4"
+			"GFX_portrait_cat_generic_operative_male_5"
+		}
+		female = {
+			"GFX_portrait_cat_generic_operative_female_1"
+			"GFX_portrait_cat_generic_operative_female_2"
+			"GFX_portrait_cat_generic_army_female_1"
+			"GFX_portrait_cat_generic_army_female_2"
+			"GFX_portrait_cat_generic_army_female_3"
+			"GFX_portrait_cat_generic_army_female_4"
+		}
+	}
+}
+######## HARPIES ########
+MCW = {
+	operative = {
+		male = {
+			"GFX_portrait_harpy_generic_operative_male_1"
+			"GFX_portrait_harpy_generic_operative_male_2"
+			"GFX_portrait_harpy_generic_operative_male_3"
+			"GFX_portrait_harpy_generic_operative_male_4"
+			"GFX_portrait_harpy_generic_operative_male_5"
+			"GFX_portrait_harpy_generic_operative_male_6"
+		}
+		female = {
+			"GFX_portrait_harpy_generic_operative_male_1"
+			"GFX_portrait_harpy_generic_operative_male_2"
+			"GFX_portrait_harpy_generic_operative_male_3"
+			"GFX_portrait_harpy_generic_operative_male_4"
+			"GFX_portrait_harpy_generic_operative_male_5"
+			"GFX_portrait_harpy_generic_operative_male_6"
+		}
+	}
+}
+######## LLAMAS ########
+LMB = {
+	operative = {
+		male = {
+			"GFX_portrait_llama_generic_leader_male_1"
+			"GFX_portrait_llama_generic_army_male_1"
+			"GFX_portrait_llama_generic_army_male_2"
+			"GFX_portrait_llama_generic_army_male_3"
+			"GFX_portrait_llama_generic_army_male_4"
+		}
+		female = {
+			"GFX_portrait_llama_generic_leader_male_1"
+			"GFX_portrait_llama_generic_army_male_1"
+			"GFX_portrait_llama_generic_army_male_2"
+			"GFX_portrait_llama_generic_army_male_3"
+			"GFX_portrait_llama_generic_army_male_4"
+		}
+	}
+}
+GAZ = {
+	operative = {
+		male = {
+			"GFX_portrait_llama_generic_leader_male_1"
+			"GFX_portrait_llama_generic_army_male_1"
+			"GFX_portrait_llama_generic_army_male_2"
+			"GFX_portrait_llama_generic_army_male_3"
+			"GFX_portrait_llama_generic_army_male_4"
+		}
+		female = {
+			"GFX_portrait_llama_generic_leader_male_1"
+			"GFX_portrait_llama_generic_army_male_1"
+			"GFX_portrait_llama_generic_army_male_2"
+			"GFX_portrait_llama_generic_army_male_3"
+			"GFX_portrait_llama_generic_army_male_4"
+		}
+	}
+}
+######## KIRIN ########
+KIR = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+KIS = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+KIC = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+KXN = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+KHM = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+NVA = {
+	operative = {
+		male = {
+			"GFX_portrait_kirin_generic_leader_male_1"
+			"GFX_portrait_kirin_generic_operative_male_1"
+			"GFX_portrait_kirin_generic_operative_male_2"
+			"GFX_portrait_kirin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_kirin_generic_leader_female_1"
+			"GFX_portrait_kirin_generic_operative_female_1"
+			"GFX_portrait_kirin_generic_operative_female_2"
+			"GFX_portrait_kirin_generic_operative_female_3"
+		}
+	}
+}
+######## ZEEBS ########
+ZES = {
+	operative = {
+		male = {
+			"GFX_portrait_zebra_generic_operative_male_1"
+			"GFX_portrait_zebra_generic_operative_male_2"
+			"GFX_portrait_zebra_generic_operative_male_3"
+			"GFX_portrait_zebra_generic_operative_male_4"
+		}
+		female = {
+			"GFX_portrait_zebra_generic_operative_female_1"
+			"GFX_portrait_zebra_generic_female_1"
+			"GFX_portrait_zebra_generic_female_2"
+			"GFX_portrait_zebra_generic_female_3"
+			"GFX_portrait_zebra_generic_female_4"
+			"GFX_portrait_zebra_generic_female_5"
+			"GFX_portrait_zebra_generic_female_6"
+		}
+	}
+}
+######## Penguins ########
+PNG = {
+	operative = {
+		male = {
+			"GFX_portrait_penguin_generic_operative_male_1"
+			"GFX_portrait_penguin_generic_operative_male_2"
+			"GFX_portrait_penguin_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_penguin_generic_operative_female_1"
+			"GFX_portrait_penguin_generic_operative_female_2"
+			"GFX_portrait_penguin_generic_operative_female_3"
+		}
+	}
+}
+######## Buffalo ########
+BUF = {
+	operative = {
+		male = {
+			"GFX_portrait_buffalo_generic_operative_male_1"
+		}
+		female = {}
+	}
+}
+
+######## Zebrican Ponies ########
+BAT = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+TBK = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+MGY = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+MDL = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+AES = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+MTO = {
+	operative = {
+		male = {
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_pony_generic_land_14"
+		}
+		female = {
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+		}
+	}
+}
+######## Horses (using mostly pony for now) ########
+SDL = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+SDS = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+SDC = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+SDF = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+EMR = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+YMN = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+HMR = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+REE = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+OSQ = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+MTA = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+KAR = {
+	operative = {
+		male = {
+			"GFX_portrait_horse_generic_operative_male_1"
+			"GFX_portrait_horse_generic_leader_male_1"
+			"GFX_portrait_pony_generic_operative_1"
+			"GFX_portrait_pony_generic_operative_2"
+			"GFX_portrait_pony_generic_operative_3"
+			"GFX_portrait_pony_generic_operative_4"
+			"GFX_portrait_pony_generic_operative_5"
+			"GFX_portrait_pony_generic_operative_6"
+			"GFX_portrait_horse_generic_army_male_1"
+		}
+		female = {
+			"GFX_portrait_horse_generic_leader_female_1"
+			"GFX_portrait_pony_generic_operative_female_1"
+			"GFX_portrait_pony_generic_operative_female_2"
+			"GFX_portrait_pony_generic_operative_female_3"
+			"GFX_portrait_horse_generic_army_female_1"
+		}
+	}
+}
+
+######## Polar Bear ########
+PLB = {
+	operative = {
+		male = {
+			"GFX_portrait_polar_generic_operative_male_1"
+			"GFX_portrait_polar_generic_operative_male_2"
+			"GFX_portrait_polar_generic_operative_male_3"
+		}
+		female = {
+			"GFX_portrait_polar_generic_operative_female_1"
+			"GFX_portrait_polar_generic_operative_female_2"
+			"GFX_portrait_polar_generic_operative_female_3"
+		}
+	}
+}
+
+######## Dragons ########
+DRG = {
+	operative = {
+		male = {
+			"GFX_portrait_fire_dragon_generic_male_1"
+			"GFX_portrait_fire_dragon_generic_male_2"
+			"GFX_portrait_fire_dragon_generic_male_3"
+			"GFX_portrait_fire_dragon_generic_male_4"
+			"GFX_portrait_fire_dragon_generic_male_5"
+			"GFX_portrait_fire_dragon_generic_male_6"
+			"GFX_portrait_fire_dragon_generic_male_7"
+			"GFX_portrait_fire_dragon_generic_male_8"
+		}
+		female = {
+			"GFX_portrait_fire_dragon_generic_female_1"
+			"GFX_portrait_fire_dragon_generic_female_2"
+			"GFX_portrait_fire_dragon_generic_female_3"
+			"GFX_portrait_fire_dragon_generic_female_4"
+		}
+	}
+}
+IDT = {
+	operative = {
+		male = {
+			"GFX_portrait_fire_dragon_generic_male_1"
+			"GFX_portrait_fire_dragon_generic_male_2"
+			"GFX_portrait_fire_dragon_generic_male_3"
+			"GFX_portrait_fire_dragon_generic_male_4"
+			"GFX_portrait_fire_dragon_generic_male_5"
+			"GFX_portrait_fire_dragon_generic_male_6"
+			"GFX_portrait_fire_dragon_generic_male_7"
+			"GFX_portrait_fire_dragon_generic_male_8"
+		}
+		female = {
+			"GFX_portrait_fire_dragon_generic_female_1"
+			"GFX_portrait_fire_dragon_generic_female_2"
+			"GFX_portrait_fire_dragon_generic_female_3"
+			"GFX_portrait_fire_dragon_generic_female_4"
+		}
+	}
+}
+
+######## Yetis ########
+STM = {
+	operative = {
+		male = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+		female = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+	}
+}
+SLC = {
+	operative = {
+		male = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+		female = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+	}
+}
+GYZ = {
+	operative = {
+		male = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+		female = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+	}
+}
+THU = {
+	operative = {
+		male = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+		female = {
+			"GFX_portrait_yeti_generic_operative_male_1"
+			"GFX_portrait_yeti_generic_operative_male_2"
+			"GFX_portrait_storm_creature_generic_operative_male_1"
+			"GFX_portrait_storm_creature_generic_operative_male_2"
+		}
+	}
+}

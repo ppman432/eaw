@@ -1,0 +1,263 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_modifiers_nuked_icon"
+		textureFile = "gfx/interface/modifiers_fallout_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_dinkau_lighthouse_icon"
+		textureFile = "gfx/interface/modifiers_dinkau_lighthouse_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_old_dragon_gardens_icon" ## now repurposed for the Everfree ##
+		textureFile = "gfx/interface/modifiers_botanical_gardens_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_skynavian_peoples_archives_icon"
+		textureFile = "gfx/interface/modifiers_people_archives_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_great_hall_of_the_proletariat_icon"
+		textureFile = "gfx/interface/modifiers_proletariat_hall_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_hail_forest_obelisk_icon"
+		textureFile = "gfx/interface/modifiers_hailforest_obelisk_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_ostfloy_nature_reserve_icon"
+		textureFile = "gfx/interface/modifiers_nature_reserve_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_skynavia_trolleybus_network_icon"
+		textureFile = "gfx/interface/modifiers_skynavia_trolleybus_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_riaportu_cloudtower_icon"
+		textureFile = "gfx/interface/modifiers_riaportu_cloudtower_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_scheisswald_forest_icon"
+		textureFile = "gfx/interface/modifers_magic_forest.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_eygsic_forest_icon"
+		textureFile = "gfx/interface/modifers_magic_forest.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_centaur_forest_icon"
+		textureFile = "gfx/interface/modifers_magic_forest.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_enchanted_jungle_icon"
+		textureFile = "gfx/interface/modifers_magic_jungle.tga" # TO REPLACE
+	}
+	spriteType = {
+		name = "GFX_modifiers_lost_jungle_icon"
+		textureFile = "gfx/interface/modifers_magic_jungle.tga" # TO REPLACE
+	}
+	spriteType = {
+		name = "GFX_modifiers_changeling_control_icon" 
+		textureFile = "gfx/interface/modifiers_changeling_control_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_changeling_settlement_icon" 
+		textureFile = "gfx/interface/modifiers_changeling_settlement_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_changeling_garrison_icon"
+		textureFile = "gfx/interface/modifiers_changeling_garrison_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_changeling_horse_icon"
+		textureFile = "gfx/interface/modifiers_changeling_horse_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_snowy_skull_icon" 
+		textureFile = "gfx/interface/modifiers_snowy_skull_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_hill_icon"
+		textureFile = "gfx/interface/hill.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_gardencity_icon"
+		textureFile = "gfx/interface/gardencity.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_changeling_icon"
+		textureFile = "gfx/interface/modifiers_changeling_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_canterlot_palace"
+		textureFile = "gfx/interface/chn/CHN_canterlot_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_vesalipolis_queens_tower"
+		textureFile = "gfx/interface/chn/CHN_vesalipolis_queens_tower.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_pizza"
+		textureFile = "gfx/interface/pizza.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_everfree_icon"
+		textureFile = "gfx/interface/modifiers_everfree_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_empowered_state_resistance"
+		textureFile = "gfx/interface/occupation/empowered_state_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAT_free_city_modifier"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAT_free_city_modifier.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAT_griffonian_breadbasket_modifier"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAT_griffonian_breadbasket_modifier.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAT_dog_zone_modifier"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAT_dog_zone_modifier.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAT_feathisian_province_modifier"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAT_feathisian_province_modifier.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAW_crownland_demesne"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAW_crownland_demesne.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAT_pone_emigres"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAT_pone_emigres.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FAW_knight_chapter_keep"
+		textureFile = "gfx/interface/state_modifiers/FAT/FAW_knight_chapter_keep.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FRN_tarrin_resistance"
+		textureFile = "gfx/interface/state_modifiers/FRN/FRN_tarrin_resistance.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_FRN_tarrin_autonomy"
+		textureFile = "gfx/interface/state_modifiers/FRN/FRN_tarrin_autonomy.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_state_industry_icon"
+		textureFile = "gfx/interface/modifiers_state_industry_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_state_artillery_icon"
+		textureFile = "gfx/interface/modifiers_state_artillery_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_famine"
+		textureFile = "gfx/interface/modifiers_famine.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_yin_yang"
+		textureFile = "gfx/interface/modifiers_yin_yang.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_red_flag_icon"
+		textureFile = "gfx/interface/modifiers_red_flag_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_supply_crate_icon"
+		textureFile = "gfx/interface/modifiers_supply_crate_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_civilian_reactor_icon"
+		textureFile = "gfx/interface/modifiers_nuclear_thingy_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_interface_The_Desert_Flowering"
+		textureFile = "gfx/interface/state_modifiers/ZAR/The_Desert_Flowering.dds"	
+	}
+	spriteType = {
+		name = "GFX_modifiers_imperial_state_icon"
+		textureFile = "gfx/interface/modifiers_imperial_state.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_REE_settlement_icon"
+		textureFile = "gfx/interface/modifiers_REE_settlement_icon.tga"
+	}
+	spriteType = { #Replaces Vanilla one 
+		name = "GFX_modifiers_weather_icons"
+		textureFile = "gfx/interface/modifiers_weather_icons.dds"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_modifiers_minefields_icon"
+		textureFile = "gfx/interface/modifiers_nature_reserve_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_CTH_monument_to_the_revolution_icon"
+		textureFile = "gfx/interface/state_modifiers/CTH/BigBuildingInMexicoCity.tga"	
+	}
+	SpriteType = {
+		name = "GFX_modifiers_admin"
+		textureFile = "gfx/interface/state_modifiers/admin.tga"
+	}
+	SpriteType = {
+		name = "GFX_modifiers_serre"
+		textureFile = "gfx/interface/state_modifiers/serre.tga"
+	}
+	SpriteType = {
+		name = "GFX_modifiers_core"
+		textureFile = "gfx/interface/state_modifiers/core.tga"
+	}
+	SpriteType = {
+		name = "GFX_modifiers_birthplace_of_the_qaylid"
+		textureFile = "gfx/interface/modifiers_birthplace_of_the_qaylid.tga"
+	}
+  spriteType = {
+    name = "GFX_modifiers_JAK_leaving_them_alone"
+    textureFile = "gfx/interface/state_modifiers/JAK/JAK_leaving_them_alone.tga"
+  }
+  spriteType = {
+    name = "GFX_modifiers_JAK_sabotage_campaign"
+    textureFile = "gfx/interface/state_modifiers/JAK/JAK_sabotage_campaign.tga"
+  }
+  spriteType = {
+    name = "GFX_modifiers_JAK_tributary_core"
+    textureFile = "gfx/interface/state_modifiers/JAK/JAK_tributary_core.tga"
+  }
+  spriteType = {
+    name = "GFX_modifiers_JAK_weapon_caches_modifier"
+    textureFile = "gfx/interface/state_modifiers/JAK/JAK_weapon_caches_modifier.tga"
+  }
+  spriteType = {
+    name = "GFX_modifiers_JAK_windigos_are_back"
+    textureFile = "gfx/interface/state_modifiers/JAK/JAK_windigos_are_back.tga"
+  }
+	spriteType = {
+		name = "GFX_modifiers_state_airship_icon"
+		textureFile = "gfx/interface/modifiers_state_airship_icon.dds"	
+	}
+	spriteType = {
+		name = "GFX_modifiers_JAK_leaving_them_alone"
+		textureFile = "gfx/interface/state_modifiers/JAK/JAK_leaving_them_alone.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_JAK_sabotage_campaign"
+		textureFile = "gfx/interface/state_modifiers/JAK/JAK_sabotage_campaign.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_JAK_tributary_core"
+		textureFile = "gfx/interface/state_modifiers/JAK/JAK_tributary_core.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_JAK_weapon_caches_modifier"
+		textureFile = "gfx/interface/state_modifiers/JAK/JAK_weapon_caches_modifier.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_JAK_windigos_are_back"
+		textureFile = "gfx/interface/state_modifiers/JAK/JAK_windigos_are_back.tga"
+	}
+	spriteType = {
+		name = "GFX_modifiers_ED_total_chaos"
+		textureFile = "gfx/interface/state_modifiers/ED/ED_total_chaos.dds"
+	}
+}

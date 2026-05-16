@@ -1,0 +1,375 @@
+ZES_oppressive_countries_calculate = {
+	ZES = {
+		clear_variable = ZES_oppressive_countries
+		every_country = {
+			limit = {
+				NOT = {
+					has_idea = detached_country
+					has_idea = communal_society
+					has_idea = communal_society_better	
+					has_idea = tribal_society
+					has_idea = tribal_society2
+					has_idea = tribal_society3
+					has_idea = tribal_society4
+					has_idea = agrarian_society
+					has_idea = agrarian_society2
+					has_idea = agrarian_society3
+					has_idea = agrarian_society4
+					has_idea = agrarian_society5
+					has_idea = agrarian_society6
+					AND = {
+						tag = ANG
+						has_government = communism
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = ANG_willie_scherler
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_gerben_kogchel
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = ROU_roland_ehrhardt
+							}
+						}
+					}
+					AND = {
+						tag = BUF
+						OR = { 
+							has_country_leader = {
+								ruling_only = yes
+								character = BUF_the_elder
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = BUF_gorick
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = BUF_gentle_giant
+							}
+						}
+					}
+					AND = {
+						tag = FEA
+						has_government = communism
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_gerben_kogchel
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_grand_duke_gerlach_iv
+							}
+						}
+					}
+					AND = {
+						tag = GRF
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = GRF_heinrich_redtail
+						}
+					}
+					AND = {
+						tag = OLV
+						has_government = communism
+						NOT = {
+							has_completed_focus = OLV_communist_coup
+						}
+					}
+					AND = {
+						tag = FEA
+						has_government = fascism
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_grand_duke_gerlach_iv
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_anton_moldernik
+							}
+						}
+					}
+					AND = {
+						tag = FAT
+						has_government = communism
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = FAT_rikard_astler
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = FEA_gerben_kogchel
+							}
+						}
+					}
+					AND = {
+						tag = VAN
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = VAN_strawberry_snowflake
+						}
+					}
+					AND = {
+						tag = CYA
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = CYA_alexandria_rinde
+						}
+					}
+					AND = {
+						tag = JER
+						has_government = communism
+						NOT = {
+							has_completed_focus = JER_PAT_triumphant
+						}
+					}
+					AND = {
+						tag = RCT
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = RCT_nova_whirl
+						}
+					}
+					AND = {
+						tag = WNG
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = WNG_giovanni_gacci
+						}
+					}
+					AND = {
+						tag = SRS
+						has_government = communism
+					}
+					AND = {
+						tag = BRZ
+						has_government = communism
+						has_completed_focus = BRZ_the_outsider_candidate
+					}
+					AND = {
+						tag = STL
+						has_government = communism
+					}
+					AND = {
+						tag = LSC
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = LSC_starry_night
+						}
+					}
+					AND = {
+						tag = CRY
+						has_government = fascism
+						has_country_leader = {
+							ruling_only = yes
+							character = EQS_rarity
+						}
+					}
+					AND = {
+						tag = NMS
+						has_government = fascism
+						has_country_leader = {
+							ruling_only = yes
+							character = NMS_light_narrative
+						}
+					}
+					AND = {
+						tag = WIT
+						has_government = communism
+						has_country_leader = {
+							ruling_only = yes
+							character = WIT_voliare_gingerbeard
+						}
+					}
+					AND = {
+						tag = HLQ
+						has_government = communism
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = HLQ_ernst_fischer
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = LSC_starry_night
+							}
+						}
+					}
+					AND = {
+						tag = HIP
+						has_government = communism
+						OR = {
+							has_country_flag = HIP_coalition_government
+							has_country_flag = {
+								flag = posada_sad_level
+								value = 0
+							}
+						}
+					}
+					AND = {
+						tag = BAT
+						has_government = communism
+					}
+					AND = {
+						tag = CVA
+						has_government = communism
+						has_country_leader = { ruling_only = yes character = CVA_zeshmunazash_zeirutid }
+					}
+					AND = {
+						tag = CTH
+						has_government = fascism
+						has_country_flag = CTH_wholesome_ending
+					}
+				}
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_idea = slavery_economy
+					AND = {
+						tag = GRI
+						has_government = neutrality
+						NOT = {
+							has_completed_focus = GRI_hear_them_out
+						}
+					}
+					AND = {
+						OR = {
+							tag = FEZ
+							tag = CYA
+							tag = GRU
+							tag = OLE
+							tag = NIM
+							tag = SRS
+						}
+						has_government = neutrality
+					}
+					AND = {
+						tag = JER
+						has_government = neutrality
+						NOT = {
+							has_country_leader = {
+								ruling_only = yes
+								character = JER_theodore_verany
+							}
+						}
+					}
+					AND = {
+						tag = LSC
+						has_government = neutrality
+						has_completed_focus = LSC_endgame
+					}
+					AND = {
+						tag = PYT
+						has_completed_focus = PYT_the_new_duke
+					}
+					AND = {
+						tag = FEA
+						has_completed_focus = FEA_martial_law
+					}
+					AND = {
+						tag = FAT
+						has_government = neutrality
+						has_completed_focus = FAT_the_iron_marshal
+					}
+					AND = {
+						tag = OLV
+						has_government = neutrality
+						NOT = {
+							OLV = {
+								OR = {
+									has_completed_focus = OLV_rule_of_the_law
+									has_country_flag = OLV_constitutional_monarchy
+								}
+							}
+						}
+					}
+					AND = {
+						tag = TRD
+						has_government = neutrality
+						NOT = {
+							has_country_leader = {
+								ruling_only = yes
+								character = TRD_ghislain_guichard
+							}
+						}
+					}
+					AND = {
+						tag = BAT
+						has_government = neutrality
+					}
+					AND = {
+						tag = CTL
+						has_government = neutrality
+					}
+				}
+			}
+			add_to_variable = {
+				var = PREV.ZES_oppressive_countries
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ZES_heart
+			}
+			set_temp_variable = { ZES_oppressive_countries_TEMP = ZES_oppressive_countries }
+			multiply_temp_variable = { ZES_oppressive_countries_TEMP = 0.009 }
+			multiply_temp_variable = { ZES_oppressive_countries_TEMP = 2 }
+			set_variable = { ZES_dynamic_skapatoria_refugee_modifier_value_final = ZES_oppressive_countries_TEMP }
+			set_temp_variable = { ZES_oppressive_countries_stability_TEMP = ZES_oppressive_countries }
+			multiply_temp_variable = { ZES_oppressive_countries_stability_TEMP = -0.004 }
+			multiply_temp_variable = { ZES_oppressive_countries_stability_TEMP = 2 }
+			set_variable = { ZES_dynamic_skapatoria_refugee_modifier_stability_value_final = ZES_oppressive_countries_stability_TEMP }
+		}
+		else = {
+			set_temp_variable = { ZES_oppressive_countries_TEMP = ZES_oppressive_countries }
+			multiply_temp_variable = { ZES_oppressive_countries_TEMP = 0.009 }
+			set_variable = { ZES_dynamic_skapatoria_refugee_modifier_value_final = ZES_oppressive_countries_TEMP }
+			set_temp_variable = { ZES_oppressive_countries_stability_TEMP = ZES_oppressive_countries }
+			multiply_temp_variable = { ZES_oppressive_countries_stability_TEMP = -0.004 }
+			set_variable = { ZES_dynamic_skapatoria_refugee_modifier_stability_value_final = ZES_oppressive_countries_stability_TEMP }
+		}
+	}
+}
+
+ZES_gui_reset = {
+	set_variable = {
+		zes_lua_state = 2
+	}
+	set_variable = {
+		zes_pasarinha_state = 2
+	}
+	set_variable = {
+		zes_yrmthu_state = 2
+	}
+	set_variable = {
+		zes_altu_state = 2
+	}
+}
+
+ZES_gui_reset = {
+	set_variable = {
+		zes_lua_state = 2
+	}
+	set_variable = {
+		zes_pasarinha_state = 2
+	}
+	set_variable = {
+		zes_yrmthu_state = 2
+	}
+	set_variable = {
+		zes_altu_state = 2
+	}
+}

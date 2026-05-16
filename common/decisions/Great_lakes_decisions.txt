@@ -1,0 +1,1737 @@
+unite_great_lakes = {
+	unite_great_lakes_decision = {
+		icon = statue
+		available = {
+			has_war = no
+			owns_state = 902
+			owns_state = 937
+			owns_state = 943
+			owns_state = 948
+			owns_state = 968
+			owns_state = 961
+			owns_state = 964
+			owns_state = 949
+			owns_state = 971
+			owns_state = 974
+		}
+		fire_only_once = yes
+		visible = {
+			is_subject = no
+			NOT = {
+				has_global_flag = Great_lakes_united
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision unite_great_lakes_decision"
+			add_political_power = 150
+			if = {
+				limit = {
+					tag = ZUG
+				}
+				hidden_effect = { 
+					news_event = great_lakes.2 
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					SON = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			else_if = {
+				limit = {
+					tag = ZWA
+				}
+				hidden_effect = { 
+					news_event = great_lakes.11 
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					SON = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			else_if = {
+				limit = {
+					tag = MSH
+				}
+				hidden_effect = { 
+					news_event = great_lakes.12 
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					SON = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			else_if = {
+				limit = {
+					tag = HAY
+				}
+				hidden_effect = { 
+					news_event = great_lakes.13 
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					SON = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			else_if = {
+				limit = {
+					original_tag = ZEL
+				}
+				hidden_effect = { 
+					news_event = great_lakes.14
+					SON = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }					
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = MAZ
+				}
+				hidden_effect = { 
+					news_event = great_lakes.15
+					SON = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }					
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = TIM
+				}
+				hidden_effect = { 
+					news_event = great_lakes.16
+					SON = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }					
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			else_if = {
+				limit = {
+					original_tag = ALO
+				}
+				hidden_effect = { 
+					news_event = great_lakes.17
+					SON = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					MSS = { add_to_ROOT_potential_cores = yes }					
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = MSS
+				}
+				hidden_effect = { 
+					news_event = great_lakes.18
+					SON = { add_to_ROOT_potential_cores = yes }
+					ZUG = { add_to_ROOT_potential_cores = yes }
+					MAZ = { add_to_ROOT_potential_cores = yes }
+					TIM = { add_to_ROOT_potential_cores = yes }
+					ZWA = { add_to_ROOT_potential_cores = yes }
+					HAY = { add_to_ROOT_potential_cores = yes }
+					ZEL = { add_to_ROOT_potential_cores = yes }
+					MSH = { add_to_ROOT_potential_cores = yes }
+					ALO = { add_to_ROOT_potential_cores = yes }					
+				}
+				set_cosmetic_tag = Generic_great_lakes_cosmetic_tag_placeholder
+			}
+			hidden_effect = {
+				set_global_flag = Great_lakes_united
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	placeholder_MSH_vs_north_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			tag = MSH
+		}
+		visible = {
+			AND = {
+				tag = MSH
+				SON = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+			OR = {
+				TIM = {
+					exists = yes
+				}
+				ALO = {
+					exists = yes
+				}
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = ALO
+		war_with_on_remove = TIM
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_MSH_vs_north_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ALO }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					tag = MSH
+				}
+				SON	= { add_to_ROOT_potential_cores = yes } 
+			}
+			ALO = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			TIM = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			if = {
+				limit = {
+					TIM = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = TIM
+					value = 1000
+				}
+				TIM = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ALO = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ALO
+					value = 1000
+				}
+				ALO = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_MSH_vs_north_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ALO }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					ALO = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = ALO
+					}
+				}
+				declare_war_on = { type = annex_everything target = ALO }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ALO
+					value = -1000
+				}
+				ALO = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					TIM = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = TIM
+					}
+				}
+				declare_war_on = { type = annex_everything target = TIM }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = TIM
+					value = -1000
+				}
+				TIM = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_HAY_vs_center_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			tag = HAY
+		}
+		visible = {
+			NOT = { has_country_flag = HYE_balkanized_stormlands_upper_hayzeb }
+			ZEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			OR = {
+				ZUG = {
+					exists = yes
+				}
+				ZWA = {
+					exists = yes
+				}
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = ZUG
+		war_with_on_remove = ZWA
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_HAY_vs_center_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ZUG }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZWA }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			ZUG = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			ZWA = {
+				add_to_ROOT_potential_cores = yes
+			}
+			if = {
+				limit = {
+					ZUG = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZUG
+					value = 1000
+				}
+				ZUG = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZWA = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZWA
+					value = 1000
+				}
+				ZWA = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_HAY_vs_center_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ZUG }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZWA }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					ZUG = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = ZUG
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZUG }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZUG
+					value = -1000
+				}
+				ZUG = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZWA = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = ZWA
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZWA }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZWA
+					value = -1000
+				}
+				ZWA = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_ZWA_vs_east_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			OR = {
+				tag = ZWA
+				tag = ZUG
+			}
+		}
+		visible = {
+			OR = {
+				AND = {
+					tag = ZWA
+					ZUG = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+				}
+				AND = {
+					tag = ZUG
+					ZWA = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					
+				}
+			}
+			OR = {
+				HAY = {
+					exists = yes
+				}
+				ZEL = {
+					exists = yes
+				}
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = ZEL
+		war_with_on_remove = HAY
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_ZWA_vs_east_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ZEL }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = HAY }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					tag = ZUG
+				}
+				ZWA = { add_to_ROOT_potential_cores = yes } 
+			}
+			HAY = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			ZEL = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			if = {
+				limit = {
+					ZEL = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZEL
+					value = 1000
+				}
+				ZEL = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					HAY = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HAY
+					value = 1000
+				}
+				HAY = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_ZWA_vs_east_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ZEL }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = HAY }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					ZEL = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = ZEL
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZEL }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZEL
+					value = -1000
+				}
+				ZEL = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					HAY = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = HAY
+					}
+				}
+				declare_war_on = { type = annex_everything target = HAY }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HAY
+					value = -1000
+				}
+				HAY = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_north_vs_south_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			tag = MSH
+		}
+		visible = {
+			AND = {
+				tag = MSH
+				TIM = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				ALO = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				SON = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+			OR = {
+				ZEL = {
+					exists = yes
+				}
+				ZUG = {
+					exists = yes
+				}
+				HAY = {
+					exists = yes
+				}
+				ZWA = {
+					exists = yes
+				}
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = ALO
+		war_with_on_remove = TIM
+		war_with_on_remove = ZUG
+		war_with_on_remove = ZWA
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_north_vs_south_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ALO }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZUG }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZWA }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			ZEL = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			ZUG = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			HAY = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			ZWA = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			if = {
+				limit = {
+					ZUG = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZUG
+					value = 1000
+				}
+				ZUG = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					HAY = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HAY
+					value = 1000
+				}
+				HAY = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZEL = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZEL
+					value = 1000
+				}
+				ZEL = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZWA = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZWA
+					value = 1000
+				}
+				ZWA = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_north_vs_south_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = ALO }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZUG }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ZWA }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					ZEL = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = ZEL
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZEL }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZEL
+					value = -1000
+				}
+				ZEL = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					HAY = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = HAY
+					}
+				}
+				declare_war_on = { type = annex_everything target = HAY }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HAY
+					value = -1000
+				}
+				HAY = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZUG = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = ZUG
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZUG }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZUG
+					value = -1000
+				}
+				ZUG = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ZWA = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = ZWA
+					}
+				}
+				declare_war_on = { type = annex_everything target = ZWA }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZWA
+					value = -1000
+				}
+				ZWA = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_south_vs_north_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			OR = {
+				tag = ZWA
+				tag = HAY
+				tag = ZUG
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = HYE_balkanized_stormlands_upper_hayzeb }
+			OR = {
+				AND = {
+					tag = HAY
+					ZWA = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZEL = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZUG = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+				}
+				AND = {
+					tag = ZWA
+					HAY = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZEL = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZUG = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+				}
+				AND = {
+					tag = ZUG
+					HAY = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZEL = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					ZWA = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+				}
+			}
+			OR = {
+				SON = {
+					exists = yes
+				}
+				MSH = {
+					exists = yes
+				}
+				TIM = {
+					exists = yes
+				}
+				ALO = {
+					exists = yes
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 30
+		war_with_on_remove = SON
+		war_with_on_remove = ALO
+		war_with_on_remove = MSH
+		war_with_on_remove = TIM
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_south_vs_north_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = SON }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ALO }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = MSH }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			SON = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			MSH = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			TIM = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			ALO = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			if = {
+				limit = {
+					SON = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = SON
+					value = 1000
+				}
+				SON = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					MSH = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MSH
+					value = 1000
+				}
+				MSH = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					TIM = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = TIM
+					value = 1000
+				}
+				TIM = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ALO = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ALO
+					value = 1000
+				}
+				ALO = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_north_vs_south_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = SON }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = ALO }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = MSH }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = TIM }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					SON = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = SON
+					}
+				}
+				declare_war_on = { type = annex_everything target = SON }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = SON
+					value = -1000
+				}
+				SON = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					MSH = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = MSH
+					}
+				}
+				declare_war_on = { type = annex_everything target = MSH }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MSH
+					value = -1000
+				}
+				MSH = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					TIM = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = TIM
+					}
+				}
+				declare_war_on = { type = annex_everything target = TIM }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = TIM
+					value = -1000
+				}
+				TIM = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ALO = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = ALO
+					}
+				}
+				declare_war_on = { type = annex_everything target = ALO }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ALO
+					value = -1000
+				}
+				ALO = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_east_vs_west_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			OR = {
+				original_tag = MSH
+				original_tag = HAY
+				original_tag = ZWA
+				original_tag = ZUG
+				original_tag = ZEL
+				original_tag = TIM
+				original_tag = ALO
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = HYE_balkanized_stormlands_upper_hayzeb }
+			OR = {
+				AND = {
+					tag = MSH
+					TIM = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+				AND = {
+					tag = ZWA
+					TIM = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+				AND = {
+					tag = HAY
+					TIM = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+				AND = {
+					tag = ZUG
+					TIM = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+				AND = {
+					original_tag = ZEL
+					TIM = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+				}
+				AND = {
+					original_tag = TIM
+					SON = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					ALO = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+				AND = {
+					original_tag = ALO
+					TIM = {
+						exists = no
+					}
+					MSH = {
+						exists = no
+					}
+					HAY = {
+						exists = no
+					}
+					SON = {
+						exists = no
+					}
+					ZWA = {
+						exists = no
+					}
+					ZUG = {
+						exists = no
+					}
+					ZEL = {
+						exists = no
+					}
+				}
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = MAZ
+		war_with_on_remove = MSS
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_north_vs_south_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = MAZ }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = MSS }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			MAZ = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			MSS = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			if = {
+				limit = {
+					MAZ = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MAZ
+					value = 1000
+				}
+				MAZ = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+			if = {
+				limit = {
+					MSS = {
+						exists = yes
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MSS
+					value = 1000
+				}
+				MSS = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_north_vs_south_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = MAZ }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			set_temp_variable = { temp_target = MSS }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			if = {
+				limit = {
+					MAZ = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = MAZ
+					}
+				}
+				declare_war_on = { type = annex_everything target = MAZ }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MAZ
+					value = -1000
+				}
+				MAZ = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					MSS = {
+						exists = yes
+					}
+				}
+				hidden_effect = {
+						create_wargoal = { 
+						type = annex_everything 
+						target = MSS
+					}
+				}
+				declare_war_on = { type = annex_everything target = MSS }
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = MSS
+					value = -1000
+				}
+				MSS = { 
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
+					ROOT = {
+						add_to_PREV_potential_cores = yes
+					}
+				}
+			}
+		}
+	}
+	placeholder_maz_kill_mss_decision = {
+		icon = crossed_swords
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		allowed = {
+			original_tag = MAZ
+		}
+		visible = {
+			TIM = {
+				exists = no
+			}
+			ALO = {
+				exists = no
+			}
+			SON = {
+				exists = no
+			}
+			HAY = {
+				exists = no
+			}
+			ZWA = {
+				exists = no
+			}
+			ZUG = {
+				exists = no
+			}
+			ZEL = {
+				exists = no
+			}
+			MSS = {
+				exists = yes
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		
+		days_remove = 30
+		war_with_on_remove = MSS
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision placeholder_maz_kill_mss_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = MSS }
+			eaw_alert_send_imminent_declaration_of_war = yes
+			
+			MSS = {
+				add_to_ROOT_potential_cores = yes 
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = MSS
+				value = 1000
+			}
+			MSS = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove placeholder_maz_kill_mss_decision target: [From.GetName]"
+			set_temp_variable = { temp_target = MSS }
+			eaw_clear_alert_imminent_declaration_of_war = yes
+			
+			hidden_effect = {
+					create_wargoal = { 
+					type = annex_everything 
+					target = MSS
+				}
+			}
+			declare_war_on = { type = annex_everything target = MSS }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = MSS
+				value = -1000
+			}
+			MSS = { 
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+				ROOT = {
+					add_to_PREV_potential_cores = yes
+				}
+			}
+		}
+	}
+}

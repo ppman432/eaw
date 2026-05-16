@@ -1,0 +1,122 @@
+scripted_gui = {
+	eaw_diplo_popup_options = {
+		context_type = player_context
+		window_name = "eaw_diplo_popup_options_window"
+		parent_window_name = "event_header"
+
+		visible = {
+			is_ai = no
+		}
+
+		effects = {
+			popup_majors_checkbox_click = {
+				if = {
+					limit = {
+						check_variable = {
+							eaw_major_diplo_popups = 1
+						}
+					}
+					set_variable = {
+						eaw_major_diplo_popups = 2
+					}
+				}
+				else = {
+					set_variable = {
+						eaw_major_diplo_popups = 1
+					}
+				}
+			}
+
+			popup_neighbors_only_checkbox_click = {
+				if = {
+					limit = {
+						check_variable = {
+							eaw_neighbors_only_diplo_popups = 1
+						}
+					}
+					set_variable = {
+						eaw_neighbors_only_diplo_popups = 2
+					}
+				}
+				else = {
+					set_variable = {
+						eaw_neighbors_only_diplo_popups = 1
+					}
+				}
+			}
+		}
+
+		properties = {
+			popup_majors_checkbox = {
+				frame = eaw_major_diplo_popups
+			}
+			popup_neighbors_only_checkbox = {
+				frame = eaw_neighbors_only_diplo_popups
+			}
+		}
+	}
+
+	eaw_diplo_popup_new = {
+		context_type = player_context
+		window_name = "eaw_diplo_popup_window_new"
+
+		dynamic_lists = {
+			eaw_diplo_popup_window_gridbox = {
+				array = eaw_diplo_popup_unique_id
+				entry_container = eaw_diplo_popup_window_new_entry
+				index = popup_i
+			}
+		}
+
+		effects = {
+			entry_background_right_click = {
+				if = {
+					limit = {
+						set_temp_variable = { size_check = eaw_diplo_popup_unique_id^num }
+						subtract_from_temp_variable = { size_check = 1 }
+						check_variable = { size_check = popup_i }
+					}
+					set_temp_variable = { close_index = popup_i }
+					eaw_diplo_popup_close_popup = yes
+				}
+			}
+		}
+
+		triggers = {
+			timeout_progressbar_visible = {
+				set_temp_variable = { timeout_progessbar_frame = global.date }
+				subtract_from_temp_variable = { timeout_progessbar_frame = eaw_diplo_popup_initial_date^popup_i }
+				multiply_temp_variable = { timeout_progessbar_frame = 138888.88889 }
+			}
+
+			diplo_war_large_icon_visible = {
+				check_variable = { eaw_diplo_popup_type^popup_i = 4 }
+			}
+			diplo_war_large_icon2_visible = {
+				check_variable = { eaw_diplo_popup_type^popup_i = 4 }
+			}
+
+			sender_flag_visible = {
+				NOT = { check_variable = { eaw_diplo_popup_type^popup_i = 9 } }
+			}
+			sender_flag_frame_visible = {
+				NOT = { check_variable = { eaw_diplo_popup_type^popup_i = 9 } }
+			}
+			diplo_integration_successful_icon_visible = {
+				check_variable = { eaw_diplo_popup_type^popup_i = 9 }
+			}
+		}
+
+		properties = {
+			sender_flag = {
+				image = "[?eaw_diplo_popup_sender^popup_i.GetFlag]"
+			}
+			receiver_flag = {
+				image = "[?eaw_diplo_popup_reciever^popup_i.GetFlag]"
+			}
+			timeout_progressbar = {
+				frame = timeout_progessbar_frame
+			}
+		}
+	}
+}

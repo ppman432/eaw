@@ -1,0 +1,877 @@
+spriteTypes = {
+
+	### Equipment images for River Federation countries and surrounding nations ###
+	####################################################################
+	#################### SHARED ########################################
+	####################################################################
+	
+	# Melee Weapons
+	SpriteType = {
+		name = "GFX_river_federation_2d_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_melee_weapons1.dds"
+	}
+
+	# Infantry Weapons
+	SpriteType = {
+		name = "GFX_river_federation_2d_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_infantry_equipment_6.dds"
+	}
+
+	# Magical Weapons
+	SpriteType = {
+		name = "GFX_river_federation_2d_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_magical_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_magical_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_magical_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_magical_equipment_4.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_river_federation_2d_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Mechanized
+	SpriteType = {
+		name = "GFX_river_federation_2d_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_mechanised_infantry.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_mechanised_infantry2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_mechanised_infantry3.dds"
+	}
+
+	# Armored Cars
+	SpriteType = {
+		name = "GFX_river_federation_2d_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/jap_armored_car_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/jap_armored_car_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/jap_armored_car_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_armored_car_at_upgrade_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/jap_armored_car_at_equipment.dds"
+	}
+	
+	# Support Equipment
+	SpriteType = {
+		name = "GFX_river_federation_2d_tech_support_medium"
+		texturefile = "gfx/interface/technologies/support_folder/river_federation_2d/RIV_support_equipment_1.tga"
+	}
+
+	# Artillery
+	SpriteType = {
+		name = "GFX_river_federation_2d_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/artillery_folder/river_federation_2d/RIV_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_artillery1_medium"
+		texturefile = "gfx/interface/technologies/artillery_folder/river_federation_2d/RIV_Art_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_river_federation_2d_artillery4_medium"
+		texturefile = "gfx/interface/technologies/artillery_folder/river_federation_2d/RIV_Art_3.dds"
+	}
+
+	# Light Tanks
+	SpriteType = {
+		name = "GFX_river_federation_2d_gwtank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_gw_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_light_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_light_tank_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_light_tank_a_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_light_tank_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_light_tank_b_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_light_tank_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_gwtank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_gw_tank.dds"
+	}
+
+	# Medium Tanks
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_medium_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_medium_tank_3.dds"
+	}
+
+	# Heavy Tanks
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_heavy_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_heavy_tank_3.dds"
+	}
+
+	# Superheavy Tanks
+	SpriteType = {
+		name = "GFX_river_federation_2d_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_super_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_super_heavy_tank_a_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_super_heavy_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_super_heavy_tank_b_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_super_heavy_tank_3.dds"
+	}
+
+	# Main Battle Tanks
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_a_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_b_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_c_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_d_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_main_battle_tank_e_medium"
+		texturefile = "gfx/interface/technologies/armour_folder/river_federation_2d/RIV_modern_tank_4.dds"
+	}
+
+	# Close Air Support
+	SpriteType = {
+		name = "GFX_river_federation_2d_CAS1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_cas.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_CAS2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_cas2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_CAS3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_cas3.dds"
+	}
+
+	# Fighters
+	SpriteType = {
+		name = "GFX_river_federation_2d_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_interwar_fighter.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_fighter1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_fighter2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_fighter3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_fighter.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_fighter2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_fighter_a_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_fighter3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_iw_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_interwar_fighter.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_fighter3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_fighter.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_fighter3.dds"
+	}
+
+	# Naval Bombers
+	SpriteType = {
+		name = "GFX_river_federation_2d_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_naval_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_naval_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_naval_bomber3.dds"
+	}
+
+	# Heavy Fighters
+	SpriteType = {
+		name = "GFX_river_federation_2d_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_heavy_fighter1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_heavy_fighter2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_heavy_fighter3.dds"
+	}
+
+	# Tactical Bombers
+	SpriteType = {
+		name = "GFX_river_federation_2d_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_early_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_tactical_bomber_a_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_bomber.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_iw_medium_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_early_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_medium_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_medium_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_medium_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_tactical_bomber3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_medium_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_jet_bomber.dds"
+	}
+
+	# Strategic Bombers
+	SpriteType = {
+		name = "GFX_river_federation_2d_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_valiant.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_strategic_bomber_a_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_victor_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_jet_heavy_strategic_bomber_a_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_jet_heavy_strat_bomber.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_iw_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/JAP_strategic_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_basic_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_advanced_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/river_federation_2d/RIV_strategic_bomber3.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_valiant.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_victor_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_super_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/air_techs_folder/commonwealth_2d/EQS_jet_heavy_strat_bomber.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_river_federation_2d_early_transport_plane_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_improved_transport_plane_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_strategic_airlifter_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_bba_early_transport_plane_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_bba_improved_transport_plane_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_bba_strategic_airlifter_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_river_federation_2d_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_river_federation_2d_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	####################################################################
+	#################### LAKE CITY #####################################
+	####################################################################
+
+	# Trains
+	SpriteType = {
+		name = "GFX_LCT_basic_train_medium"
+		texturefile = "gfx/interface/technologies/JAP_train_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_train_equipment_medium"
+		texturefile = "gfx/interface/technologies/JAP_train_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_train_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_train_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_wartime_train_medium"
+		texturefile = "gfx/interface/technologies/JAP_train_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_train_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_train_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_railway_gun_medium"
+		texturefile = "gfx/interface/technologies/JAP_railway_gun.dds"
+	}
+
+	####################################################################
+	#################### NIMBUSIA ######################################
+	####################################################################
+
+	# Melee Weapons
+	SpriteType = {
+		name = "GFX_NIM_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_melee_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_melee_weapons1.dds"
+	}
+
+	# Infantry Weapons
+	SpriteType = {
+		name = "GFX_NIM_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_infantry_equipment_6.dds"
+	}
+
+	# Magical Weapons
+	SpriteType = {
+		name = "GFX_NIM_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_magical_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_magical_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_magical_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/NIM/NIM_magical_equipment_4.dds"
+	}
+
+	####################################################################
+	#################### PONAIDHEAN ####################################
+	####################################################################
+
+	# Melee Weapons
+	SpriteType = {
+		name = "GFX_FRE_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/FRE/FRE_melee_weapons.dds"
+	}
+
+	####################################################################
+	#################### WITTENLAND ####################################
+	####################################################################
+
+	# Melee Weapons
+	SpriteType = {
+		name = "GFX_WIT_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/WIT/WIT_melee_weapons.tga"
+	}
+	SpriteType = {
+		name = "GFX_WIT_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_melee_weapons1.tga"
+	}
+
+	####################################################################
+	#################### BARRAD ########################################
+	####################################################################
+
+	# Melee Weapons
+	SpriteType = {
+		name = "GFX_BAR_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_melee_weapons.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_melee_weapons1.tga"
+	}
+
+	# Infantry Weapons
+	SpriteType = {
+		name = "GFX_BAR_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_5.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_infantry_equipment_6.tga"
+	}
+
+	# Magical Weapons
+	SpriteType = {
+		name = "GFX_BAR_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_magical_equipment_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_magical_equipment_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_magical_equipment_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_BAR_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/BAR/BAR_magical_equipment_4.tga"
+	}
+
+	####################################################################
+	#################### OTHER #########################################
+	####################################################################
+
+	SpriteType = {
+		name = "GFX_NIM_carrier_cloud_medium"
+		texturefile = "gfx/interface/technologies/EAW_unique_tech_folder/NIM_cloud_carrier.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_ship_hull_cloud_carrier_medium"
+		texturefile = "gfx/interface/technologies/EAW_unique_tech_folder/NIM_cloud_carrier.dds"
+	}
+
+	####################################################################
+	############# MOTORISED EQUIPMENT ICON WORKAROUND ##################
+	####################################################################
+	# Motorised and transport planes use the default icon as equipment if not defined per tag. Remove these if it ever gets fixed.
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_RCT_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_RCT_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RCT_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RCT_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_LCT_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_LCT_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_LCT_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_NIM_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_NIM_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_NIM_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_FRE_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_FRE_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRE_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRE_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_WIT_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_WIT_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_WIT_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_WIT_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_BAR_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_BAR_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_BAR_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_BAR_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_BAK_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_BAK_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_BAK_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_BAK_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_DEP_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_DEP_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_DEP_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_DEP_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_FBK_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_FBK_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FBK_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FBK_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_FIR_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_FIR_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_FIR_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_FIR_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+
+	# Motorized
+	SpriteType = {
+		name = "GFX_WAT_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/river_federation_2d/RIV_motorised_infantry.dds"
+	}
+
+	# Transport Planes
+	SpriteType = {
+		name = "GFX_WAT_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_WAT_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_WAT_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_transport_plane_equipment_3.dds"
+	}
+}

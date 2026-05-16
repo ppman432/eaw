@@ -1,0 +1,114 @@
+﻿division_template = {
+	name = "Local Levy"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Almidfaeiat mae Alwahadat"		# Infra whit artillery_brigade
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+	}
+}
+
+units = {
+	####### Almidfaeiat mae Alwahadat #########
+
+	division = {
+		name = "Almidfaeiat mae Alwahadat 1"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Almidfaeiat mae Alwahadat 2"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+
+	division = {
+		name = "Almidfaeiat mae Alwahadat 3"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Almidfaeiat mae Alwahadat 4"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Almidfaeiat mae Alwahadat 5"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Almidfaeiat mae Alwahadat 6"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Almidfaeiat mae Alwahadat 7"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 0.75
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Almidfaeiat mae Alwahadat 8"
+		location = 15487
+		division_template = "Almidfaeiat mae Alwahadat"
+		start_equipment_factor = 0.75
+		start_experience_factor = 0.2
+
+	}
+
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ASS"
+		}
+		requested_factories = 2
+		progress = 0.5
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_0
+			creator = "ASS"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+		industrial_manufacturer = mio:generic_artillery_organization
+	}
+}

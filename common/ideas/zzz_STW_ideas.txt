@@ -1,0 +1,1501 @@
+ideas = {
+	country = {
+		### Starting ideas
+		STW_absent_ruler = {
+			picture = STW_absentee
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				political_advisor_cost_factor = 0.15
+			}
+		}
+		
+		STW_modernisation_restistance = {
+			picture = STW_resistance
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				local_resources_factor = -0.10
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+		
+		STW_modernisation_and_reform_restistance = {
+			picture = STW_resistance
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain_mult = -0.1
+				consumer_goods_factor = 0.06
+				production_speed_buildings_factor = -0.10
+				local_resources_factor = -0.10
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+		
+		STW_ducal_cooperation = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				local_resources_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		STW_ducal_cooperation_better = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				local_resources_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		STW_uni_of_readewetter = {
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		### Fash ideas
+		
+		STW_reluctant_cooperation = {
+			picture = vittoria_mutilata
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.04
+			}
+		}
+		
+		STW_convert_opposition = {
+			picture = vittoria_mutilata
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.08
+			}
+		}
+		
+		STW_murder_opposition = {
+			picture = vittoria_mutilata
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		STW_fixed_it = {
+			picture = vittoria_mutilata
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+				consumer_goods_factor = -0.04
+			}
+		}
+		
+		STW_support_from_the_three = {
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				conscription_factor = 0.05
+				fascism_drift = 0.01
+			}
+		}
+		
+		STW_reinvigorated_guard = {
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.05
+				conscription = 0.01
+			}
+		}
+		
+		### Corbyns Corner
+		
+		STW_civil_liberties = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		STW_peoples_army_idea = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		STW_grand_pensionary = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		
+		STW_small_business = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+			}
+		}
+		
+		STW_social_rights = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		STW_socialist_education = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		STW_subdued_nobles = {
+			picture = STW_absentee
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		# Harmonic ideas
+		
+		STW_equalisation_payments = {
+			picture = trade
+			allowed = {
+				always = no
+			}
+			available = {
+			    NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+				NOT = {
+					has_war_with = GRI
+				}
+			}
+			
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		### Gabrielas ideas
+		
+		STW_lower_noble_taxes = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = STW
+			}
+			available = {
+			    NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+		}
+		
+		STW_lower_commoner_taxes = {
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = STW
+			}
+			available = {
+			    NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+		}
+
+		STW_remove_achaic_advisors= {
+			picture = trade
+			allowed = {
+				original_tag = STW
+			}
+			available = {
+			    NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.10
+				political_power_factor = 0.10
+			}
+		}
+
+		STW_one_nation_united = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = STW
+			}
+			available = {
+			    NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.10
+				training_time_army_factor = -0.05
+			}
+		}
+
+		### Others
+		
+		STW_positions_for_literate = {
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		STW_subsidies = {
+			picture = trade
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industry_repair_factor = 0.10
+			}
+		}
+		STW_industry_council = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			research_bonus = { industry = 0.10 }
+		}
+		
+		STW_zentralbank_1 = {
+			name = STW_zentralbank
+			picture = trade
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.06
+				trade_opinion_factor = 0.10
+				political_advisor_cost_factor = -0.15
+			}
+		}
+		
+		STW_zentralbank_2 = {
+			name = STW_zentralbank
+			picture = trade
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = 0.20
+				political_advisor_cost_factor = -0.25
+			}
+		}
+		STW_feudalists_twats = {
+			picture = STW_absentee
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		#Land Tree ideas
+		STW_spec_ops = {
+
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_training_time_factor = -0.10
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1
+			
+		}
+
+		STW_some_towed_arty_idea = {
+			picture = generic_artillery_regiments
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+			removal_cost = -1
+		}
+
+		STW_even_more_guns_idea = {
+			picture = MEX_politicised_army_2
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+			removal_cost = -1
+		}
+
+		STW_modern_military_idea = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				max_command_power = 25
+				planning_speed = 0.10
+				command_power_gain = 0.10
+			}
+
+			removal_cost = -1
+		}
+
+		STW_more_fields_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_air_base_factor = 0.10
+				production_speed_anti_air_building_factor = 0.10
+				production_speed_radar_station_factor = 0.10
+			}
+
+			removal_cost = -1
+		}
+
+		STW_more_planes_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+
+			removal_cost = -1
+		}
+
+		STW_land_sale_profits = {
+
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.10
+			}
+
+		}
+
+		STW_encourage_construction_idea = {
+
+			picture = man_five_year_plan_industry
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+
+		}
+
+		STW_industry_subsidies = {
+
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		STW_nationalize_rail_idea = {
+
+			picture = generic_build_infrastructure
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+
+		STW_labour_reforms = {
+
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		STW_labour_reforms_2 = {
+			name = STW_labour_reforms
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+			}
+		}
+
+		STW_support_the_farms_idea = {
+
+			picture = generic_agrarian_society
+			
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				local_resources_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		# Decision ideas
+
+		STW_slanders_on_archon_idea = {
+			allowed = {
+				always = no
+			}
+			available = {
+			    has_country_leader = { 
+		            ruling_only = yes 
+			        character = GRI_archon_eros_vii
+		        }
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_neutrality_drift_bonus
+			removal_cost = -1
+			modifier = {
+				neutrality_drift = 0.02
+				stability_factor = -0.05
+			}
+		}
+
+		STW_joint_training_idea = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_army = 0.15
+			}
+
+			removal_cost = -1
+		}
+
+		STW_commoner_support_bonus_small = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			} 
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.01
+			}
+
+			removal_cost = -1
+		}
+		STW_commoner_support_bonus_medium = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+			}
+
+			removal_cost = -1
+		}
+		STW_commoner_support_bonus_big = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.03
+			}
+
+			removal_cost = -1
+		}
+
+		STW_upset_nobles = {
+			picture = GRF_militias
+			allowed = {
+				always = no
+			}
+            available = {
+				NOT = {
+				    has_country_flag = JER_puppet
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = -0.15
+			}
+
+			removal_cost = -1
+		}
+
+		#IMPERIAL RESTORATION FRONT
+		STW_grover_vi = {
+			picture = GRI_Grover_VI
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		STW_land_thougth = {
+			picture = GRI_hat
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				max_command_power = 10
+				command_power_gain = 0.05
+				experience_gain_army = 0.02
+				land_doctrine_cost_factor = -0.10
+			}
+		}
+		STW_land_thougth_1 = {
+			name = STW_land_thougth
+			picture = GRI_hat
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				max_command_power = 10
+				command_power_gain = 0.05
+				experience_gain_army = 0.02
+				land_doctrine_cost_factor = -0.10
+				air_ace_bonuses_factor = 0.35
+				air_agility_factor = 0.25
+				air_interception_detect_factor = 0.25
+			}
+		}
+		STW_retake_the_capital_idea = {
+			picture = BRF_everyman_a_knight
+			allowed = { always = no }
+			available = { country_exists = FAT }
+			targeted_modifier = {
+				tag = FAT
+				attack_bonus_against = 0.10
+			}
+		}
+		STW_war_hounds = {
+			picture = DMT_dog_revanchism
+			available = { country_exists = FAT }
+			modifier = {
+				war_support_weekly = 0.01
+				disabled_ideas = 1
+			}
+			targeted_modifier = {
+				tag = FAT
+				breakthrough_bonus_against = 0.25
+			}
+		}
+		STW_imperial_popular_assembly = {
+			picture = PLB_griffon_council
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				democratic_drift = 0.01
+			}
+		}
+		STW_social_hierarchy = {
+			picture = specops
+			allowed = { always = no }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				local_resources_factor = 0.10
+			}
+		}
+		STW_vacant_throne = {
+			picture = feudalism
+			allowed = { always = no }
+			modifier = {
+				party_popularity_stability_factor = 0.35
+				political_advisor_cost_factor = -0.15
+				offensive_war_stability_factor = 0.50
+			}
+		}
+		STW_archonates = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_archonism_idea
+			modifier = {
+				fascism_drift = 0.02
+				consumer_goods_factor = -0.10
+			}
+		}
+		STW_anti_republicanism = {
+			picture = HIP_AF_victory
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				surrender_limit = 0.1
+				drift_defence_factor = 0.35
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+
+		STW_fast_tank_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 443
+				}
+			}
+            available = {
+				owns_state = 443
+				443 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		STW_medium_tank_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		STW_convoy_escort_naval_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+				any_controlled_state_is_coastal = yes
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		STW_light_aircraft_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		STW_medium_aircraft_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 545
+				}
+			}
+            available = {
+				owns_state = 545
+				545 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		STW_heavy_aircraft_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		STW_infantry_equipment_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		STW_artillery_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		STW_motorized_equipment_manufacturer = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+
+	industrial_concern = {
+		STW_standardisation_concern = {
+			picture = STW_ssi
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+
+			traits = { standardisation_concern }
+		}
+
+		STW_electronics_concern = {
+			allowed = {
+				OR = {
+					original_tag = STW
+					original_tag = GRI
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = STW
+					owns_state = 486
+				}
+			}
+            available = {
+				owns_state = 486
+				486 = { is_core_of = ROOT }
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			traits = { electronics_concern }
+		}
+
+		### Stuff from the Empire tree
+		STW_crow = {
+			name = crow
+			picture = GRI_crow
+
+			allowed = {
+				original_tag = STW
+			}
+			visible = {
+				OR = {
+					has_country_flag = STW_reinstall_archon
+					has_country_flag = STW_reinstall_eagleclaw
+				}
+			}
+			available = {
+			    has_completed_focus = GRI_krahe_contract
+				hidden_trigger = {
+					has_country_flag = STW_reinstall_archon
+					has_country_flag = STW_reinstall_eagleclaw
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+	}
+}
+
+

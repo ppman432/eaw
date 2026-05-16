@@ -1,0 +1,131 @@
+﻿capital = 435
+oob = "JEB_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	pre_gw_artillery = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		iw_small_airframe = 1
+	}
+
+	create_equipment_variant = {
+		name = "NiD-122"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_aquileia_2d_early_fighter_medium"
+	}
+
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	torpedo_gunboats = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	protected_cruisers = 1
+	early_ship_hull_cruiser = 1
+	pre_dreadnoughts = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	#basic_medium_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_armor_scheme = 1
+	mtg_transport = 1
+}
+set_naval_oob = "JEB_1007_naval"
+
+add_manpower = 20000
+set_cosmetic_tag = JER_PUPPET
+set_convoys = 70
+set_popularities = {
+	democratic = 29
+	fascism = 10
+	communism = 24
+	neutrality = 37
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_variable = { monarchist_support = 36 } #Monarchists
+set_variable = { revolutionary_support = 64 } #Revolutionaries 
+
+set_country_flag = big_science_base_unlocked
+add_ideas = { 
+    outdated_industry
+	lack_of_scientists
+    big_science_base	
+}
+
+add_offsite_building = {
+	type = industrial_complex
+	level = 1
+}
+add_offsite_building = {
+	type = arms_factory
+	level = 1
+}
+
+set_stability = 0.50
+set_war_support = 0.35
+
+recruit_character = JEB_duke_michel_discret
+recruit_character = JEB_axelle_duret
+recruit_character = JEB_committee_of_public_safety
+recruit_character = JEB_jeanantoine_rossignol
+recruit_character = JEB_beau_harnais
+recruit_character = JEB_athanase_charette_de_la_perdrix
+recruit_character = JEB_roche_verger
+recruit_character = JEB_charles_de_loupoigne
+recruit_character = JEB_leon_blaise_de_rochefort 
+
+### Gained from Aquileia.10 ###
+recruit_character = JEB_boreas_babeuf
+recruit_character = JEB_annejosephine_de_mericourt
+recruit_character = JEB_aquilin_dumouriez
+recruit_character = JEB_gerard_simon_de_berger
+
+recruit_character = JEB_duke_trubach
+
+set_rule = {
+	can_generate_female_aces = yes
+	can_generate_female_unit_leaders  = yes
+	can_generate_female_country_leaders = yes
+}
+### Variants ###
+crown_of_aquileia_ships = yes

@@ -1,0 +1,481 @@
+defined_text = {
+	name = CVA_Colthage_get_map_image
+	text = {
+		trigger = {
+			875 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Colthage_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Colthage
+	}
+}
+
+defined_text = {
+	name = CVA_Tefedid_get_map_image
+	text = {
+		trigger = {
+			699 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			877 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Tefedid_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Tefedid
+	}
+}
+
+defined_text = {
+	name = CVA_Zeokat_get_map_image
+	text = {
+		trigger = {
+			705 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			706 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Zeokat_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Zeokat
+	}
+}
+
+defined_text = {
+	name = CVA_Coltva_get_map_image
+	text = {
+		trigger = {
+			1093 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			1094 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			1095 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Coltva_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Coltva
+	}
+}
+
+defined_text = {
+	name = CVA_Zuritha_get_map_image
+	text = {
+		trigger = {
+			852 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			701 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Zuritha_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Zuritha
+	}
+}
+
+defined_text = {
+	name = CVA_Sophili_get_map_image
+	text = {
+		trigger = {
+			876 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			702 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Sophili_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Sophili
+	}
+}
+
+defined_text = {
+	name = CVA_Sivmane_get_map_image
+	text = {
+		trigger = {
+			700 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			709 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Sivmane_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Sivmane
+	}
+}
+
+defined_text = {
+	name = CVA_Zebisneya_get_map_image
+	text = {
+		trigger = {
+			703 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+			704 = {
+				OR = {
+					has_state_flag = CVA_state_in_anarchy
+					has_state_flag = CVA_special_circumstances
+				}
+			}
+		}
+		localization_key = GFX_CVA_prefecture_Zebisneya_anarchy
+	}
+	text = {
+		localization_key = GFX_CVA_prefecture_Zebisneya
+	}
+}
+
+defined_text = {
+	name = CVA_pref_stat_CO
+	text = {
+		trigger = {
+			check_variable = { CVA_CO_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CO_Authority < 51 }
+			check_variable = { CVA_CO_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CO_Authority < 26 }
+			check_variable = { CVA_CO_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CO_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_TZ
+	text = {
+		trigger = {
+			check_variable = { CVA_TZ_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_TZ_Authority < 51 }
+			check_variable = { CVA_TZ_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_TZ_Authority < 26 }
+			check_variable = { CVA_TZ_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_TZ_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_ZA
+	text = {
+		trigger = {
+			check_variable = { CVA_ZA_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZA_Authority < 51 }
+			check_variable = { CVA_ZA_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZA_Authority < 26 }
+			check_variable = { CVA_ZA_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZA_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_CH
+	text = {
+		trigger = {
+			check_variable = { CVA_CH_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CH_Authority < 51 }
+			check_variable = { CVA_CH_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CH_Authority < 26 }
+			check_variable = { CVA_CH_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_CH_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_ZS
+	text = {
+		trigger = {
+			check_variable = { CVA_ZS_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZS_Authority < 51 }
+			check_variable = { CVA_ZS_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZS_Authority < 26 }
+			check_variable = { CVA_ZS_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZS_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_SK
+	text = {
+		trigger = {
+			check_variable = { CVA_SK_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_SK_Authority < 51 }
+			check_variable = { CVA_SK_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_SK_Authority < 26 }
+			check_variable = { CVA_SK_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_SK_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_ZZ
+	text = {
+		trigger = {
+			check_variable = { CVA_ZZ_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZZ_Authority < 51 }
+			check_variable = { CVA_ZZ_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZZ_Authority < 26 }
+			check_variable = { CVA_ZZ_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_ZZ_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+defined_text = {
+	name = CVA_pref_stat_HI
+	text = {
+		trigger = {
+			check_variable = { CVA_HI_Authority > 50 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_HI_Authority < 51 }
+			check_variable = { CVA_HI_Authority > 25 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_HI_Authority < 26 }
+			check_variable = { CVA_HI_Authority > 20 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_HI_Authority < 21 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}
+
+
+
+defined_text = {
+	name = CVA_pref_stat_anarchy
+	text = {
+		trigger = {
+			check_variable = { CVA_collapsed_states = 0 }
+		}
+		localization_key = "G"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_collapsed_states = 1 }
+		}
+		localization_key = "Y"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_collapsed_states = 2 }
+		}
+		localization_key = "O"
+	}
+	text = {
+		trigger = {
+			check_variable = { CVA_collapsed_states = 3 }
+		}
+		localization_key = "R"
+	}
+	text = {
+		localization_key = "W"
+	}
+}

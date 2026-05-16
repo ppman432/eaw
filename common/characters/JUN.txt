@@ -1,0 +1,795 @@
+characters={
+	JUN_doctor_caballeron={
+		name=JUN_doctor_caballeron
+		portraits={
+			army={
+				small="GFX_idea_JUN_caballeron"
+			}
+			civilian={
+				large="gfx/leaders/JUN/Caballeron.tga"
+			}
+		}
+		field_marshal={
+			traits={ pony_race_trait inspirational_leader irregulars_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			desc = JUN_doctor_desc
+		}
+		country_leader={
+			desc="JUN_doctor_desc"
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="JUN_doctor_desc"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	JUN_fuhrer_seaterror={
+		name=JUN_fuhrer_seaterror
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/portrait_pony_generic_navy_15.dds"
+				small="GFX_portrait_pony_generic_navy_15_small"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	JUN_mayor_goldwin={
+		name=JUN_mayor_goldwin
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
+				small="GFX_portrait_pony_generic_land_11_small"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		gender = female
+	}
+	JUN_addie_hoover={
+		name=JUN_addie_hoover
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/portrait_stg_pony_generic_7.dds"
+				small="GFX_portrait_stg_pony_generic_7_small"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	JUN_nimbus={
+		name=JUN_nimbus
+		portraits={
+			army={
+				large="gfx/leaders/JUN/Nimbus.tga"
+				small="GFX_idea_JUN_Nimbus"
+			}
+		}
+		corps_commander={
+			traits={ pony_race_trait jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = nimbus1
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_serene_storm={
+		name=JUN_serene_storm
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_serene_storm.tga"
+				small="GFX_idea_JUN_Serene_Storm"
+			}
+		}
+		corps_commander={
+			traits={ thestral_race_trait jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+	}
+	JUN_zambezi={
+		name=JUN_zambezi
+		portraits={
+			army={
+				large="gfx/leaders/JUN/Zambezi.tga"
+				small="GFX_idea_JUN_my_z_word"
+			}
+		}
+		corps_commander={
+			traits={ zebra_race_trait commando }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = zambezi1
+			cost = 200
+			allowed = {
+				original_tag = JUN
+			}			
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_sweet_water={
+		name=JUN_sweet_water
+		portraits={
+			army={
+				large="gfx/leaders/JUN/middy.tga"
+				small="GFX_idea_JUN_Sweet_Water"
+			}
+		}
+		corps_commander={
+			traits={ pony_race_trait swamp_fox jungle_rat }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+			desc = JUN_rat_horse_desc
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+		gender = female
+	}
+	JUN_jungle_trek={
+		name=JUN_jungle_trek
+		portraits={
+			army={
+				large="gfx/leaders/JUN/Baron.tga"
+				small="GFX_idea_JUN_Jungle_Trek"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist pony_race_trait jungle_rat heat_specialist adaptable }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+			desc = JUN_merc_pone_desc
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+	}
+	JUN_tailcoatl={
+		name=JUN_tailcoatl
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_tailcoatl.tga"
+				small="GFX_idea_TEM_Tailcoatl"
+			}
+		}
+		corps_commander={
+			traits={ pony_race_trait jungle_rat }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				OR = {
+					original_tag = TEM
+					has_country_flag = JUN_unlocked_local_generals
+				}
+			}
+		}
+		gender = female
+	}
+	JUN_erenpil={
+		name=JUN_erenpil
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_erenpil.tga"
+				small="GFX_idea_TEM_Erenpil"
+			}
+		}
+	}
+	JUN_huitzilli={
+		name=JUN_huitzilli
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_huitzilli.tga"
+				small="GFX_idea_TEM_Huitzilli"
+			}
+		}
+	}
+	JUN_tenoch={
+		name=JUN_tenoch
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_tenoch.tga"
+				small="GFX_idea_TEM_Tenoch"
+			}
+		}
+	}
+	JUN_bookmark_blush={
+		name=bookmark_blush
+		portraits={
+			army={
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = bookmark_blush
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = CES
+				}
+			}
+			traits = {
+				technocrat 
+			}
+		}
+	}
+	JUN_velvet_glow={
+		name=velvet
+		portraits={
+			army={
+				small="GFX_idea_JUN_Velvet_Glow"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = velvet
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				SWI_weapons_designer
+			}
+		}
+	}
+	JUN_lily_valley={
+		name=lily
+		portraits={
+			army={
+				small="GFX_idea_JUN_Lily_Valley"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = lily
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = CES
+				}
+			}
+			traits = {
+				bureaucrat
+			}
+		}
+	}
+	JUN_teuicolt={
+		name=teuicolt
+		portraits={
+			army={
+				small="GFX_idea_TEM_Teuicolt"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = teuicolt
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				BEL_minister_of_national_defence_nuyten
+			}
+		}
+	}
+	JUN_ixtilal={
+		name=ixtilal
+		portraits={
+			army={
+				small="GFX_idea_TEM_Ixitiatl"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ixtilal
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = BAL
+				}
+			}
+			traits = {
+				xiopili_chief
+			}
+		}
+	}
+	JUN_midnight_dasher={
+		name=dasher1
+		portraits={
+			army={
+				small="GFX_idea_TEM_Midnight_Dasher"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = dasher1
+			cost = 100
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = CES
+				}
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_star_dash={
+		name=star_dash
+		portraits={
+			army={
+				small="GFX_idea_JUN_Star_Dash"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = star_dash
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				IRQ_air_vice_marshal
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_wild_star={
+		name=wild_star
+		portraits={
+			army={
+				small="GFX_idea_TEM_Wild_Star"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = wild_star
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				alt_air_pilot_training_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_silver_song={
+		name=silver_song
+		portraits={
+			army={
+				small="GFX_idea_JUN_Silver_Song"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = silver_song
+			cost = 200
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				alt_navy_anti_submarine_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_pearl_swirl={
+		name=pearl_swirl
+		portraits={
+			army={
+				small="GFX_idea_TEM_Pearl_Swirl"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = pearl_swirl
+			cost = 100
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = CES
+				}
+			}
+			traits = {
+				alt_navy_submarine_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_ivory_tail={
+		name=ivory_tail
+		portraits={
+			army={
+				small="GFX_idea_JUN_Ivory_Tail"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ivory_tail
+			ledger = army
+			cost = 50
+			allowed = {
+				OR = {
+					original_tag = JUN
+					original_tag = CES
+				}
+			}
+			traits = {
+				army_commando_1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_blue_heart={
+		name=blue_heart
+		portraits={
+			army={
+				small="GFX_idea_TEM_Blue_Heart"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = blue_heart
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				alt_army_chief_morale_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_ruby_bolt={
+		name=emerald_bolt
+		portraits={
+			army={
+				small="GFX_idea_TEM_Emerald_Bolt"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = emerald_bolt
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	JUN_fancy_hooves={
+		name=fancy
+		portraits={
+			army={
+				small="GFX_idea_TEM_Fancy_Hooves"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = fancy
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	JUN_caramel_crunch={
+		name=caramel1
+		portraits={
+			army={
+				small="GFX_idea_JUN_Caramel_Crunch"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = caramel1
+			ledger = air
+			cost = 100
+			allowed = {
+				original_tag = JUN
+			}
+			research_bonus = {
+				rocketry = 0.15
+			}
+			traits = {
+				rocket_scientist
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_bright }
+			skills = {
+				specialization_air = 3
+			}
+			
+			
+			desc = caramel1_desc
+		}
+	}
+
+	JUN_darling_angel = {
+		name = JUN_darling_angel
+		portraits = {
+			civilian = {
+				small="GFX_idea_JUN_darling_angel"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JUN_darling_angel
+			allowed = {
+				original_tag = JUN
+			}
+
+			visible = {
+				NOT = {
+					has_country_flag = JUN_ban_darling
+				}
+			}
+
+			traits = { smooth_talking_charmer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	JUN_rogue={
+		name=JUN_rogue
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_Rogue.tga"
+				small="gfx/interface/ideas/Advisors/JUN/JUN_Rogue_adv.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = JUN_rogue
+			ledger = army
+			cost = 25
+			allowed = {
+				original_tag = JUN
+			}
+			available = {
+				NOT = {
+					has_country_flag = JUN_fired_goons
+				}
+			}
+			traits = {
+				NOR_defeatist_commander_in_chief
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			can_be_fired = no
+		}
+
+		corps_commander = {
+			traits = { pony_race_trait politically_connected trait_mercenary_commander }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JUN_biff={
+		name=JUN_biff
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_Biff.tga"
+				small="gfx/interface/ideas/Advisors/JUN/JUN_Biff_adv.tga"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = JUN_biff
+			ledger = army
+			cost = 25
+			allowed = {
+				original_tag = JUN
+			}
+			available = {
+				NOT = {
+					has_country_flag = JUN_fired_goons
+				}
+			}
+			traits = {
+				alt_navy_naval_air_defense_1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			can_be_fired = no
+		}
+		navy_leader={
+			traits = { pony_race_trait navy_media_personality }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	JUN_withers={
+		name=JUN_withers
+		portraits={
+			army={
+				large="gfx/leaders/JUN/JUN_Withers.tga"
+				small="gfx/interface/ideas/Advisors/JUN/JUN_Withers_adv.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = JUN_withers
+			ledger = army
+			cost = 25
+			allowed = {
+				original_tag = JUN
+			}
+			available = {
+				NOT = {
+					has_country_flag = JUN_fired_goons
+				}
+			}
+			traits = {
+				alt_air_airborne_1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			can_be_fired = no
+		}
+		
+		corps_commander = {
+			traits = { pony_race_trait politically_connected air_force_commander }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	JUN_changeling_merc={
+		name=JUN_changeling_merc
+		portraits={
+			army={
+				large="gfx/leaders/CHN/portrait_changelings_generic_land_12.tga"
+				small="gfx/interface/ideas/generic_generals_small/idea_changelings_generic_land_12.tga"
+			}
+		}
+		corps_commander={
+			traits={ changeling_race_trait trait_unpredictable cavalry_leader arrow }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+	}
+	JUN_griffin_merc={
+		name=JUN_griffin_merc
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_griffon_generic_land_8.dds"
+				small="gfx/interface/ideas/generic_generals_small/idea_griffon_generic_land_8.dds"
+			}
+		}
+		corps_commander={
+			traits={ griffon_race_trait panzer_leader trait_engineer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = JUN_got_more_mercs
+			}
+		}
+	}
+}

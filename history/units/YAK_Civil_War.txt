@@ -1,0 +1,66 @@
+﻿
+units = {
+
+	division = {
+		name = "First Militia Group"
+		location = 1604
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Second Militia Group"
+		location = 3268
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Third Militia Group"
+		location = 4641
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Fourth Militia Group"
+		location = 9286
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Fifth Militia Group"
+		location = 6273
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "Sixth Militia Group"
+		location = 1594
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Seventh Militia Group"
+		location = 1635
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Eighth Militia Group"
+		location = 3197
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+
+	division = {
+		name = "Ninth Militia Group"
+		location = 3317
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.05
+	}
+}

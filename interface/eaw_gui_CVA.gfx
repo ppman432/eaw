@@ -1,0 +1,252 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_CVA_CH_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_CH_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_HI_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_HI_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_TZ_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_TZ_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_CO_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_CO_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_ZZ_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_ZZ_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_ZS_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_ZS_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_SK_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_SK_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_ZA_Infopanel_bg"
+		texturefile = "gfx/interface/CVA/CVA_ZA_Infopanel.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_bribe_ability"
+		texturefile = "gfx/interface/CVA/CVA_bribe_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_political_violence_ability"
+		texturefile = "gfx/interface/CVA/CVA_political_violence_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_restore_order_ability"
+		texturefile = "gfx/interface/CVA/CVA_restore_order_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_hunt_starites_ability"
+		texturefile = "gfx/interface/CVA/CVA_hunt_starites_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_clamp_down_on_secret_socities_ability"
+		texturefile = "gfx/interface/CVA/CVA_clamp_down_on_secret_socities_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_ignore_agricultural_corruption_ability"
+		texturefile = "gfx/interface/CVA/CVA_ignore_agricultural_corruption_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_loosen_agricultural_quotas_ability"
+		texturefile = "gfx/interface/CVA/CVA_loosen_agricultural_quotas_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_invest_in_locals_ability"
+		texturefile = "gfx/interface/CVA/CVA_invest_in_locals_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_placate_urban_elites_ability"
+		texturefile = "gfx/interface/CVA/CVA_placate_urban_elites_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_support_local_traders_ability"
+		texturefile = "gfx/interface/CVA/CVA_support_local_traders_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_fight_unfair_banking_practices_ability"
+		texturefile = "gfx/interface/CVA/CVA_fight_unfair_banking_practices_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_support_local_frontierzebras_ability"
+		texturefile = "gfx/interface/CVA/CVA_support_local_frontierzebras_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_hunt_constitutionalist_simps_ability"
+		texturefile = "gfx/interface/CVA/CVA_hunt_constitutionalist_simps_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_jungle_clearance_ability"
+		texturefile = "gfx/interface/CVA/CVA_jungle_clearance_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_reinforce_jungle_corps_ability"
+		texturefile = "gfx/interface/CVA/CVA_reinforce_jungle_corps_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_hunt_local_technocrats_ability"
+		texturefile = "gfx/interface/CVA/CVA_hunt_local_technocrats_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_monitor_local_universities_ability"
+		texturefile = "gfx/interface/CVA/CVA_monitor_local_universities_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_ability_bar"
+		texturefile = "gfx/interface/CVA/CVA_ability_bar.dds"
+	}
+	spriteType = {
+		name = "GFX_CVA_progress_bar"
+		textureFile = "gfx/interface/CVA/progress_bar.dds"
+	}
+	progressbartype = {
+		name = "GFX_CVA_progress_bar"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/CVA/CVA_progress_bar.dds"
+		textureFile2 = "gfx/interface/CVA/CVA_progress_bar_bg.dds"
+		size = { x = 213 y = 40 }
+		effectFile = "gfx/FX/progress_centered.lua"
+	}
+
+	# New stuff - Scars
+
+	spriteType = {
+		name = "GFX_CVA_prefecture_background"
+		textureFile = "gfx/interface/CVA/new_gui/background.dds"
+	}
+	frameanimatedspritetype = {
+		name = "GFX_CVA_prefecture_backglow"
+		textureFile = "gfx/interface/CVA/new_gui/back_glow.png"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		pause_on_loop = 0
+		play_on_show = yes
+		looping = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.shader"
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Tefedid"
+		textureFile = "gfx/interface/CVA/new_gui/Tefedid.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zuritha"
+		textureFile = "gfx/interface/CVA/new_gui/Zuritha.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Sivmane"
+		textureFile = "gfx/interface/CVA/new_gui/Sivmane.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Sophili"
+		textureFile = "gfx/interface/CVA/new_gui/Sophili.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Colthage"
+		textureFile = "gfx/interface/CVA/new_gui/Colthage.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zebisneya"
+		textureFile = "gfx/interface/CVA/new_gui/Zebisneya.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zeokat"
+		textureFile = "gfx/interface/CVA/new_gui/Zeokat.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Coltva"
+		textureFile = "gfx/interface/CVA/new_gui/Coltva.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Tefedid_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Tefedid_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zuritha_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Zuritha_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Sivmane_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Sivmane_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Sophili_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Sophili_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Colthage_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Colthage_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zebisneya_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Zebisneya_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Zeokat_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Zeokat_anarchy.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_CVA_prefecture_Coltva_anarchy"
+		textureFile = "gfx/interface/CVA/new_gui/Coltva_anarchy.png"
+		transparencecheck = yes
+	}
+	
+	### Zapatista struggle gui ###
+	progressbartype = {
+		name = "GFX_CVA_evolutionary_pie"
+		texturefile1 = "gfx/interface/CVA/faction_influence/evolutionary.dds"
+		texturefile2 = "gfx/interface/CVA/faction_influence/empty_pie.dds"
+		size = { x = 140 y = 140 }
+		effectfile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_CVA_orthodox_pie"
+		texturefile1 = "gfx/interface/CVA/faction_influence/orthodox.dds"
+		texturefile2 = "gfx/interface/CVA/faction_influence/empty_pie.dds"
+		size = { x = 140 y = 140 }
+		effectfile = "gfx/FX/progress_radial.lua"
+	}
+	spritetype = {
+		name = "GFX_CVA_pragmatist_pie"
+		texturefile = "gfx/interface/CVA/faction_influence/pragmatist.dds"
+	}
+	spritetype = {
+		name = "GFX_CVA_pie_overlay"
+		texturefile = "gfx/interface/CVA/faction_influence/pie_overlay.dds"
+		transparencecheck = yes
+	}
+	
+	# Funny
+	frameAnimatedSpriteType = {
+		name = "GFX_CVA_Zeirutid_Blink"
+		texturefile = "gfx/leaders/CVA/CVA_Zeirutid_Blink.tga"
+		noOfFrames = 40
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+}

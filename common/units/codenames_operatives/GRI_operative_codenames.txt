@@ -1,0 +1,145 @@
+﻿#Should Cover all Griffon Codenames, even if I think they're stinky
+GENERIC_GRI_OPERATIVE_CODENAME_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_OPERATIVES
+
+	# for all Birb speaking countries :)
+	for_countries = {
+		EYR
+		GRF
+		GFF
+		GRI
+		FAT
+		FAW
+		TRD
+		PYT
+		ROU
+		BOI
+		LAK
+		YAL
+		ANG
+		STW
+		HLQ
+		KAT
+		LNS
+		HAU
+		SRS
+		LSM
+		BAN
+		JHZ
+		JGF
+		JOS
+		HLR
+		VED
+		MNC
+		JNG
+	}
+
+	type = codename
+
+	fallback_name = "Agent %d"
+
+	unique = {
+		"Teschner"
+		"Bierkamp"
+		"Lehner"
+		"Feigenbaum"
+		"Ehrenfeld"
+		"Schwann"
+		"Hohenlohe"
+		"Paasche"
+		"Kalkbrenner"
+		"Kaulitz"
+		"Braun"
+		"Speck"
+		"Seck"
+		"Hahne"
+		"Sanner"
+		"Friedeberg"
+		"Polzl"
+		"Pilcz"
+		"Moldenhauer"
+		"Rinder"
+		"Brandt"
+		"Rottmanner"
+		"Romberg"
+		"Werdin"
+		"Prantl"
+		"Schnitzer"
+		"Seyfried"
+		"Wimpffen"
+		"Feuerwerker"
+		"Wentz"
+		"Kieffer"
+		"Weizmann"
+		"Weingand"
+		"Hettich"
+		"Ehler"
+		"Brosch"
+		"Apel"
+		"Becherer"
+		"Ducke"
+		"Gottesman"
+		"Graf"
+		"Blatt"
+		"Mueller"
+		"Heinig"
+		"Oppert"
+		"Gross"
+		"Krause"
+		"Heffelclawe"
+		"Vorgrimler"
+		"Scholl"
+		"Krenkel"
+		"Nostitz"
+		"Schur"
+		"Teichmueller"
+		"Holdermein"
+		"Finkel"
+		"Rheingold"
+		"Feit"
+		"Grendel"
+		"Hitzig"
+		"Pollmacher"
+		"Kornfeld"
+		"Spener"
+		"Kaltenbrunner"
+		"Rosenzweig"
+		"Westermein"
+		"Steichen"
+		"Kistler"
+		"Drossel"
+		"Schimpf"
+		"Heltir"
+		"Haas"
+		"Rinder"
+		"Esser"
+		"Schauer"
+		"Siegfred"
+		"Neumayer"
+		"Gluck"
+		"Hafer"
+		"Baumstein"
+		"Muff"
+		"Rosch"
+		"Buckler"
+		"Hertzog"
+		"Thielemein"
+		"Hasenclever"
+		"Furst"
+		"Drachmann"
+		"Strauch"
+		"Sperl"
+		"Felischhaker"
+		"Achenbach"
+		"Hechler"
+		"Weiner"
+		"Hoehmenn"
+		"Mittag"
+		"Heun"
+		"Kringel"
+		"Klopp"
+	
+	}
+}
+
+

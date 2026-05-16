@@ -1,0 +1,224 @@
+﻿BRF_INF_01 = { 
+	name = "Infanterie"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "infantry" "magical_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Divizia"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Divizia 'Kivessin'" }
+		2 = { "%d. Divizia 'Getica'" }
+		3 = { "%d. Divizia 'Kissau'" }
+		4 = { "%d. Divizia 'Gemina'" }
+		5 = { "%d. Divizia 'Brodfeld'" }
+		6 = { "%d. Divizia 'Lifov'" }
+		7 = { "%d. Divizia 'Sydia'" }
+		8 = { "%d. Divizia 'Acute Padure'" }
+		9 = { "%d. Divizia 'Grifonwill'" }
+		10 = { "%d. Divizia 'Floare Albă'" }
+		11 = { "%d. Divizia 'Kihai'" }
+		12 = { "%d. Divizia 'Gobdan'" }
+		13 = { "%d. Divizia 'Garle'" }
+		14 = { "%d. Divizia 'Kloseu'" }
+		15 = { "%d. Divizia 'Tomado'" }
+		16 = { "%d. Divizia 'Qwoptia'" }
+		17 = { "%d. Divizia 'Twelt'" }
+		18 = { "%d. Divizia 'Larios'" }
+		19 = { "%d. Divizia 'Crowoia'" }
+		20 = { "%d. Divizia 'Beakau'" }
+		21 = { "%d. Divizia 'Temsoar'" }
+	}
+}
+
+BRF_INF_02 = { 
+	name = "Militie"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Brigada"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Brigada 'Traiasca Regele'" }
+		2 = { "%d. Brigada 'Loialisti'" }
+		3 = { "%d. Brigada 'Tarani Liberi'" }
+		4 = { "%d. Brigada 'Moartea La Rosu!'" }
+		5 = { "%d. Brigada 'Zori de Aur'" }
+		6 = { "%d. Brigada 'Canonada'" }
+		7 = { "%d. Brigada 'Credincios'" }
+		8 = { "%d. Brigada 'Zdrobitorii Comunismului'" }
+		9 = { "%d. Brigada 'La Victorie!'" }
+		10 = { "%d. Brigada 'Brodfeld Etern'" }
+	}
+}
+
+BRF_GRD_01 = { 
+	name = "Ordinul Cavalerilor"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "knights" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Ordinul Cavalerilor"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "Order of the Golden Shield" }
+		2 = { "Order of Salt Island" }
+		3 = { "Royal Order of Kihai I" }
+		4 = { "Knightly Order of Sydia" }
+		5 = { "Holy Order of the Sun" }
+		6 = { "Order of the Secret Monitor" }
+		7 = { "Order of the White Flower" }
+		8 = { "Golden Knights of Dawn" }
+		9 = { "Sacred Order of Evi" }
+		10 = { "Order of the Brazen Serpent" }
+		11 = { "Order of Knight Masons" }
+		12 = { "Military Order of the Temple" }
+		13 = { "Order of the Silver Trovel" }
+		14 = { "Ancient and Accepted Brodfeldian Rite" }
+		15 = { "Mystic Order of Veiled Prophets of the Enchanted Realm" }
+	}
+}
+
+BRF_MOT_01 = { 
+	name = "Brigada Mecanizata"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "motorized" "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Brigada Mecanizata"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Brigada 'Unirea Principatelor'" }
+		2 = { "%d. Brigada 'Domnitor'" }
+		3 = { "%d. Brigada 'Print'" }
+		4 = { "%d. Brigada 'Rege'" }
+		5 = { "%d. Brigada 'Coroana'" }
+	}
+}
+
+BRF_ARM_01 = { 
+	name = "Brigada De Tancuri"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Brigada Blindata"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Brigada Blindata 'Scorpionii de Aur'" }
+		2 = { "%d. Brigada Blindata 'Scorpionii Negri'" }
+		3 = { "%d. Brigada Blindata 'Scorpionii Rosii'" }
+		4 = { "%d. Brigada Blindata 'Scorpionii Albi'" }
+		5 = { "%d. Brigada Blindata 'Scorpionii Verzi'" }
+	}
+}
+
+BRF_PAR_01 = { 
+	name = "Parasutisti"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Regiment"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Regiment 'Vultur'" }
+		2 = { "%d. Regiment 'Soim'" }
+		3 = { "%d. Regiment 'Pajura'" }
+	}
+}
+
+BRF_MAR_01 = { 
+	name = "Infanterie Marina"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Regiment"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		307 = { "%d. Regiment 'Evi'" }
+		1 = { "%d. Regiment 'Sare'" }
+		2 = { "%d. Regiment 'Ocean'" }
+	}
+}
+
+BRF_MNT_01 = { 
+	name = "Vanatori de Munte"
+
+	for_countries = { BRF }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRF_INF_01 }
+
+	fallback_name = "%d. Brigada"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Brigada 'Stanca'" }
+		2 = { "%d. Brigada 'Piatra'" }
+		3 = { "%d. Brigada 'Culme'" }
+	}
+}

@@ -1,0 +1,35 @@
+﻿division_template = {
+	name = "Tonaltzintli's Chosen"
+
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+		irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+		irregular_infantry = { x = 1 y = 2 }
+		irregular_infantry = { x = 2 y = 0 }
+		irregular_infantry = { x = 2 y = 1 }
+		irregular_infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		recon = {
+			x = 0
+			y = 0
+		}
+		jungle_pioneers_support = {
+			x = 0
+			y = 1
+		}
+	}
+}
+units = {
+	division = {
+		name = "Tonaltzintli's Chosen"
+		location = 8622
+		division_template = "Tonaltzintli's Chosen"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0 
+	}
+}

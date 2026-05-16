@@ -1,0 +1,1257 @@
+chisimbi_unification_decisions = {
+
+	chisimbi_consolidate_south = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+			}
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_country_flag = chisimbi_internal_consolidated
+				has_war_with = GFS
+				has_war_with = ROA
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = chisimbi_internal_consolidated
+			}
+			
+		}
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = {
+			factor = 250
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_consolidate_south"
+			set_country_flag = chisimbi_internal_consolidated
+			ROOT = {
+				division_template = {
+					name = "Veteran Infantry"
+					template_counter = 25
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				if = {
+					limit = { tag = ROA }
+					set_division_template_cap = { 
+						division_template = "Legio Praetoriani" 
+						division_cap = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = ROA
+				}
+				add_research_slot = 1
+				land_infantry_mastery_doctrine_50 = yes
+			}
+			if = {
+				limit = {
+					original_tag = GFS
+				}
+				add_state_core = 193
+				add_state_core = 329
+			}
+			if = {
+				limit = { is_ai = yes }
+				every_owned_state = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_compliance = 30
+				}
+			}
+		}
+	}
+
+	chisimbi_consolidate_north = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			OR = {
+				original_tag = IBZ
+				original_tag = TSV
+			}
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_country_flag = chisimbi_internal_consolidated
+				has_war_with = IBZ
+				has_war_with = TSV
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = IBZ
+				original_tag = TSV
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = chisimbi_internal_consolidated
+			}
+			
+		}
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = {
+			factor = 250
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_consolidate_north"
+			set_country_flag = chisimbi_internal_consolidated
+			ROOT = {
+				division_template = {
+					name = "Veteran Infantry"
+					template_counter = 25
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = IBZ
+				}
+				add_research_slot = 1
+				increase_society_development = yes
+			}
+			if = {
+				limit = { is_ai = yes }
+				every_owned_state = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_compliance = 30
+				}
+			}
+		}
+	}
+
+	chisimbi_start_central_conflict = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+			}
+		}
+		available = {
+			date > 1008.06.01
+			has_war = no
+			is_subject = no
+			has_country_flag = chisimbi_internal_consolidated
+		}
+
+		visible = {
+			if = {
+				limit = { # South
+					OR = {
+						original_tag = GFS
+						original_tag = ROA
+					}
+				}
+				OR = { # Any north exists
+					TSV = {
+						AND = {
+							exists = yes
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					IBZ = {
+						AND = {
+							exists = yes
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+				}
+			}
+			else = { # North
+				OR = { # Any south exists
+					GFS = {
+						AND = {
+							exists = yes
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					ROA = {
+						AND = {
+							exists = yes
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+				}
+			}
+			is_subject = no
+			
+		}
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_start_central_conflict"
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = ROA
+							original_tag = GFS
+							original_tag = IBZ
+							original_tag = TSV
+						}
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_start_central_conflict"
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = ROA
+						original_tag = GFS
+						original_tag = IBZ
+						original_tag = TSV
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+			set_global_flag = chisimbi_central_conflict_started
+		}
+	}
+
+	chisimbi_zeblu_attack_center = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = ZLU
+		}
+		available = {
+			OR = {
+				date > 1009.11.01
+				has_global_flag = {
+					flag = chisimbi_central_conflict_started
+					days > 150
+				}
+			}
+			has_war = no
+			is_subject = no
+		}
+
+		visible = {
+			has_war = no
+			is_subject = no
+		}
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_zeblu_attack_center"
+			
+			add_ideas = chisimbi_unification_wars
+			division_template = {
+				name = "Levy Warband"
+				template_counter = 25
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = ROA
+							original_tag = GFS
+							original_tag = IBZ
+							original_tag = TSV
+						}
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_zeblu_attack_center"
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = ROA
+						original_tag = GFS
+						original_tag = IBZ
+						original_tag = TSV
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+			set_global_flag = chisimbi_zeblu_attacked
+		}
+	}
+
+	chisimbi_twizanyika_attack_center = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+			}
+		}
+		available = {
+			OR = {
+				date > 1009.06.01
+				has_global_flag = chisimbi_zeblu_attacked
+			}
+			has_war = no
+			is_subject = no
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+			}
+			is_subject = no
+		}
+		
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+		targets = { GIF }
+        targets_dynamic = yes
+        target_trigger = {
+			can_declare_war_on = FROM
+            FROM = { 
+				original_tag = GIF 
+				NOT = { is_subject_of = ROOT }
+			}
+        }
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_twizanyika_attack_center"
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GIF
+				value = 1000
+			}
+			GIF = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+				country_event = { id = eaw_decisions.6 hours = 12 }
+			}
+			if = {
+				limit = { GIF = { NOT = { has_idea = chisimbi_unification_wars }}}
+				GIF = { add_ideas = chisimbi_unification_wars }
+			}
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_twizanyika_attack_center"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GIF
+				value = -1000
+			}
+			GIF = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {
+				target = GIF
+				type = annex_everything
+			}
+			set_global_flag = chisimbi_twizanyika_attacked
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
+		}
+	}
+
+	chisimbi_twizanyika_backstab_center = {
+		icon = generic_ignite_civil_war
+		allowed = {
+			original_tag = GIF
+		}
+		available = {
+			OR = {
+				date > 1009.06.01
+				has_global_flag = chisimbi_zeblu_attacked
+			}
+			has_war = no
+			is_subject = no
+			
+		}
+
+		visible = {
+			original_tag = GIF
+			is_subject = no
+		}
+		
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_twizanyika_backstab_center"
+			
+			if = {
+				limit = { # Tzhimane Confederacy
+					TSV = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = TSV
+					value = 1000
+				}
+				TSV = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+			if = {
+				limit = {
+					IBZ = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = IBZ
+					value = 1000
+				}
+				IBZ = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+			if = {
+				limit = {
+					ROA = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROA
+					value = 1000
+				}
+				ROA = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+			if = {
+				limit = {
+					GFS = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = GFS
+					value = 1000
+				}
+				GFS = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+			if = {
+				limit = {
+					ZLU = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ZLU
+					value = 1000
+				}
+				ZLU = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+			if = {
+				limit = { GIF = { NOT = { has_idea = chisimbi_unification_wars }}}
+				GIF = { add_ideas = chisimbi_unification_wars }
+			}
+			division_template = {
+				name = "Mercenary Band"
+				template_counter = 25
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = ROA
+							original_tag = GFS
+							original_tag = IBZ
+							original_tag = TSV
+							original_tag = ZLU
+						}
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_twizanyika_backstab_center"
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = ROA
+						original_tag = GFS
+						original_tag = IBZ
+						original_tag = TSV
+						original_tag = ZLU
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+		}
+	}
+
+}
+
+unite_chisimbi_category = {
+
+	unite_chisimbi_decision = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = ROA
+				original_tag = GFS
+				original_tag = ZLU
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = GIF
+			}
+		}
+		fire_only_once = yes
+		available = {
+			is_subject = no
+			GFS = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+			ROA = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+			TSV = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+			IBZ = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+			ZLU = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+			GIF = {
+				all_original_cores_owned_by_ROOT_or_subject = yes
+			}
+		}
+
+		visible = {
+			is_subject = no
+			NOT = { has_global_flag = chisimbi_has_united }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					original_tag = IBZ
+				}
+				set_cosmetic_tag = IBZ_chisimbi_unified
+			}
+			else_if = {
+				limit = {
+					original_tag = GFS
+				}
+				set_cosmetic_tag = GFS_chisimbi_unified
+			}
+			else_if = {
+				limit = {
+					original_tag = GIF
+				}
+				set_cosmetic_tag = GIF_chisimbi_unified
+			}
+			else_if = {
+				limit = {
+					original_tag = TSV
+				}
+				set_cosmetic_tag = TSV_chisimbi_unified
+			}
+			else_if = {
+				limit = {
+					original_tag = ZLU
+				}
+				set_cosmetic_tag = ZLU_chisimbi_unified
+			}
+			# Roam doesn't get a tag applied
+			GFS = { add_to_ROOT_potential_original_cores = yes }
+			ROA = { add_to_ROOT_potential_original_cores = yes }
+			TSV = { add_to_ROOT_potential_original_cores = yes }
+			IBZ = { add_to_ROOT_potential_original_cores = yes }
+			ZLU = { add_to_ROOT_potential_original_cores = yes }
+			GIF = { add_to_ROOT_potential_original_cores = yes }
+
+			# Annex subjects in the region
+			every_subject_country = {
+				limit = {
+					OR = {
+						original_tag = GFS
+						original_tag = ROA
+						original_tag = TSV
+						original_tag = IBZ
+						original_tag = ZLU
+						original_tag = GIF
+					}
+				}
+				ROOT = { 
+					annex_country = {
+						target = PREV
+					}
+				}
+			}
+
+			if = {
+				limit = { is_ai = yes }
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_compliance = 20
+				}
+			}
+
+			hidden_effect = {
+				set_global_flag = chisimbi_has_united
+			}
+		}
+
+		ai_will_do = {
+			factor = 300
+		}
+	}
+
+}
+
+chisimbi_expansion_category = {
+
+	chisimbi_expand_zongolese = {
+		icon = generic_nationalism
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			date > 1010.07.01
+			has_war = no
+		}
+
+		visible = {
+			is_subject = no
+			ZOO = { all_original_cores_owned_by_ROOT_or_subject = no }
+			TAI = { all_original_cores_owned_by_ROOT_or_subject = no }
+			MEL = { all_original_cores_owned_by_ROOT_or_subject = no }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = MEL
+							original_tag = TAI
+							original_tag = ZOO
+							OR = {
+								has_war_with = ZOO
+								any_of_scopes = {
+									array = MEL.core_states
+									is_controlled_by = PREV
+								}
+								any_of_scopes = {
+									array = TAI.core_states
+									is_controlled_by = PREV
+								}
+								any_of_scopes = {
+									array = ZOO.core_states
+									is_controlled_by = PREV
+								}
+							}
+						}
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					KXN = {
+						OR = {
+							has_war_with = MEL
+							has_war_with = TAI
+							has_war_with = ZOO
+						}
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = KXN
+					value = 1000
+				}
+				KXN = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+					country_event = { id = eaw_decisions.6 hours = 12 }
+				}
+			}
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_expand_zongolese"
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = MEL
+						original_tag = TAI
+						original_tag = ZOO
+						OR = {
+							has_war_with = ZOO
+							any_of_scopes = {
+								array = MEL.core_states
+								is_controlled_by = PREV
+							}
+							any_of_scopes = {
+								array = TAI.core_states
+								is_controlled_by = PREV
+							}
+							any_of_scopes = {
+								array = ZOO.core_states
+								is_controlled_by = PREV
+							}
+						}
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+		}
+	}
+	
+	chisimbi_consolidate_zongo = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			ZOO = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			TAI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			MEL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
+		visible = {
+			has_global_flag = chisimbi_has_united
+			is_subject = no
+		}
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision chisimbi_consolidate_zongo"
+			ZOO = { add_to_ROOT_potential_original_cores = yes }
+			TAI = { add_to_ROOT_potential_original_cores = yes }
+			MEL = { add_to_ROOT_potential_original_cores = yes }
+
+			hidden_effect = {
+				set_country_flag = chisimbi_has_conquered_middle_southeast
+
+				if = {
+					limit = {
+						original_tag = ROA
+					}
+					news_event = { 
+						id = newsroam.1 	
+						hours = 1 
+					}
+					set_cosmetic_tag = ROA_imperial_cosmetic_tag
+				}
+			}
+		}
+	}
+	
+	chisimbi_expand_far_south = {
+		icon = generic_nationalism
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			date > 1011.01.01
+			has_war = no
+			NOT = { has_country_flag = chisimbi_attaking_someone_flag }
+		}
+
+		visible = {
+			is_subject = no
+			has_country_flag = chisimbi_has_conquered_middle_southeast
+			IST = { all_original_cores_owned_by_ROOT_or_subject = no }
+			IDO = { all_original_cores_owned_by_ROOT_or_subject = no }
+			DEL = { all_original_cores_owned_by_ROOT_or_subject = no }
+		}
+
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 250
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_expand_far_south"
+			
+			set_country_flag = chisimbi_attaking_someone_flag
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = IST
+							original_tag = IDO
+							original_tag = DEL
+						}
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_expand_far_south"
+			
+			clr_country_flag = chisimbi_attaking_someone_flag
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = IST
+						original_tag = IDO
+						original_tag = DEL
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+		}
+	}
+
+	chisimbi_expand_zakiria = {
+		icon = generic_nationalism
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			date > 1012.01.01
+			has_war = no
+			NOT = { has_country_flag = chisimbi_attaking_someone_flag }
+		}
+
+		visible = {
+			is_subject = no
+			has_country_flag = chisimbi_has_conquered_middle_southeast
+			OR = {
+				KXN = { 
+					exists = yes
+					is_subject = no
+				}
+				KHM = { 
+					exists = yes
+					is_subject = no
+				}
+				NVA = { 
+					exists = yes
+					is_subject = no
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		
+		days_remove = 5
+		ai_will_do = {
+			factor = 250
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete chisimbi_expand_zakiria"
+			
+			set_country_flag = chisimbi_attaking_someone_flag
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = KXN
+							original_tag = KHM
+							original_tag = NVA
+						}
+						is_subject = no
+					}
+					ROOT = {
+						set_temp_variable = { temp_target = PREV }
+						eaw_alert_send_imminent_declaration_of_war = yes
+					}
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_expand_zakiria"
+			
+			clr_country_flag = chisimbi_attaking_someone_flag
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = KXN
+						original_tag = KHM
+						original_tag = NVA
+					}
+					is_subject = no
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+					set_temp_variable = { temp_target = PREV }
+					eaw_clear_alert_imminent_declaration_of_war = yes
+				}
+			}
+		}
+	}
+
+	chisimbi_consolidate_far_south = {
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			IST = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			IDO = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			DEL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
+		visible = {
+			is_subject = no
+			has_country_flag = chisimbi_has_conquered_middle_southeast
+		}
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision chisimbi_consolidate_far_south"
+			IST = { add_to_ROOT_potential_original_cores = yes }
+			IDO = { add_to_ROOT_potential_original_cores = yes }
+			DEL = { add_to_ROOT_potential_original_cores = yes }
+		}
+	}
+
+	chisimbi_consolidate_the_isles = {		#no conquest, because AI can't manage the navy now, but player can
+		icon = generic_form_nation
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			MQA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			YAN = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
+		visible = {
+			is_subject = no
+			has_global_flag = chisimbi_has_united
+			has_country_flag = chisimbi_has_conquered_middle_southeast
+		}
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision chisimbi_consolidate_the_isles"
+			MQA = { add_to_ROOT_potential_original_cores = yes }
+			YAN = { add_to_ROOT_potential_original_cores = yes }
+		}
+	}
+
+	chisimbi_expand_kiria = {
+		icon = generic_nationalism
+		allowed = {
+			OR = {
+				original_tag = GFS
+				original_tag = ROA
+				original_tag = TSV
+				original_tag = IBZ
+				original_tag = ZLU
+				original_tag = GIF
+			}
+		}
+		available = {
+			date > 1013.01.01
+			has_war = no
+			NOT = { has_country_flag = chisimbi_attaking_someone_flag }
+		}
+
+		visible = {
+			is_subject = no
+		}
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+		targets = { KIR KIS KIC }
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = { 
+				OR = {
+					original_tag = KIR
+					original_tag = KIS
+					original_tag = KIC
+				} 
+				NOT = { is_subject_of = ROOT }
+			}
+			NOT = { has_war_with = FROM }
+			can_declare_war_on = FROM
+        }
+		cost = 25
+		
+		days_remove = 30
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove chisimbi_expand_kiria"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
+			declare_war_on = {
+				target = KIR
+				type = puppet_wargoal_focus
+			}
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}

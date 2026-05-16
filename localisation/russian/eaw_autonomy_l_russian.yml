@@ -1,0 +1,9 @@
+﻿l_russian:
+ autonomy_nominal_vassal:0 "Условный вассал"
+ autonomy_autonomous_vassal:0 "Автономный вассал"
+ autonomy_vassal:0 "Вассал"
+ autonomy_subjugated_vassal:0 "Порабощённый вассал"
+ autonomy_demilitarized_colony:0 "Демилитаризованная автономная марионетка"
+ autonomy_demilitarized_puppet:0 "Демилитаризованная марионетка"
+ autonomy_demilitarized_integrated_puppet:0 "Демилитаризованная интегрированная марионетка"
+ autonomy_personal_union_eaw:0 "$autonomy_personal_union$"

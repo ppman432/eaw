@@ -1,0 +1,30 @@
+﻿air_wings = {
+	1024 = {
+		medium_airship_airframe_0 = {
+			owner = "SLC"
+			amount = 25
+			version_name = "Early Medium Airship"
+		}
+		large_airship_airframe_0 = {
+			owner = "SLC"
+			amount = 5
+			version_name = "Early Heavy Airship"
+		}
+	}
+	978 = {
+		medium_airship_airframe_0 = {
+			owner = "SLC"
+			amount = 10
+			version_name = "Early Medium Airship"
+		}
+	}
+	980 = {
+		small_plane_airframe_0 = {
+			owner = "HIP"
+			amount = 20
+			version_name = "P-26A Peashooter"
+		}
+		name = "Cerulean Squadron"
+        start_experience_factor = 0.20
+	}
+}

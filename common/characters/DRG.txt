@@ -1,0 +1,563 @@
+characters={
+	DRG_dragon_lord_ember={
+		name=DRG_dragon_lord_ember
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/DRG/DRG_ember.tga"
+			}
+			civilian={
+				large="gfx/leaders/DRG/Ember.tga"
+			}
+		}
+		field_marshal={
+			traits={ dragon_race_trait commando }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ DRG_dragonlord }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=kratokracy
+		    traits={ DRG_dragonlord }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			traits={ DRG_dragonlord }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		gender = female
+	}
+	DRG_lord_ruby={
+		name=DRG_lord_ruby
+		portraits={
+			civilian={
+				large="gfx/leaders/DRG/rubydragon.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_ruby.tga"
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		gender = female
+	}
+	DRG_lord_torch={
+		name=DRG_lord_torch
+		portraits={
+			army={
+				large="gfx/leaders/DRG/torch.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_torch.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard politically_connected harsh_leader trait_mountaineer dragon_race_trait }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DRG_misha={
+		name=DRG_misha
+		portraits={
+			army={
+				large="gfx/leaders/DRG/misha.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_misha.tga"
+			}
+		}
+		corps_commander={
+			traits={ dragon_race_trait promising_general }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			
+		}
+		gender = female
+	}
+	DRG_smolder={
+		name=DRG_smolder
+		portraits={
+			army={
+				large="gfx/leaders/DRG/Smolder.tga"
+				small=GFX_idea_DRG_smolder
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = DRG_smolder
+			allowed = {
+				original_tag = DRG
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}				
+			}
+			traits = {
+				friendship_school_student
+			}
+		}
+		gender = female
+	}
+	DRG_gark={
+		name=DRG_gark
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_5_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = DRG_gark
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+	DRG_scales={
+		name=DRG_scales
+		portraits={
+			army={
+				small=GFX_idea_DRG_scales
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = DRG_scales
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				backroom_backstabber
+			}
+		}
+		gender = female
+	}
+	DRG_cynder={
+		name=DRG_cynder
+		portraits={
+			army={
+				large="gfx/leaders/DRG/Cynder.tga"
+				small=GFX_idea_DRG_cynder
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = DRG_cynder
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+	DRG_firekin={
+		name=DRG_firekin
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_2_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = DRG_firekin
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_tiagin={
+		name=DRG_tiagin
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_4_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = DRG_tiagin
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_nascale={
+		name=DRG_nascale
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_female_3_small
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = DRG_nascale
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				air_chief_all_weather_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_kasitor={
+		name=DRG_kasitor
+		portraits={
+			army={
+				small=GFX_idea_unknown_advisor_dragon
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = DRG_kasitor
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_grima={
+		name=DRG_grima
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_female_2_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = DRG_grima_n
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_kuzz={
+		name=DRG_kuzz
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_female_4_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = DRG_kuzz
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_kahamit={
+		name=DRG_kahamit
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_1_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DRG_kahamit
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				army_regrouping_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_kalagar={
+		name=DRG_kalagar
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_7_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DRG_kalagar
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				alt_army_chief_morale_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_nightburn={
+		name=DRG_nightburn
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_3_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DRG_nightburn
+			ledger = navy
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				navy_screen_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_naga={
+		name=DRG_naga
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_female_1_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DRG_naga
+			ledger = air
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				air_naval_strike_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_ludmilla={
+		name=DRG_ludmilla
+		portraits={
+			army={
+				small=GFX_portrait_fire_dragon_generic_male_8_small
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = DRG_ludmilla
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	DRG_tamm={
+		name=DRG_tamm
+		portraits={
+			army={
+				large=GFX_portrait_fire_dragon_generic_male_6
+				small=GFX_portrait_fire_dragon_generic_male_6_small
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = DRG_tamm
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			research_bonus = {
+				race_tech = 0.07
+				magical_tech = 0.07
+			}
+			traits = {
+				bookworm
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_race_specialist scientist_trait_bright } # TODO GTD balance
+			skills = {
+				specialization_magical = 2
+			}
+			
+			desc = DRG_tamm_desc
+		}
+	}
+	DRG_kukulkan={
+		name=DRG_kukulkan
+		portraits={
+			army={
+				small=GFX_idea_unknown_advisor_dragon
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = DRG_kukulkan
+			ledger = air
+			cost = 100
+			allowed = {
+				original_tag = DRG
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+    DRG_graphite={
+		name=DRG_graphite
+		portraits={
+			civilian={
+				large="gfx/leaders/DRG/Graphite.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_graphite.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Graphite_adv
+			cost = 100
+			traits = {
+				DRG_vocal_workwyrm
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+    DRG_charcoal={
+		name=DRG_charcoal
+		portraits={
+			civilian={
+				large="gfx/leaders/DRG/Charcoal.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_charcoal.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = Charcoal_adv
+			ledger = army
+			cost = 100
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	DRG_rockslide={
+		name=DRG_rockslide
+		portraits={
+			army={
+				large="gfx/leaders/DRG/Rockslide.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_rockslide.tga"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist dragon_race_trait }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			desc = Rockslide_adv_desc
+		}
+	}
+	DRG_garble={
+		name=DRG_garble
+		portraits={
+			army={
+				large="gfx/leaders/DRG/Garble.tga"
+				small="gfx/interface/ideas/Advisors/DRG/DRG_garble.tga"
+			}
+		}
+		corps_commander={
+			traits={ dragon_race_trait }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			desc = Garble_adv_desc
+		}
+		advisor ={    
+			slot = high_command
+			idea_token = Garble_adv
+			ledger = army
+			cost = 50
+			traits = {
+				alt_army_chief_planning_1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

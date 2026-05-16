@@ -1,0 +1,176 @@
+guiTypes = {
+	#Grouped text and checkbox for easier positioning
+	containerWindowType = {
+		name = "eaw_diplo_popup_options_window"
+		position = {x=235 y=63}
+		Orientation = upper_right
+
+
+		instantTextboxType = {
+			name = "popup_diplo_text"
+			position = { x = -220 y = -5 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "POPUP_DIPLO"
+			maxWidth = 200
+			maxHeight = 10
+			format = right
+		}
+
+		buttonType = {
+			name = "popup_majors_checkbox"
+			position = { x = -11 y = -7 }
+			quadTextureSprite = "GFX_generic_checkbox3"
+			clicksound = decisions_ui_button
+		}
+
+		instantTextboxType = {
+			name = "popup_majors_only_text"
+			position = { x = 23 y = -5 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "POPUP_MAJORS"
+			maxWidth = 110
+			maxHeight = 10
+			format = left
+		}
+
+		buttonType = {
+			name = "popup_neighbors_only_checkbox"
+			position = { x = 119 y = -7 }
+			quadTextureSprite = "GFX_generic_checkbox3"
+			clicksound = decisions_ui_button
+		}
+
+		instantTextboxType = {
+			name = "popup_neighbors_only_text"
+			position = { x = 153 y = -5 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = { x = 0 y = 0 }
+			text = "POPUP_NEIGHBORS"
+			maxWidth = 110
+			maxHeight = 10
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "eaw_diplo_popup_window_new"
+        orientation = lower_right
+     	position = { x = -435 y = -444 }
+
+		gridBoxType = {
+			name = "eaw_diplo_popup_window_gridbox"
+			slotsize = { width = 0 height = 20 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+	}
+
+    containerWindowType = {
+        name = "eaw_diplo_popup_window_new_entry"
+        size = { width = 350 height = 220 }
+        
+        background = {
+            name = "background"
+            quadTextureSprite = "GFX_tiled_bg"
+        }
+
+		iconType = {
+			name = "entry_background"
+			spriteType = "GFX_eaw_diplo_popup_hitbox"
+			pdx_tooltip = eaw_diplo_popup_right_click_to_dismiss
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = -105 y = 26 }
+			font = "hoi_18mbs"
+			text = "eaw_diplo_popup_window_title"	
+			maxWidth = 210
+			maxHeight = 44
+			fixedsize = yes
+			multiline = yes
+			format = center
+			orientation = center_up
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "diplo_war_large_icon"
+			quadTextureSprite ="GFX_diplo_war_large_icon"
+			position = { x= 16 y = 6 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "diplo_war_large_icon2"
+			quadTextureSprite = "GFX_diplo_war_large_icon"
+			position = { x = 427 y = 6 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "diplo_integration_successful_icon"
+			spriteType = "GFX_eaw_diplo_popup_integration_successful_icon"
+			position = { x = 22 y = 18 }
+		}
+
+		iconType = {
+			name = "sender_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 22 y = 23 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name ="sender_flag_frame"
+			spriteType = "GFX_diplo_countrylist_flag_frame"
+			position = { x = 18 y = 19 }
+		}
+
+		iconType = {
+			name = "receiver_flag"
+			quadTextureSprite ="GFX_flag_small2"
+			position = { x = -63 y = 23 }
+			Orientation = "UPPER_RIGHT"
+		}
+
+		iconType = {
+			name ="receiver_flag_frame"
+			spriteType = "GFX_diplo_countrylist_flag_frame"
+			position = { x = -68 y = 19 }
+			Orientation = "UPPER_RIGHT"
+		}
+
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 21 y = 76 }
+			font = "hoi_18mbs"
+			text = "eaw_diplo_popup_window_message"
+			maxWidth = 308
+			maxHeight = 110
+			format = center
+			# scrollbartype = "standardtext_slider"
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "diplo_popup_bottom"
+			spriteType = "GFX_diplo_popup_bottom"
+			position = { x= 3 y = 249 }
+		}
+		
+		iconType = {
+			name = "timeout_progressbar"
+			spriteType = "GFX_popup_progressbar"
+			position = { x = 14 y = 193 }
+		}
+	}
+}

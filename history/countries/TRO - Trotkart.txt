@@ -1,0 +1,151 @@
+﻿### NOTE - THIS TAG IS PURELY FOR COLTHAGINIAN COLLAPSE AND COLTHAGE BALKANISATION PURPOSES, IT SHOULD NOT BE USED IN STANDARD GAMEPLAY OTHERWISE
+
+capital = 706
+
+# Starting tech
+set_technology = {
+	zebra_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	fuel_silos = 1
+	basic_train = 1
+	#trade_interdiction = 1
+	tech_spirit_warriors = 1
+	tech_zebra_war_canoes = 1
+}
+set_grand_doctrine = new_convoy_raiding
+if = {
+	limit = { has_dlc = "No Step Back" }
+
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	generic_gwtank_template = yes
+
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		engines_1 = 1
+		engines_2 = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_small_airframe = 1
+		air_torpedoe_1 = 1
+		bba_early_transport_plane = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+			early_transport_plane = 1
+		}
+	}
+}
+actually_fix_weapon_techs = yes
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	torpedo_gunboats = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	protected_cruisers = 1
+	early_ship_hull_cruiser = 1
+	pre_dreadnoughts = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	#basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_torpedo = 1
+	coastal_defense_ships = 1
+	mtg_transport = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	basic_heavy_armor_scheme = 1
+	tech_zebra_war_canoes_sea = 1
+}
+
+set_convoys = 80
+set_popularities = {
+	democratic = 20
+	fascism = 20
+	communism = 0
+	neutrality = 60
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1006.5.2"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_country_flag = has_custom_advisors
+
+
+set_research_slots = 3
+
+set_stability = 0.5
+set_war_support = 0.5
+
+add_ideas = {
+	proper_science_base
+	civilian_economy
+	pre_industrial_society2
+	poverty2
+}
+set_rule = {
+	can_generate_female_aces = yes
+	can_generate_female_unit_leaders  = yes
+	can_generate_female_country_leaders = yes
+}
+
+recruit_character = TRO_zuan_khilletzball
+recruit_character = TRO_addir_quartanid
+recruit_character = TRO_hailama_zaqhatid
+recruit_character = TRO_adonia_philosirit
+recruit_character = TRO_tabnit_zashtoreth
+recruit_character = TRO_amma_zeshmunid
+recruit_character = TRO_azmelqart_yashanit
+recruit_character = TRO_zastartus_ashtartyaton
+recruit_character = TRO_birkana_zilkherem
+recruit_character = TRO_zitthobaal_ahinadab
+recruit_character = TRO_abdosir_tammuzid
+recruit_character = TRO_batrun_kanmiiz
+recruit_character = TRO_zephon_aderbaalut
+recruit_character = TRO_ashdonbal_zaddoniadid
+recruit_character = TRO_zehawwielon_zamilcaruz
+recruit_character = TRO_arishot_berutit
+recruit_character = TRO_tanyth_kanmiud
+recruit_character = TRO_shamayim_ahiromid
+recruit_character = TRO_zaldo_zidonid
+
+recruit_character = TRO_CTH_zicardo
+recruit_character = TRO_CTH_father_zisco
+recruit_character = TRO_CTH_zermelqart
+recruit_character = TRO_CTH_shama_zurumilki
+recruit_character = TRO_CTH_zuan_abizaal
+recruit_character = TRO_OC_guy
+recruit_character = TRO_Stacked_Cookies
+
+
+### Variants ###
+colthage_breakaways_ships = yes
+colthage_breakaways_planes = yes

@@ -1,0 +1,71 @@
+﻿##### GFS NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+GFS_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { GFS }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "CHU "
+	fallback_name = "Chikepe chehondo che%d"
+
+	unique = {
+		"Hwai" "Gava" "Kamba" "Nguruve" "Mhou" "Dzvinyu" "Nyoka" "Dhadha"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+GFS_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { GFS }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+
+	prefix = "CHU "
+	fallback_name = "Chikepe chehondo che%d"
+
+	unique = { 
+		"Garwe" "Shumba" "Nzou" "Nhoro" "Mvuu" "Ingwe"
+	}
+}
+
+### BATTLESHIP/BATTLECRUISER NAMES ###
+GFS_BB_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB_BC
+
+	for_countries = { GFS }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship battle_cruiser }
+
+	prefix = "CHU "
+	fallback_name = "Chikepe chehondo che%d"
+
+	unique = {
+		"Girinhival" "Muromo Werwizi" "Ibellen" "Hoofatwa" "Mokadzani" "Tisha" "Nzvimbo-Yakafara"
+	}
+}
+
+### THEME: STATES CITIES REGIONS RIVERS ###
+GFS_STATES = {
+	name = NAME_THEME_PLACES
+	fallback_name = "Chikepe chehondo che%d"
+	for_countries = { GFS }
+
+	type = ship
+
+	prefix = "CHU "
+	unique = {
+		"Girinhival"
+		"Muromo Werwizi"
+		"Ibellen"
+		"Hoofatwa"
+		"Mokadzani"
+		"Tisha"
+		"Nzvimbo-Yakafara"
+	}
+}

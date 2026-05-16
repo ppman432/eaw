@@ -1,0 +1,98 @@
+BRZ_historical_plan = {
+	name = "Bronzhill historical plan"
+	desc = "Historical behavior for Bronzhill"
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = BRZ_ai_behavior 
+					option = DEFAULT
+				}
+			}
+			has_country_flag = BRZ_AI_HISTORICAL
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_global_flag = GRI_grover_vi_dead
+			GRI = {
+				has_completed_focus = GRI_eagleclaw # If Griffenheim is ruled by Gabriela, Regent In Exile is unavailable
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_old_loyalties
+		
+		# Regent In Exile
+		BRZ_the_regent_in_exile
+		BRZ_trip_to_readewetter
+		BRZ_purge_the_high_command
+		BRZ_work_with_the_hkp
+		BRZ_help_from_the_prelate
+		BRZ_loyalty_of_the_knights
+		BRZ_gather_noble_support
+		BRZ_dismiss_the_council
+		BRZ_trade_with_strawberry
+		BRZ_renegotiate_industrial_contracts
+		BRZ_shuffle_industrial_shares
+		BRZ_rebuild_popular_support
+		BRZ_invite_yale_professors
+		BRZ_in_defence_of_tradition
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_negotiations_with_kraehe_stahl
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

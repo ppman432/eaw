@@ -1,0 +1,2187 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { # Country
+	name = GetAviationEffortDesc
+	text = {
+		trigger = {
+			is_griffon_race = yes
+		}
+		localization_key = griffon_aviation_effort_desc_grif
+	}
+	text = {
+		trigger = {
+			is_griffon_race = no
+		}
+		localization_key = griffon_aviation_effort_desc_other
+	}
+}
+defined_text = { # Country
+	name = GetPopularRevolutionDesc
+	text = {
+		trigger = {
+			is_griffon_race = yes
+		}
+		localization_key = griffon_popular_revolution_desc_grif
+	}
+	text = {
+		trigger = {
+			is_griffon_race = no
+		}
+		localization_key = griffon_popular_revolution_desc_other
+	}
+}
+defined_text = { # Country
+	name = GetTraditionalWarfareDesc
+	text = {
+		trigger = {
+			is_griffon_race = yes
+		}
+		localization_key = griffon_traditonal_warfair_desc_grif
+	}
+	text = {
+		trigger = {
+			is_pony_race = yes
+		}
+		localization_key = griffon_traditonal_warfair_desc_pony
+	}
+	text = {
+		trigger = {
+			is_pony_race = no
+			is_griffon_race = no
+		}
+		localization_key = griffon_traditonal_warfair_desc_other
+	}
+}
+defined_text = { # Country
+	name = GetEquestrianOverlordDesc
+	text = {
+		trigger = {
+			original_tag = CRY
+		}
+		localization_key = equestrian_overlord_desc_cry
+	}
+	text = {
+		trigger = {
+			NOT = { original_tag = CRY }
+		}
+		localization_key = equestrian_overlord_desc_gen
+	}
+}
+
+defined_text = { # Country
+	name = GetPrywhenRevolutionDecisionDesc
+	text = {
+		trigger = {
+			has_war_with = BRF
+		}
+		localization_key = GRW_defense_of_the_revolution_desc_start
+	}
+	text = {
+		trigger = {
+			NOT = { has_war_with = BRF }
+			NOT = {
+				has_completed_focus = GRW_exansionism
+				has_completed_focus = GRW_global_revolution
+			}
+		}
+		localization_key = GRW_defense_of_the_revolution_postwar_desc
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = GRW_exansionism
+				has_completed_focus = GRW_global_revolution
+			}
+		}
+		localization_key = GRW_defense_of_the_revolution_export_of_revolution_desc
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostInfEq250Fuel10k
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 249
+			}
+			has_fuel > 9999
+		}
+		localization_key = decision_cost_250_infantry_10k_fuel
+	}
+	text = {
+		localization_key = decision_cost_250_infantry_10k_fuel_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostInfEq200Manpower2kCP20
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 199
+			}
+			has_manpower > 1999
+			command_power > 19
+		}
+		localization_key = decision_cost_200_infantry_2000_manpower_20_cp
+	}
+	text = {
+		localization_key = decision_cost_200_infantry_2000_manpower_20_cp_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostInfEq150Manpower1500PP30
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 149
+			}
+			has_manpower > 1499
+			has_political_power > 29
+		}
+		localization_key = decision_cost_150_infantry_1500_manpower_30_pp
+	}
+	text = {
+		localization_key = decision_cost_150_infantry_1500_manpower_30_pp_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP50
+	text = {
+		trigger = {
+			has_army_experience > 49
+		}
+		localization_key = decision_cost_army_xp_50
+	}
+	text = {
+		localization_key = decision_cost_army_xp_50_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP25
+	text = {
+		trigger = {
+			has_army_experience > 24
+		}
+		localization_key = decision_cost_army_xp_25
+	}
+	text = {
+		localization_key = decision_cost_army_xp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostAirXP50
+	text = {
+		trigger = {
+			has_air_experience > 49
+		}
+		localization_key = decision_cost_air_xp_50
+	}
+	text = {
+		localization_key = decision_cost_air_xp_50_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostNavyXP50
+	text = {
+		trigger = {
+			has_navy_experience > 49
+		}
+		localization_key = decision_cost_navy_xp_50
+	}
+	text = {
+		localization_key = decision_cost_air_navy_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP25ArmyXP50
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+			has_army_experience > 49
+		}
+		localization_key = decision_cost_CP_25_army_xp_50
+	}
+	text = {
+		localization_key = decision_cost_CP_25_army_xp_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP30
+	text = {
+		trigger = {
+			has_army_experience > 29
+		}
+		localization_key = decision_cost_army_xp_30
+	}
+	text = {
+		localization_key = decision_cost_army_xp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP150PP30
+	text = {
+		trigger = {
+			has_army_experience > 149
+			has_political_power > 29
+		}
+		localization_key = decision_cost_army_xp_150_pp_30
+	}
+	text = {
+		localization_key = decision_cost_army_xp_150_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostAirXP75PP30
+	text = {
+		trigger = {
+			has_air_experience > 74
+			has_political_power > 29
+		}
+		localization_key = decision_cost_air_xp_75_pp_30
+	}
+	text = {
+		localization_key = decision_cost_air_xp_75_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostAirXP45PP30
+	text = {
+		trigger = {
+			has_air_experience > 99
+			has_political_power > 29
+		}
+		localization_key = decision_cost_air_xp_45_pp_30
+	}
+	text = {
+		localization_key = decision_cost_air_xp_45_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostAirXP150PP30
+	text = {
+		trigger = {
+			has_air_experience > 149
+			has_political_power > 29
+		}
+		localization_key = decision_cost_air_xp_150_pp_30
+	}
+	text = {
+		localization_key = decision_cost_air_xp_150_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP50AirXP5PP15
+	text = {
+		trigger = {
+			has_navy_experience > 49
+			has_air_experience > 4
+			has_political_power > 14
+		}
+		localization_key = decision_cost_navy_xp_50_air_xp_5_pp_15
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_50_air_xp_5_pp_15_blocked
+	}
+}
+
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP50PP30
+	text = {
+		trigger = {
+			has_navy_experience > 49
+			has_political_power > 29
+		}
+		localization_key = decision_cost_navy_xp_50_pp_30
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_50_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP75PP30
+	text = {
+		trigger = {
+			has_navy_experience > 74
+			has_political_power > 29
+		}
+		localization_key = decision_cost_navy_xp_75_pp_30
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_75_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP150PP30
+	text = {
+		trigger = {
+			has_navy_experience > 149
+			has_political_power > 29
+		}
+		localization_key = decision_cost_navy_xp_150_pp_30
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_150_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP450PP60
+	text = {
+		trigger = {
+			has_navy_experience > 449
+			has_political_power > 59
+		}
+		localization_key = decision_cost_navy_xp_450_pp_60
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_450_pp_60_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostNavyXP250PP60
+	text = {
+		trigger = {
+			has_navy_experience > 249
+			has_political_power > 59
+		}
+		localization_key = decision_cost_navy_xp_250_pp_60
+	}
+	text = {
+		localization_key = decision_cost_navy_xp_250_pp_60_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP25PP50
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+			has_political_power > 49
+		}
+		localization_key = decision_cost_CP_25_pp_50
+	}
+	text = {
+		localization_key = decision_cost_CP_25_pp_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP30PP25
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_political_power > 24
+		}
+		localization_key = decision_cost_CP_30_pp_25
+	}
+	text = {
+		localization_key = decision_cost_CP_30_pp_25_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCPHayzeb
+	text = {
+		trigger = {
+			command_power > GYZ_infiltrate_hayzeb_cost
+		}
+		localization_key = decision_cost_CP_hayzeb
+	}
+	text = {
+		localization_key = decision_cost_CP_hayzeb_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostManpowerHayzeb
+	text = {
+		trigger = {
+			has_manpower > GYZ_crackdown_hayzeb_cost
+		}
+		localization_key = decision_cost_manpower_hayzeb
+	}
+	text = {
+		localization_key = decision_cost_manpower_hayzeb_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP35PP75
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 35
+				compare = greater_than_or_equals
+			}
+			has_political_power > 75
+		}
+		localization_key = decision_cost_CP_35_pp_75
+	}
+	text = {
+		localization_key = decision_cost_CP_35_pp_75_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP30
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_CP_30
+	}
+	text = {
+		localization_key = decision_cost_CP_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP100
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 100
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_CP_100
+	}
+	text = {
+		localization_key = decision_cost_CP_100_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP125
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 125
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_CP_125
+	}
+	text = {
+		localization_key = decision_cost_CP_125_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP15PP15
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 15
+				compare = greater_than_or_equals
+			}
+			has_political_power > 14
+		}
+		localization_key = decision_cost_CP_15_pp_15
+	}
+	text = {
+		localization_key = decision_cost_CP_15_pp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP15PP15MP500
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 15
+				compare = greater_than_or_equals
+			}
+			has_political_power > 14
+			has_manpower > 499
+		}
+		localization_key = decision_cost_CP_15_pp_15_manpower_500
+	}
+	text = {
+		localization_key = decision_cost_CP_15_pp_15_manpower_500_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP25PP25
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+			has_political_power > 24
+		}
+		localization_key = decision_cost_CP_25_pp_25
+	}
+	text = {
+		localization_key = decision_cost_CP_25_pp_25_blocked
+	}
+}
+
+
+defined_text = { # Country
+	name = GetDecisionCostCP35PP35
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 35
+				compare = greater_than_or_equals
+			}
+			has_political_power > 34
+		}
+		localization_key = decision_cost_CP_35_pp_35
+	}
+	text = {
+		localization_key = decision_cost_CP_35_pp_35_blocked
+	}
+}
+
+
+defined_text = { # Country
+	name = GetDecisionCostPP50Manpower2000
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_manpower > 1999
+		}
+		localization_key = decision_cost_pp_50_manpower_2000
+	}
+	text = {
+		localization_key = decision_cost_pp_50_manpower_2000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP50Manpower2000
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_manpower > 1999
+		}
+		localization_key = decision_cost_manpower_8000
+	}
+	text = {
+		localization_key = decision_cost_manpower_8000_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostPP25Manpower2500
+	text = {
+		trigger = {
+			has_political_power > 24
+			has_manpower > 2499
+		}
+		localization_key = decision_cost_pp_25_manpower_2500
+	}
+	text = {
+		localization_key = decision_cost_pp_25_manpower_2500_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP50Manpower18000
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_manpower > 17999
+		}
+		localization_key = decision_cost_pp_50_manpower_18000
+	}
+	text = {
+		localization_key = decision_cost_pp_50_manpower_18000_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostInfEq640Supp10Manpower6Point5k
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 639
+			}
+			has_equipment = {
+				support_equipment > 9
+			}
+			has_manpower > 6499
+		}
+		localization_key = decision_cost_640_infantry_10_support_6500_manpower
+	}
+	text = {
+		localization_key = decision_cost_640_infantry_10_support_6500_manpower_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostInfEq600Arty12Supp25Manpower6Point8k
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 599
+			}
+			has_equipment = {
+				support_equipment > 24
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_manpower > 6799
+		}
+		localization_key = decision_cost_600_infantry_12_artillery_25_support_6800_manpower
+	}
+	text = {
+		localization_key = decision_cost_600_infantry_12_artillery_25_support_6800_manpower_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostInfEq600Supp25Manpower6Point5k
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 599
+			}
+			has_equipment = {
+				support_equipment > 24
+			}
+			has_manpower > 6499
+		}
+		localization_key = decision_cost_600_infantry_25_support_6500_manpower
+	}
+	text = {
+		localization_key = decision_cost_600_infantry_25_support_6500_manpower_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostInfEq840Arty12Supp10Manpower8Point8k
+	text = {
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 839
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				support_equipment > 9
+			}
+			has_manpower > 8799
+		}
+		localization_key = decision_cost_840_infantry_12_artillery_10_support_8800_manpower
+	}
+	text = {
+		localization_key = decision_cost_840_infantry_12_artillery_10_support_8800_manpower_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP50Manpower11100
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_manpower > 11099
+		}
+		localization_key = decision_cost_pp_50_manpower_11100
+	}
+	text = {
+		localization_key = decision_cost_pp_50_manpower_11100_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP200
+	text = {
+		trigger = {
+			has_army_experience > 199
+		}
+		localization_key = decision_cost_army_xp_200
+	}
+	text = {
+		localization_key = decision_cost_army_xp_200_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP200Manpower21300
+	text = {
+		trigger = {
+			has_army_experience > 200
+			has_manpower > 21299
+		}
+		localization_key = decision_cost_army_xp_200_manpower_21300
+	}
+	text = {
+		localization_key = decision_cost_army_xp_200_manpower_21300_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP100
+	text = {
+		trigger = {
+			has_army_experience > 99
+		}
+		localization_key = decision_cost_army_xp_100
+	}
+	text = {
+		localization_key = decision_cost_army_xp_100_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP10
+	text = {
+		trigger = {
+			has_army_experience > 9
+		}
+		localization_key = decision_cost_army_xp_10
+	}
+	text = {
+		localization_key = decision_cost_army_xp_10_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP20
+	text = {
+		trigger = {
+			has_army_experience > 19
+		}
+		localization_key = decision_cost_army_xp_20
+	}
+	text = {
+		localization_key = decision_cost_army_xp_20_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP30
+	text = {
+		trigger = {
+			has_army_experience > 29
+		}
+		localization_key = decision_cost_army_xp_30
+	}
+	text = {
+		localization_key = decision_cost_army_xp_30_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostArmyXP125
+	text = {
+		trigger = {
+			has_army_experience > 124
+		}
+		localization_key = decision_cost_army_xp_125
+	}
+	text = {
+		localization_key = decision_cost_army_xp_125_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP75
+	text = {
+		trigger = {
+			has_army_experience > 74
+		}
+		localization_key = decision_cost_army_xp_75
+	}
+	text = {
+		localization_key = decision_cost_army_xp_75_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP75PP30
+	text = {
+		trigger = {
+			has_army_experience > 74
+			has_political_power > 29
+		}
+		localization_key = decision_cost_army_xp_75_pp_30
+	}
+	text = {
+		localization_key = decision_cost_army_xp_75_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP50Manpower6700
+	text = {
+		trigger = {
+			has_army_experience > 49
+			has_manpower > 6699
+		}
+		localization_key = decision_cost_army_xp_50_manpower_6700
+	}
+	text = {
+		localization_key = decision_cost_army_xp_50_manpower_6700_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP50Manpower7000
+	text = {
+		trigger = {
+			has_army_experience > 49
+			has_manpower > 6999
+		}
+		localization_key = decision_cost_army_xp_50_manpower_7000
+	}
+	text = {
+		localization_key = decision_cost_army_xp_50_manpower_7000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP100Manpower10300
+	text = {
+		trigger = {
+			has_army_experience > 99
+			has_manpower > 10299
+		}
+		localization_key = decision_cost_army_xp_100_manpower_10300
+	}
+	text = {
+		localization_key = decision_cost_army_xp_100_manpower_10300_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP150
+	text = {
+		trigger = {
+			has_army_experience > 149
+		}
+		localization_key = decision_cost_army_xp_150
+	}
+	text = {
+		localization_key = decision_cost_army_xp_150_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP150Manpower21000
+	text = {
+		trigger = {
+			has_army_experience > 149
+			has_manpower > 20999
+		}
+		localization_key = decision_cost_army_xp_150_manpower_21000
+	}
+	text = {
+		localization_key = decision_cost_army_xp_150_manpower_21000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP70Manpower500
+	text = {
+		trigger = {
+			has_political_power > 69
+			has_manpower > 499
+		}
+		localization_key = decision_cost_pp_70_manpower_500
+	}
+	text = {
+		localization_key = decision_cost_pp_70_manpower_500_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP60Manpower150
+	text = {
+		trigger = {
+			has_political_power > 59
+			has_manpower > 149
+		}
+		localization_key = decision_cost_pp_60_manpower_150
+	}
+	text = {
+		localization_key = decision_cost_pp_60_manpower_150_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP40Manpower50
+	text = {
+		trigger = {
+			has_political_power > 39
+			has_manpower > 49
+		}
+		localization_key = decision_cost_pp_40_manpower_50
+	}
+	text = {
+		localization_key = decision_cost_pp_40_manpower_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP20Manpower150
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 20
+				compare = greater_than_or_equals
+			}
+			has_manpower > 149
+		}
+		localization_key = decision_cost_20_cp_manpower_150
+	}
+	text = {
+		localization_key = decision_cost_20_cp_manpower_150_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLoot2
+	text = {
+		trigger = {
+			check_variable  = {
+				var = loot
+				value = 1
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_2_loot
+	}
+	text = {
+		localization_key = decision_cost_2_loot_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLoot4
+	text = {
+		trigger = {
+			check_variable  = {
+				var = loot
+				value = 3
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_4_loot
+	}
+	text = {
+		localization_key = decision_cost_4_loot_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLoot5
+	text = {
+		trigger = {
+			check_variable  = {
+				var = loot
+				value = 4
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_5_loot
+	}
+	text = {
+		localization_key = decision_cost_5_loot_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLoot6
+	text = {
+		trigger = {
+			check_variable  = {
+				var = loot
+				value = 5
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_6_loot
+	}
+	text = {
+		localization_key = decision_cost_6_loot_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLoot8
+	text = {
+		trigger = {
+			check_variable  = {
+				var = loot
+				value = 7
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_8_loot
+	}
+	text = {
+		localization_key = decision_cost_8_loot_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostChivalry1PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			check_variable  = {
+				var = VED_Chivalry_Points
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_1_chivalry_pp_50
+	}
+	text = {
+		localization_key = decision_cost_1_chivalry_pp_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostManpower10000
+	text = {
+		trigger = {
+			has_manpower > 9999
+		}
+		localization_key = decision_cost_manpower_10000
+	}
+	text = {
+		localization_key = decision_cost_manpower_10000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostManpower25000
+	text = {
+		trigger = {
+			has_manpower > 24999
+		}
+		localization_key = decision_cost_manpower_25000
+	}
+	text = {
+		localization_key = decision_cost_manpower_25000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostManpower50000
+	text = {
+		trigger = {
+			has_manpower > 49999
+		}
+		localization_key = decision_cost_manpower_50000
+	}
+	text = {
+		localization_key = decision_cost_manpower_50000_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostBank5PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			check_variable = { bank > 4 }
+		}
+		localization_key = decision_cost_bank_5_pp_50
+	}
+	text = {
+		localization_key = decision_cost_bank_5_pp_50_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostBank5PP75
+	text = {
+		trigger = {
+			has_political_power > 74
+			check_variable = { bank > 4 }
+		}
+		localization_key = decision_cost_bank_5_pp_75
+	}
+	text = {
+		localization_key = decision_cost_bank_5_pp_75_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostBank2PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { bank > 2 }
+		}
+		localization_key = decision_cost_bank_2_pp_25
+	}
+	text = {
+		localization_key = decision_cost_bank_2_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank3PP100
+	text = {
+		trigger = {
+			has_political_power > 99
+			check_variable = { bank > 3 }
+		}
+		localization_key = decision_cost_bank_3_pp_100
+	}
+	text = {
+		localization_key = decision_cost_bank_3_pp_100_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank3PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			check_variable = { bank > 3 }
+		}
+		localization_key = decision_cost_bank_3_pp_50
+	}
+	text = {
+		localization_key = decision_cost_bank_3_pp_50_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank4PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { bank > 4 }
+		}
+		localization_key = decision_cost_bank_4_pp_25
+	}
+	text = {
+		localization_key = decision_cost_bank_4_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank3PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { bank > 3 }
+		}
+		localization_key = decision_cost_bank_3_pp_25
+	}
+	text = {
+		localization_key = decision_cost_bank_3_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank6PP75
+	text = {
+		trigger = {
+			has_political_power > 74
+			check_variable = { bank > 6 }
+		}
+		localization_key = decision_cost_bank_6_pp_75
+	}
+	text = {
+		localization_key = decision_cost_bank_6_pp_75_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank1PP15
+	text = {
+		trigger = {
+			has_political_power > 14
+			check_variable = { bank > 0 }
+		}
+		localization_key = decision_cost_bank_1_pp_15
+	}
+	text = {
+		localization_key = decision_cost_bank_1_pp_15_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBank2PP20
+	text = {
+		trigger = {
+			has_political_power > 19
+			check_variable = { bank > 1 }
+		}
+		localization_key = decision_cost_bank_2_pp_20
+	}
+	text = {
+		localization_key = decision_cost_bank_2_pp_20_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostEquipment2000PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		localization_key = decision_cost_2000_guns_25_pp
+	}
+	text = {
+		localization_key = decision_cost_2000_guns_25_pp_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostEquipment500PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_equipment = { infantry_equipment > 499 }
+		}
+		localization_key = decision_cost_500_guns_50_pp
+	}
+	text = {
+		localization_key = decision_cost_500_guns_50_pp_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostStability3
+	text = {
+		trigger = {
+			has_stability > 0.02
+		}
+		localization_key = decision_cost_3_stability
+	}
+	text = {
+		localization_key = decision_cost_3_stability_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostFavor2
+	text = {
+		trigger = {
+			check_variable  = {
+				var = favor
+				value = 1
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_2_favor
+	}
+	text = {
+		localization_key = decision_cost_2_favor_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostFavor4
+	text = {
+		trigger = {
+			check_variable  = {
+				var = favor
+				value = 3
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_4_favor
+	}
+	text = {
+		localization_key = decision_cost_4_favor_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostFavor5
+	text = {
+		trigger = {
+			check_variable  = {
+				var = favor
+				value = 4
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_5_favor
+	}
+	text = {
+		localization_key = decision_cost_5_favor_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostFavor6
+	text = {
+		trigger = {
+			check_variable  = {
+				var = favor
+				value = 5
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_6_favor
+	}
+	text = {
+		localization_key = decision_cost_6_favor_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostFavor8
+	text = {
+		trigger = {
+			check_variable  = {
+				var = favor
+				value = 7
+				compare = greater_than
+			}
+		}
+		localization_key = decision_cost_8_favor
+	}
+	text = {
+		localization_key = decision_cost_8_favor_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostTestSubject7500
+	text = {
+		trigger = {
+			check_variable = { BAT_test_subjects > 7499 }
+		}
+		localization_key = decision_cost_7500_test_subject
+	}
+	text = {
+		localization_key = decision_cost_7500_test_subject_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostEquipment500PP100
+	text = {
+		trigger = {
+			has_political_power > 99
+			has_equipment = { infantry_equipment > 499 }
+		}
+		localization_key = decision_cost_500_guns_100_pp
+	}
+	text = {
+		localization_key = decision_cost_500_guns_100_pp_blocked
+	}
+}
+
+
+
+defined_text = {
+	name = GetDecisionCostEquipment1000CP100
+	text = {
+		trigger = {
+			command_power > 99
+			has_equipment = { infantry_equipment > 999 }
+		}
+		localization_key = decision_cost_1000_guns_100_cp
+	}
+	text = {
+		localization_key = decision_cost_1000_guns_100_cp_blocked
+	}
+}
+
+
+defined_text = {
+	name = GetDecisionCostEquipment400CP40
+	text = {
+		trigger = {
+			command_power > 39
+			has_equipment = { infantry_equipment > 399 }
+		}
+		localization_key = decision_cost_400_guns_40_cp
+	}
+	text = {
+		localization_key = decision_cost_400_guns_40_cp_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostSuppEquipment500PP100
+	text = {
+		trigger = {
+			has_political_power > 99
+			has_equipment = { support_equipment > 499 }
+		}
+		localization_key = decision_cost_500_supp_100_pp
+	}
+	text = {
+		localization_key = decision_cost_500_supp_100_pp_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostSuppEquipment200PP40
+	text = {
+		trigger = {
+			has_political_power > 39
+			has_equipment = { support_equipment > 199 }
+		}
+		localization_key = decision_cost_200_supp_40_pp
+	}
+	text = {
+		localization_key = decision_cost_200_supp_40_pp_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostTestSubject10000
+	text = {
+		trigger = {
+			check_variable = { BAT_test_subjects > 9999 }
+		}
+		localization_key = decision_cost_10000_test_subject
+	}
+	text = {
+		localization_key = decision_cost_10000_test_subject_blocked
+    }
+}
+
+defined_text = {
+	name = GetDecisionCostEquipment750PP100
+	text = {
+		trigger = {
+			has_political_power > 99
+			has_equipment = { infantry_equipment > 749 }
+		}
+		localization_key = decision_cost_750_guns_100_pp
+	}
+	text = {
+		localization_key = decision_cost_750_guns_100_pp_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostTestSubject12500
+	text = {
+		trigger = {
+			check_variable = { BAT_test_subjects > 12499 }
+		}
+		localization_key = decision_cost_12500_test_subject
+	}
+	text = {
+		localization_key = decision_cost_12500_test_subject_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLabour10000PP15
+	text = {
+		trigger = {
+			check_variable = { BAT_labourers > 9999 }
+			has_political_power > 14
+		}
+		localization_key = decision_cost_10000_labour_pp_15
+	}
+	text = {
+		localization_key = decision_cost_10000_labour_pp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLabour15000PP15
+	text = {
+		trigger = {
+			check_variable = { BAT_labourers > 14999 }
+			has_political_power > 14
+		}
+		localization_key = decision_cost_15000_labour_pp_15
+	}
+	text = {
+		localization_key = decision_cost_15000_labour_pp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLabour15000
+	text = {
+		trigger = {
+			check_variable = { BAT_labourers > 14999 }
+		}
+		localization_key = decision_cost_15000_labour
+	}
+	text = {
+		localization_key = decision_cost_15000_labour_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLabour20000PP15
+	text = {
+		trigger = {
+			check_variable = { BAT_labourers > 19999 }
+			has_political_power > 14
+		}
+		localization_key = decision_cost_20000_labour_pp_15
+	}
+	text = {
+		localization_key = decision_cost_20000_labour_pp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostLabour25000PP15
+	text = {
+		trigger = {
+			check_variable = { BAT_labourers > 24999 }
+			has_political_power > 14
+		}
+		localization_key = decision_cost_25000_labour_pp_15
+	}
+	text = {
+		localization_key = decision_cost_25000_labour_pp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP15
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 15
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_CP_15
+	}
+	text = {
+		localization_key = decision_cost_CP_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP25
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_CP_25
+	}
+	text = {
+		localization_key = decision_cost_CP_25_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP15MP500
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 15
+				compare = greater_than_or_equals
+			}
+			has_manpower > 499
+		}
+		localization_key = decision_cost_CP_15_mp_500
+	}
+	text = {
+		localization_key = decision_cost_CP_15_mp_500_blocked
+    }
+}
+
+defined_text = { # Country
+	name = GetDecisionCostCP15PP10MP500
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 15
+				compare = greater_than_or_equals
+			}
+			has_political_power > 9
+			has_manpower > 499
+		}
+		localization_key = decision_cost_CP_15_pp_10_mp_500
+	}
+	text = {
+		localization_key = decision_cost_CP_15_pp_10_mp_500_blocked
+    }
+}
+
+defined_text = {
+	name = GetDecisionCostEquipment750PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			has_equipment = { infantry_equipment > 749 }
+		}
+		localization_key = decision_cost_750_guns_50_pp
+	}
+	text = {
+		localization_key = decision_cost_750_guns_50_pp_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostFood75PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { bank > 74 }
+		}
+		localization_key = decision_cost_food_75_pp_25
+	}
+	text = {
+		localization_key = decision_cost_food_75_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBiomass750PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { ouroboros > 749 }
+		}
+		localization_key = decision_cost_biomass_750_pp_25
+	}
+	text = {
+		localization_key = decision_cost_biomass_750_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBiomass1500PP50
+	text = {
+		trigger = {
+			has_political_power > 49
+			check_variable = { ouroboros > 1499 }
+		}
+		localization_key = decision_cost_biomass_1500_pp_50
+	}
+	text = {
+		localization_key = decision_cost_biomass_1500_pp_50_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostBiomass5000PP100
+	text = {
+		trigger = {
+			has_political_power > 99
+			check_variable = { ouroboros > 4999 }
+		}
+		localization_key = decision_cost_biomass_5000_pp_100
+	}
+	text = {
+		localization_key = decision_cost_biomass_5000_pp_100_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostMagic1PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 0 }
+		}
+		localization_key = decision_cost_magical_power_1_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_1_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic2PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 1 }
+		}
+		localization_key = decision_cost_magical_power_2_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_2_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic3PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 2 }
+		}
+		localization_key = decision_cost_magical_power_3_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_3_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic4PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 3 }
+		}
+		localization_key = decision_cost_magical_power_4_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_4_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic5PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 4 }
+		}
+		localization_key = decision_cost_magical_power_5_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_5_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic6PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 5 }
+		}
+		localization_key = decision_cost_magical_power_6_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_6_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic7PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 6 }
+		}
+		localization_key = decision_cost_magical_power_7_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_7_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic8PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 7 }
+		}
+		localization_key = decision_cost_magical_power_8_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_8_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic9PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 8 }
+		}
+		localization_key = decision_cost_magical_power_9_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_9_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetDecisionCostMagic10PP25
+	text = {
+		trigger = {
+			has_political_power > 24
+			check_variable = { magical_power > 9 }
+		}
+		localization_key = decision_cost_magical_power_10_pp_25
+	}
+	text = {
+		localization_key = decision_cost_magical_power_10_pp_25_blocked
+	}
+}
+defined_text = { # Country
+	name = GetFrancistriaName
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName
+	}
+	text = {
+		localization_key = FRN_FrancistriaName
+	}
+}
+
+# RUSSIAN SCRIPTED LOC ACCOUNTING FOR CASES :solution:
+# Using the above one for the nominative case, following are self-explanatory
+
+defined_text = { # Country
+	name = GetFrancistriaName_genitive
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName_genitive
+	}
+	text = {
+		localization_key = FRN_FrancistriaName_genitive
+	}
+}
+defined_text = { # Country
+	name = GetFrancistriaName_dative
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName_dative
+	}
+	text = {
+		localization_key = FRN_FrancistriaName_dative
+	}
+}
+defined_text = { # Country
+	name = GetFrancistriaName_accusative
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName_accusative
+	}
+	text = {
+		localization_key = FRN_FrancistriaName_accusative
+	}
+}
+defined_text = { # Country
+	name = GetFrancistriaName_instrumental
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName_instrumental
+	}
+	text = {
+		localization_key = FRN_FrancistriaName_instrumental
+	}
+}
+defined_text = { # Country
+	name = GetFrancistriaName_prepositional
+	text = {
+		trigger = {
+			original_tag = FRN
+			has_cosmetic_tag = FRN_no_francis
+		}
+		localization_key = FRN_PiumontName_prepositional
+	}
+	text = {
+		localization_key = FRN_FrancistriaName_prepositional
+	}
+}
+defined_text = {
+	name = fear_factor_dynamic_loc
+	text = {
+		trigger = {
+			has_country_flag = TRT_more_fear_unlocked
+			check_variable = { fear_factor > 99 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_9
+	}
+	text = {
+		trigger = {
+			has_country_flag = TRT_more_fear_unlocked
+			check_variable = { fear_factor > 59 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_8
+	}
+	text = {
+		trigger = {
+			has_country_flag = TRT_more_fear_unlocked
+			check_variable = { fear_factor > 29 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_7
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 19 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_6
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 14 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_5
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 11 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_4
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 8 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_3
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 5 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor > 2 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_1
+	}
+	text = {
+		trigger = {
+			check_variable = { fear_factor < 3 }
+		}
+		localization_key =  fear_factor_dynamic_loc_level_0
+	}
+}
+
+defined_text = { # Country
+	name = GetFormAquileiaName
+	text = {
+		trigger = {
+			has_country_flag = holds_griffon_capital
+		}
+		localization_key = form_aquileia_griffemp
+	}
+	text = {
+		localization_key = form_aquileia_normal
+	}
+}
+
+defined_text = { # Country
+	name = GetFormEviName
+	text = {
+		trigger = {
+			has_country_flag = holds_griffon_capital
+		}
+		localization_key = form_evi_griffemp
+	}
+	text = {
+		localization_key = form_evi_normal
+	}
+}
+
+defined_test = {
+	name = GetCountryContinentEAW
+	text = {
+		trigger = {
+			capital_scope = { is_on_continent = europe }
+		}
+		localization_key = europe
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_on_continent = africa }
+		}
+		localization_key = africa
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_on_continent = asia }
+		}
+		localization_key = asia
+	}
+	
+	text = {
+		localization_key = same_continent
+	}
+}
+
+defined_test = {
+	name = land_mastery_doctrine_GetTrack
+	text = {
+		trigger = {
+			check_variable = { temp_track = 1 }
+		}
+		localization_key = "infantry"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 2 }
+		}
+		localization_key = "combat_support"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 3 }
+		}
+		localization_key = "armor"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 4 }
+		}
+		localization_key = "operations"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 5 }
+		}
+		localization_key = "future_infantry"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 6 }
+		}
+		localization_key = "future_combat_support"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 7 }
+		}
+		localization_key = "future_armor"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 8 }
+		}
+		localization_key = "future_operations"
+	}
+}
+defined_test = {
+	name = air_mastery_doctrine_GetTrack
+	text = {
+		trigger = {
+			check_variable = { temp_track = 1 }
+		}
+		localization_key = "fighter_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 2 }
+		}
+		localization_key = "strike_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 3 }
+		}
+		localization_key = "medium_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 4 }
+		}
+		localization_key = "heavy_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 5 }
+		}
+		localization_key = "future_fighter_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 6 }
+		}
+		localization_key = "future_strike_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 7 }
+		}
+		localization_key = "future_medium_aircraft"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 8 }
+		}
+		localization_key = "future_heavy_aircraft"
+	}
+}
+defined_test = {
+	name = naval_mastery_doctrine_GetTrack
+	text = {
+		trigger = {
+			check_variable = { temp_track = 1 }
+		}
+		localization_key = "submarines"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 2 }
+		}
+		localization_key = "screens"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 3 }
+		}
+		localization_key = "carriers"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 4 }
+		}
+		localization_key = "capital_ships"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 5 }
+		}
+		localization_key = "future_submarines"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 6 }
+		}
+		localization_key = "future_screens"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 7 }
+		}
+		localization_key = "future_carriers"
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_track = 8 }
+		}
+		localization_key = "future_capital_ships"
+	}
+}

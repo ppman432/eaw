@@ -1,0 +1,425 @@
+BRZ_alternate_neutral_gabriela = {
+	name = "Bronzhill Rightful Regent Path"
+	desc = ""
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			has_country_flag = BRZ_AI_RANDOM_NEUTRALITY_RIGHTFUL_REGENT
+			AND = {
+				GRI = { has_completed_focus = GRI_eagleclaw }
+				has_country_flag = BRZ_AI_HISTORICAL
+			}
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = NEUTRALITY_RIGHTFUL_REGENT
+			}
+			AND = {
+				GRI = { has_completed_focus = GRI_eagleclaw }
+				has_game_rule = {
+					rule = BRZ_ai_behavior 
+					option = HISTORICAL
+				}
+			}
+		}
+	}
+	abort = {
+		has_global_flag = GRI_grover_vi_dead
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_old_loyalties
+		
+		# Rightful regent
+		BRZ_the_rightful_regent
+		BRZ_envoy_to_griffenheim
+		BRZ_gather_the_knights
+		BRZ_unite_the_nobility
+		BRZ_clear_military_hierachies
+		BRZ_outlaw_the_SPB
+		BRZ_spread_loyalist_messages
+		BRZ_invite_advisors_from_griffenheim
+		BRZ_dismiss_the_council_loyalist
+		BRZ_a_true_show_of_unity
+		BRZ_most_loyal_and_faithful_dogs
+		BRZ_invite_yale_professors
+		BRZ_reinvigorate_trade_with_griffenheim
+		BRZ_the_grover_v_memorial_park
+		BRZ_the_forge_of_the_empire
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_negotiations_with_kraehe_stahl
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+BRZ_alternate_communist_steelpaw = {
+	name = "Bronzhill Commie Steelpaw Path"
+	desc = ""
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			has_country_flag = BRZ_AI_RANDOM_COMMUNIST_STEELPAW
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = COMMUNIST_STEELPAW
+			}
+		}
+	}
+	abort = {
+		has_global_flag = GRI_grover_vi_dead
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_a_change_of_course
+		
+		# Barking-Sun
+		BRZ_steelpaws_coup
+		BRZ_secure_the_army
+		BRZ_target_the_national_union
+		BRZ_disband_the_hkp
+		BRZ_purge_the_nobles
+		BRZ_hunt_the_count
+		BRZ_mobilize_the_economy
+		BRZ_liberation_corps
+		BRZ_principle_of_total_dedication
+		BRZ_march_on_griffenheim # War ASAP for greater chance of victory
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_nationalize_the_grover_v_industrial_park
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+BRZ_alternate_communist_softfur = {
+	name = "Bronzhill Commie Softfur Path"
+	desc = ""
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			has_country_flag = BRZ_AI_RANDOM_COMMUNIST_SOFTFUR
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = COMMUNIST_SOFTFUR
+			}
+		}
+	}
+	abort = {
+		has_global_flag = GRI_grover_vi_dead
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_a_change_of_course
+		
+		# Barking-Sun
+		BRZ_the_outsider_candidate
+		BRZ_government_for_the_workingdogs
+		BRZ_curtail_the_nobles
+		BRZ_reverse_the_socialist_laws
+		BRZ_purge_the_national_union
+		BRZ_replace_the_count
+		BRZ_introduce_worker_councils
+		BRZ_expropriate_the_oligarchs
+		BRZ_march_of_the_working_dog
+		BRZ_march_on_griffenheim # War ASAP for greater chance of victory
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_nationalize_the_grover_v_industrial_park
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+BRZ_alternate_harmony_barnaby = {
+	name = "Bronzhill Harmony Barnaby Path"
+	desc = ""
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			has_country_flag = BRZ_AI_RANDOM_HARMONY_BARNABY
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = HARMONY_BARNABY
+			}
+		}
+	}
+	abort = {
+		has_global_flag = GRI_grover_vi_dead
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_a_change_of_course
+		
+		# Barking-Sun
+		BRZ_give_power_to_barnaby
+		BRZ_negotiate_with_the_socialists
+		BRZ_labour_reform_laws
+		BRZ_start_the_reform_agenda
+		BRZ_sway_the_nobles
+		BRZ_undermine_the_national_union
+		BRZ_deal_with_the_businessgriffs
+		BRZ_new_city_council_elections
+		BRZ_our_cause_for_justice
+		BRZ_march_on_griffenheim # War ASAP for greater chance of victory
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_nationalize_the_grover_v_industrial_park
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+BRZ_alternate_fascist_loudbark = {
+	name = "Bronzhill Fascist Loudbark Path"
+	desc = ""
+
+	allowed = {
+		original_tag = BRZ
+
+	}
+
+	enable = {
+		OR = {
+			has_country_flag = BRZ_AI_RANDOM_FASCIST_LOUDBARK
+			has_game_rule = {
+				rule = BRZ_ai_behavior 
+				option = FASCISM_LOUDBARK
+			}
+		}
+	}
+	abort = {
+		has_global_flag = GRI_grover_vi_dead
+	}
+
+	ai_national_focuses = {
+		# Starting Industry Focuses
+		BRZ_finish_the_grover_v_industrial_park
+		BRZ_paving_the_roads
+		BRZ_invite_griffenheim_engineers
+		BRZ_contracts_with_the_businessgriffs
+		
+		# Political Introduction
+		BRZ_call_the_bronzehill_council
+		BRZ_tea_with_copperhill
+		BRZ_an_unusual_guest
+		BRZ_word_with_loudbark
+		BRZ_up_in_the_hills
+		BRZ_meeting_in_ravensburg
+		BRZ_barnabys_ideas
+		BRZ_the_councils_opens
+		BRZ_a_change_of_course
+		
+		# Barking-Sun
+		BRZ_the_iron_chancellor
+		BRZ_sharpen_the_socialist_laws
+		BRZ_expand_rural_subsidies
+		BRZ_our_city_reforms
+		BRZ_found_the_reichsgewerkschaft
+		BRZ_the_nationalization_act
+		BRZ_approach_the_nobles
+		BRZ_the_military_industrial_complex
+		BRZ_unleash_the_dogs_of_war
+		BRZ_march_on_griffenheim # War ASAP for greater chance of victory
+		
+		# Economic / War - these will mostly be called if other focuses are unavailable
+		BRZ_nationalize_the_grover_v_industrial_park
+		BRZ_military_budget_review
+		BRZ_challenge_our_legacy
+		BRZ_expand_the_rural_school_budget
+		BRZ_invite_electronic_engineers
+		BRZ_our_talents_at_home
+		BRZ_found_the_bronzekreuz_university
+		
+		# After that things are irrelevant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

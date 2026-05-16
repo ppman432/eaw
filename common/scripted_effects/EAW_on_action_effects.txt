@@ -1,0 +1,3747 @@
+### Some blocks of code from on_actions have been moved here for readability and reusability
+
+apply_cosmetic_tags_on_puppet_PREV_is_overlord = {
+	if = {
+		limit = {
+			PREV = {
+				tag = GRD
+				NOT = { has_country_flag = have_regular_puppets }
+			}
+			is_feudal_vassal = yes
+		}
+		country_event = griffonian.1
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				tag = event_target:solar_empire
+				has_government = fascism
+			}
+		}
+		if = {
+			limit = {
+				original_tag = CRY
+				NOT = { has_global_flag = CRY_puppet_chosen }
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				retire_country_leader = yes
+			}
+			PREV = {
+				country_event = { id = solarempire.131 hours = 1 }
+			}
+		}
+		else_if = {
+			limit = { original_tag = EQC }
+			every_possible_country = {
+				limit = {
+					has_character = EQS_SOL_arcane_nova
+				}
+				EQS_SOL_arcane_nova = {
+					retire = yes
+				}
+			}
+			promote_character = EQS_SOL_arcane_nova
+			set_party_name = { ideology = fascism long_name = EQC_SOL_fascism_party_long name = EQC_SOL_fascism_party }
+			if = {
+				limit = {
+					has_country_flag = EQC_destined_to_be_an_RK
+				}
+				PREV = { set_autonomy = { target = ROOT autonomy_state = autonomy_reichskommissariat } }
+			}
+			load_focus_tree = eqc_sol_focus
+			set_global_flag = SOL_chose_EQC_leader
+			set_province_name = { id = 10005 name = "Sunset" }
+		}
+		else_if = {
+			limit = { original_tag = PLB }
+			country_event = solarempire.1000
+		}
+		else_if = {
+			limit = { original_tag = GRF }
+			country_event = solarempire.1001
+		}
+		else_if = {
+			limit = { original_tag = PNG }
+			country_event = solarempire.1002
+		}
+		else_if = {
+			limit = { original_tag = STL }
+			country_event = solarempire.1003
+		}
+		else_if = {
+			limit = { original_tag = BUF }
+			country_event = solarempire.1004
+		}
+		else_if = {
+			limit = { original_tag = DRG }
+			country_event = solarempire.1005
+		}
+		else_if = {
+			limit = { original_tag = GFF }
+			country_event = solarempire.1006
+		}
+		else_if = {
+			limit = { original_tag = OLE }
+			country_event = solarempire.1008
+		}
+		else_if = {
+			limit = { original_tag = BAL }
+			country_event = solarempire.1009
+		}
+		else_if = {
+			limit = { original_tag = CES }
+			country_event = solarempire.1010
+		}
+		else_if = {
+			limit = { original_tag = JUN }
+			country_event = solarempire.1011
+		}
+		else_if = {
+			limit = { original_tag = SCS }
+			country_event = solarempire.1012
+		}
+		else_if = {
+			limit = { original_tag = STG }
+			country_event = solarempire.1013
+		}
+		else_if = {
+			limit = {
+				original_tag = JAK
+				NOT = {
+					has_country_flag = JAK_got_puppeted_by_SOL
+				}
+			}
+			country_event = solarempire.1015
+		}
+		else_if = {
+			limit = { original_tag = CHN }
+			country_event = solarempire.1016
+		}
+		else_if = {
+			limit = { original_tag = YAK }
+			country_event = solarempire.1017
+		}
+		else_if = {
+			limit = { original_tag = PCB }
+			country_event = solarempire.1019
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = TEM
+				has_government = fascism
+			}
+		}
+
+		if = {
+			limit = { original_tag = PLB }
+			country_event = temple.1000
+		}
+		else_if = {
+			limit = { original_tag = GRF }
+			country_event = temple.1001
+		}
+		else_if = {
+			limit = { original_tag = PNG }
+			country_event = temple.1002
+		}
+		else_if = {
+			limit = { original_tag = STL }
+			country_event = temple.1003
+		}
+		else_if = {
+			limit = { original_tag = DRG }
+			country_event = temple.1004
+		}
+		else_if = {
+			limit = { original_tag = GFF }
+			country_event = temple.1005
+		}
+		else_if = {
+			limit = { original_tag = OLE }
+			country_event = temple.1006
+		}
+		else_if = {
+			limit = { original_tag = STG }
+			country_event = temple.1007
+		}
+		else_if = {
+			limit = { original_tag = JAK }
+			country_event = temple.1008
+		}
+		else_if = {
+			limit = { original_tag = CHN }
+			country_event = temple.1009
+		}
+		else_if = {
+			limit = { original_tag = YAK }
+			country_event = temple.1010
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = NLR
+				has_government = fascism
+			}
+		}
+		if = {
+			limit = { tag = CRY }
+			set_country_flag = {
+				flag = forced_puppet
+				value = 1
+				days = 30
+			}
+			PREV = { country_event = lunas.12 }
+		}
+		else_if = {
+			limit = { original_tag = CRY }
+			PREV = {
+				if = {
+					limit = {
+						has_global_flag = rarity_captured
+						#has_completed_focus = NLR_forgive_elements
+					}
+					set_global_flag = NLR_rarity_governor
+				}
+				set_autonomy = { target = ROOT autonomy_state = autonomy_reichsprotectorate }
+			}
+			set_cosmetic_tag = CRY_NLR
+			add_autonomy_ratio = { value = -0.20 }
+			set_country_flag = CRY_lunar_governorship
+			set_country_flag = is_luna_puppet
+			set_stability = 0.3
+			set_war_support = 0.3
+			load_focus_tree = crystal_empire_lunar_focus
+			set_party_name = { ideology = fascism name = NLR_fascism_party long_name = NLR_fascism_party_long }
+			add_country_leader_role = {
+				character = CRY_nightmare_moon
+				promote_leader = yes
+
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = supremacy_alicornrule
+					traits = { provisional }
+				}
+			}
+			if = {
+				limit = {
+					has_character = CRY_reese
+				}
+				CRY_reese = {
+					set_nationality = SOL
+				}
+			}
+			if = {
+				limit = {
+					has_character = CRY_cloudie
+				}
+				CRY_cloudie = {
+					set_nationality = SOL
+				}
+			}
+			if = {
+				limit = {
+					has_character = CRY_wondermane
+				}
+				CRY_wondermane = {
+					set_nationality = SOL
+				}
+			}
+		}
+		else_if = {
+			limit = { original_tag = EQC }
+			load_focus_tree = eqc_nlr_focus
+			set_party_name = { ideology = fascism long_name = EQC_bat_supporters_fash name = EQC_bat_supporters_fash }
+			set_party_name = { ideology = neutrality name = EQC_bat_supporters long_name = EQC_bat_supporters_long }
+			add_country_leader_role = {
+				character = EQC_evening_dew
+				promote_leader = yes
+
+				country_leader={
+					desc = "another_edgy_bat_desc"
+					ideology = esotericism
+					expire="1965.1.1.1"
+					traits = {  }
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			country_event = { id = EQC_NLR.11 days = 94 }
+			NLR = {
+				set_country_flag = EQC_force_puppet_set
+				country_event = mareland.45
+			}
+		}
+		else_if = {
+			limit = { original_tag = PLB }
+			country_event = { id = lunas.900 }
+		}
+		else_if = {
+			limit = { original_tag = GRF }
+			country_event = { id = lunas.902 }
+		}
+		else_if = {
+			limit = { original_tag = PNG }
+			country_event = { id = lunas.901 }
+		}
+		else_if = {
+			limit = { original_tag = STL }
+			country_event = { id = lunas.903 }
+		}
+		else_if = {
+			limit = { original_tag = BUF }
+			country_event = { id = lunas.904 }
+		}
+		else_if = {
+			limit = { original_tag = DRG }
+			country_event = { id = lunas.905 }
+		}
+		else_if = {
+			limit = { original_tag = GFF }
+			fire_GFF_NLR_cosmetic_set = yes
+		}
+		else_if = {
+			limit = { original_tag = OLE }
+			country_event = { id = lunas.911 }
+		}
+		else_if = {
+			limit = { original_tag = BAL }
+			country_event = { id = lunas.912 }
+		}
+		else_if = {
+			limit = { original_tag = CES }
+			country_event = { id = lunas.913 }
+		}
+		else_if = {
+			limit = { original_tag = JUN }
+			country_event = { id = lunas.914 }
+		}
+		else_if = {
+			limit = { original_tag = SCS }
+			country_event = { id = lunas.916 }
+		}
+		else_if = {
+			limit = { original_tag = STG }
+			country_event = { id = lunas.917 }
+		}
+		else_if = {
+			limit = { original_tag = JAK }
+			country_event = { id = lunas.919 }
+		}
+		else_if = {
+			limit = { original_tag = CHN }
+			country_event = { id = lunas.920 }
+		}
+		else_if = {
+			limit = { original_tag = YAK }
+			country_event = { id = lunas.921 }
+		}
+		else_if = {
+			limit = { original_tag = PCB }
+			country_event = { id = lunas.922 }
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = CHN
+				has_government = fascism
+			}
+		}
+		if = {
+			limit = { original_tag = OLE }
+			country_event = { id = olenia.718 }
+		}
+		else_if = {
+			limit = {
+				original_tag = PLB
+				NOT = {
+					has_country_leader = {
+						character = PLB_bjornling
+						ruling_only = yes
+					}
+				}
+			}
+			country_event = { id = changelings.900 }
+		}
+		else_if = {
+			limit = { original_tag = GRF }
+			country_event = { id = changelings.902 }
+		}
+		else_if = {
+			limit = { original_tag = PNG }
+			country_event = { id = changelings.901 }
+		}
+		else_if = {
+			limit = { original_tag = STL }
+			country_event = { id = changelings.903 }
+		}
+		else_if = {
+			limit = { original_tag = BUF }
+			country_event = { id = changelings.904 }
+		}
+		else_if = {
+			limit = { original_tag = DRG }
+			country_event = { id = changelings.905 }
+		}
+		else_if = {
+			limit = { original_tag = GFF }
+			country_event = { id = changelings.906 }
+		}
+		else_if = {
+			limit = { original_tag = OLE }
+			country_event = { id = olenia.718 }
+		}
+		else_if = {
+			limit = { original_tag = CRY }
+			country_event = { id = crystalemp.23 }
+		}
+		else_if = {
+			limit = { original_tag = EQS }
+			country_event = { id = equestriachn.3 }
+		}
+		else_if = {
+			limit = { original_tag = STG }
+			country_event = { id = stalliongrad.98 }
+		}
+		else_if = {
+			limit = { original_tag = YAK }
+			JAK = {
+				every_core_state = {
+					add_core_of = YAK
+				}
+			}
+			if = {
+				limit = {
+					is_subject_of = CHN
+				}
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = YAK_CHN
+				add_political_power = -300
+			}
+		}
+		else_if = {
+			limit = { original_tag = JAK }
+			YAK = {
+				every_core_state = {
+					add_core_of = JAK
+				}
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = JAK_CHN
+		}
+		else_if = {
+			limit = { original_tag = SCS }
+			set_cosmetic_tag = CHN_confpuppet
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = JUN }
+			set_cosmetic_tag = JUN_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = BAL }
+			set_cosmetic_tag = BAL_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = CES }
+			set_cosmetic_tag = CES_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = EQC }
+			set_cosmetic_tag = EQC_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = HAU }
+			set_cosmetic_tag = HAU_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = PCB }
+			set_cosmetic_tag = PCB_CHN
+			set_country_flag = is_changeling_puppet
+		}
+		else_if = {
+			limit = { original_tag = MAN }
+			set_cosmetic_tag = MAN_CHN
+			set_country_flag = is_changeling_puppet
+			CHN = {
+				set_country_flag = released_manehattan_puppet
+			}
+		}
+		else_if = {
+			limit = { is_griffon_continent_country = yes }
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CHN_griffon_puppets
+		}
+	}
+	else_if = {
+		limit = { original_tag = STG }
+		if = {
+			limit = {
+				PREV = { has_government = democratic }
+			}
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = STG_EQS
+				load_focus_tree = generic_focus
+			}
+		}
+		else_if = {
+			limit = {
+				PREV = { NOT = { tag = EQS } has_government = democratic }
+			}
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = STG_DEM
+				load_focus_tree = generic_focus
+			}
+		}
+		else_if = {
+			limit = {
+				PREV = { has_government = fascism }
+			}
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = STG_PAGAN
+				load_focus_tree = generic_focus
+			}
+		}
+		else_if = {
+			limit = {
+				PREV = { has_government = neutrality }
+			}
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = STG_MONARCHY
+				load_focus_tree = generic_focus
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = GRW }
+		if = {
+			limit = {
+				PREV = { tag = BAN }
+			}
+			ROOT = {
+				set_cosmetic_tag = GRW_BAN
+				load_focus_tree = generic_griffon_focus
+			}
+		}
+		else_if = {
+			limit = {
+				PREV = { NOT = { tag = BRF tag = BAN } has_government = fascism }
+			}
+			ROOT = {
+				set_cosmetic_tag = GRW_FASHPUPPET
+				load_focus_tree = generic_griffon_focus
+			}
+		}
+		else_if = {
+			limit = {
+				PREV = { NOT = { tag = BRF tag = BAN } NOT = { has_government = fascism } }
+			}
+			ROOT = {
+				set_cosmetic_tag = GRW_PUPPET
+				load_focus_tree = generic_griffon_focus
+			}
+
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = CRY
+				has_government = fascism
+				CRY_sombra = { is_country_leader = yes }
+			}
+		}
+		if = {
+			limit = { original_tag = EQS }
+			country_event = equestria.56
+
+		}
+	}
+	else_if = {
+		limit = {
+			original_tag = FLO
+			PREV = {
+				original_tag = JER
+			}
+		}
+		if = {
+			limit = {
+				PREV = {
+					has_country_flag = have_regular_puppets
+				}
+			}
+			set_cosmetic_tag = FLO_JER_subject
+		}
+		else = {
+			set_cosmetic_tag = JER_PUPPET
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = CVA
+				has_country_flag = CVA_ZONICIAN_DENGIST_PUPPETS
+			}
+		}
+		set_cosmetic_tag = CVA_CTH_zoenician_puppet
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				original_tag = CVA
+				has_country_flag = CVA_ZONICIAN_ZAPATIST_PUPPETS
+			}
+		}
+		set_cosmetic_tag = CVA_CTH_zoenician_puppet_2
+	}
+}
+
+CRY_check_for_Sombra_when_released = {
+	if = {
+		limit = {
+			original_tag = CRY
+		}
+		country_event = crysom.48
+		if = {
+			limit = {
+				FROM = {
+					original_tag = EQS
+					has_government = democratic
+				}
+			}
+			CRY_restore_establishment = yes
+		}
+		if = {
+			limit = {
+				FROM = { has_government = fascism }
+			}
+			kill_country_leader = yes
+		}
+	}
+}
+
+CRY_process_when_puppeted_by_EQS = {
+	if = {
+		limit = { original_tag = CRY }
+		if = {
+			limit = { FROM = { has_government = democratic } }
+			CRY_restore_establishment = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = equestrian_overlord
+					has_idea = equestrian_overlord2
+					has_idea = equestrian_overlord3
+				}
+			}
+			if = {
+				limit = { has_completed_focus = CRY_subordination }
+				add_ideas = equestrian_overlord3
+			}
+			else_if = {
+				limit = { has_completed_focus = CRY_eqsengineers }
+				add_ideas = equestrian_overlord2
+			}
+			else = { add_ideas = equestrian_overlord }
+		}
+		event_target:equestria = {
+			remove_opinion_modifier = { target = ROOT modifier = CHN_embargo }
+			remove_opinion_modifier = { target = ROOT modifier = cry_refused_demmands }
+			remove_opinion_modifier = { target = ROOT modifier = enemies }
+			remove_opinion_modifier = { target = ROOT modifier = executed_royalty }
+		}
+		EQC = {
+			remove_opinion_modifier = { target = ROOT modifier = CHN_embargo }
+			remove_opinion_modifier = { target = ROOT modifier = cry_refused_demmands }
+			remove_opinion_modifier = { target = ROOT modifier = enemies }
+		}
+	}
+}
+
+CRY_restore_establishment = {
+	if = {
+		limit = {
+			original_tag = CRY
+			has_government = democratic
+		}
+		country_event = { id = crysom.40 hours = 1 }
+	}
+}
+
+CHN_remove_pony_opinion_maluses = {
+	if = {
+		limit = { tag = CHN }
+		remove_opinion_modifier = { target = FROM modifier = CHN_embargo }
+		FROM = { remove_opinion_modifier = { target = ROOT modifier = CHN_embargo } }
+		remove_opinion_modifier = { target = CRY modifier = CHN_embargo }
+		CRY = { remove_opinion_modifier = { target = ROOT modifier = CHN_embargo } }
+		remove_opinion_modifier = { target = EQC modifier = CHN_embargo }
+		EQC = { remove_opinion_modifier = { target = ROOT modifier = CHN_embargo } }
+		remove_opinion_modifier = { target = FROM modifier = mortal_enemies }
+		FROM = { remove_opinion_modifier = { target = ROOT modifier = mortal_enemies } }
+		remove_opinion_modifier = { target = CRY modifier = mortal_enemies }
+		CRY = { remove_opinion_modifier = { target = ROOT modifier = mortal_enemies } }
+		remove_opinion_modifier = { target = EQC modifier = mortal_enemies }
+		EQC = { remove_opinion_modifier = { target = ROOT modifier = mortal_enemies } }
+	}
+}
+
+CHN_demilitarise = {
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					AND = {
+						original_tag = EQS
+						has_government = democratic
+					}
+					AND = {
+						original_tag = CRY
+						has_government = democratic
+					}
+					AND = {
+						original_tag = STG
+						OR = {
+							has_government = democratic
+							has_government = communism
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = changelings.39 days = 1 }
+		}
+	}
+}
+
+EQS_force_OLE_release_when_puppeting_CHN = {
+	if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+			}
+			any_owned_state = {
+				is_core_of = OLE
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = OLE } }
+			release = OLE
+			FROM = { puppet = OLE }
+		}
+		if = {
+			limit = { OLE = { OR = { is_in_faction_with = FROM is_subject_of = FROM } } }
+			every_owned_state = {
+				limit = { is_core_of = OLE }
+				OLE = { transfer_state = PREV }
+			}
+		}
+	}
+}
+
+GRI_remove_RIV_opinion_modifiers = {
+	if = {
+		limit = {
+			tag = GRI
+		}
+		RCT = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		LCT = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		DEP = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		WIT = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		BAR = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		FRE = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		NIM = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		BAK = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+		DMT = { remove_opinion_modifier = { target = GRI modifier  = RIV_hates_the_empire } }
+	}
+}
+
+LUS_load_commie_focus = {
+	if = {
+		limit = {
+			FROM = { has_government = communism }
+			ROOT = { original_tag = LUS }
+		}
+		ROOT = {
+			load_focus_tree = Lushi_peasants_focus
+			remove_ideas = {
+				feudalism
+				lack_of_scientists2
+			}
+		}
+	}
+}
+
+BRF_load_mason_focus = {
+	if = {
+		limit = {
+			FROM = { has_government = democratic }
+			ROOT = { original_tag = BRF }
+		}
+		ROOT = {
+			load_focus_tree = BRF_Mason_Tree
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			ROOT = {
+				has_focus_tree = BRF_Mason_Tree
+			}
+		}
+		ROOT = {
+			load_focus_tree = generic_griffon_focus
+		}
+	}
+}
+
+GRU_load_commie_tree = {
+	if = {
+		limit = {
+			FROM = { has_government = communism }
+			ROOT = { original_tag = GRU }
+		}
+		ROOT = {
+			load_focus_tree = { tree = gryphus_commie_tree keep_completed = yes }
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { NOT = { has_government = communism } }
+			ROOT = { original_tag = GRU }
+		}
+		ROOT = {
+			load_focus_tree = { tree = gryphus keep_completed = yes }
+		}
+	}
+}
+
+FLO_load_ideology_focus = {
+	if = {
+		limit = {
+			ROOT = { original_tag = FLO }
+		}
+		if = {
+			limit = {
+				FROM = { has_government = neutrality }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = Flowena_neutrality_focus keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = democratic }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = Flowena_democratic_focus keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = communism }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = Flowena_communism_focus keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = fascism }
+			}
+
+			ROOT = {
+				if = {
+					limit = {
+						has_country_flag = remove_nicolas
+					}
+					load_focus_tree = { tree = generic_griffon_focus keep_completed = yes }
+				}
+				else = {
+					load_focus_tree = { tree = Flowena_fascism_focus keep_completed = yes }
+				}
+			}
+		}
+	}
+}
+WIT_load_ideology_focus = {
+	if = {
+		limit = {
+			ROOT = { original_tag = WIT }
+
+		}
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						has_government = communism
+						has_country_flag = have_regular_puppets
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							has_country_flag = have_regular_puppets
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = have_regular_puppets
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = WIT_republic_tag
+					#Just to make sure they're leaders
+					if = {
+						limit = {
+							NOT = {
+								has_character = WIT_sigeweard_spellshield
+							}
+						}
+						every_possible_country = {
+							limit = {
+								has_character = WIT_sigeweard_spellshield
+							}
+							WIT_sigeweard_spellshield = {
+								set_nationality = ROOT
+							}
+						}
+					}
+					add_country_leader_role = {
+						character = WIT_sigeweard_spellshield
+						promote_leader = yes
+
+						country_leader = {
+							desc = "POLITICS_SIGEWEARD_DESC"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = { FBK_anti_extremist }
+						}
+					}
+					add_country_leader_role = {
+						character = WIT_eadberhta_featherwing
+						promote_leader = yes
+
+						country_leader = {
+							desc = "POLITICS_EADBERHT_DESC"
+							expire = "1965.1.1"
+							ideology = libertarianism
+							traits = { smooth_talking_charmer }
+						}
+					}
+					load_focus_tree = { tree = WIT_focus_tree_volaire keep_completed = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = neutrality }
+			}
+
+			ROOT = {
+				drop_cosmetic_tag = yes
+				load_focus_tree = { tree = WIT_focus_tree_wulfric keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = democratic }
+			}
+
+			ROOT = {
+				drop_cosmetic_tag = yes
+				load_focus_tree = { tree = WIT_focus_tree_white_star keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = fascism }
+			}
+
+			ROOT = {
+				drop_cosmetic_tag = yes
+				load_focus_tree = { tree = WIT_focus_tree_honoria keep_completed = yes }
+
+			}
+		}
+	}
+}
+FRN_load_ideology_focus = {
+	if = {
+		limit = {
+			ROOT = { original_tag = FRN }
+			FROM = {
+				NOT = {
+					original_tag = EQC
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_government = neutrality }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = FRN_neutral_focus keep_completed = yes }
+
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = democratic }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = FRN_harm_focus keep_completed = yes }
+
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = communism }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = FRN_com_focus keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = fascism }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = FRN_fasc_focus keep_completed = yes }
+
+			}
+		}
+	}
+}
+CTH_load_ideology_focus = {
+	if = {
+		limit = {
+			ROOT = { original_tag = CTH }
+
+		}
+		if = {
+			limit = {
+				FROM = { has_government = neutrality }
+			}
+
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = CTH_constitutionalist_2
+				clr_country_flag = CTH_colthage_zarcaid
+				clr_country_flag = CTH_colthage_militarists
+				clr_country_flag = CTH_colthage_scientifids
+				clr_country_flag = CTH_colthage_harmonite
+				set_country_flag = CTH_colthage_constitutionalist
+				set_variable = { CTH_constitutionalist_power = 5 } #out of 5
+				set_variable = { CTH_constitutionalist_loyalty = 100 } #out of 100
+				set_variable = { CTH_constitutionalist_economy_cost_factor_var = -0.5 }
+				set_variable = { CTH_constitutionalist_mobilization_laws_cost_factor_var = -0.5 }
+				every_possible_country = {
+					limit = {
+						has_character = CTH_zarvad_orzagid
+					}
+					CTH_zarvad_orzagid = {
+						set_nationality = ROOT
+					}
+				}
+				every_possible_country = {
+					limit = {
+						has_character = CTH_zasdrubal_zalvarado
+					}
+					CTH_zasdrubal_zalvarado = {
+						set_nationality = ROOT
+					}
+				}
+				every_possible_country = {
+					limit = {
+						has_character = CTH_ziliad_annizalid
+					}
+					CTH_ziliad_annizalid = {
+						set_nationality = ROOT
+					}
+				}
+				add_country_leader_role = {
+					character = CTH_zarvad_orzagid
+					country_leader = {
+						desc = CTH_zarvad_orzagid_desc
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {
+							JER_father_of_the_republic
+						}
+					}
+					promote_leader = yes
+				}
+				clr_country_flag = CTH_baltazar_zakbar_flag
+				clr_country_flag = CTH_zaron_zorrel_flag
+				clr_country_flag = CTH_batrun_zaryes_flag
+				clr_country_flag = CTH_cosufrit_zaphod_flag
+				clr_country_flag = CTH_cosufrit_zarvad_flag
+				load_focus_tree = {
+					tree = colthage_constitutionalist_focus_tree
+					keep_completed = yes
+				}
+				if = {
+					limit = {
+						has_idea = CTH_political_instability_2
+					}
+					swap_ideas = {
+						remove_idea = CTH_political_instability_2
+						add_idea = CTH_political_instability
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = CTH_political_instability
+						}
+					}
+					add_ideas = CTH_political_instability
+				}
+				hidden_effect = {
+					remove_ideas = {
+						CTH_batrun_zaryes
+						CTH_baltazar_zakbar
+						CTH_zaron_zorrel
+						CTH_zaphod_sufrit
+						CTH_zarvad_sufrit
+					}
+					if = {
+						limit = {
+							has_character = CTH_zalathel_zarca
+						}
+						CTH_zalathel_zarca = {
+							set_nationality = SOL
+						}
+					}
+					every_character = {
+						limit = {
+							has_trait = zarcid_supporter
+						}
+						set_nationality = SOL
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = democratic }
+			}
+
+			ROOT = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = CTH_constitutionalist_2
+				clr_country_flag = CTH_colthage_zarcaid
+				clr_country_flag = CTH_colthage_militarists
+				clr_country_flag = CTH_colthage_scientifids
+				clr_country_flag = CTH_colthage_constitutionalist
+				set_country_flag = CTH_colthage_harmonite
+				set_variable = { CTH_harmonites_power = 5 } #out of 5
+				set_variable = { CTH_harmonites_loyalty = 100 } #out of 100
+				set_variable = { CTH_harmonite_stability_factor_var = 0.125 }
+				set_variable = { CTH_harmonite_trade_opinion_factor_var = 0.5 }
+				load_focus_tree = {
+					tree = colthage_harmonite_focus_tree
+					keep_completed = yes
+				}
+				clr_country_flag = CTH_baltazar_zakbar_flag
+				clr_country_flag = CTH_zaron_zorrel_flag
+				clr_country_flag = CTH_batrun_zaryes_flag
+				set_country_flag = CTH_no_co_sufrit_flag
+				if = {
+					limit = {
+						NOT = {
+							has_idea = CTH_no_co_sufrit
+						}
+					}
+					remove_ideas = {
+						CTH_batrun_zaryes
+						CTH_baltazar_zakbar
+						CTH_zaron_zorrel
+					}
+					activate_advisor = CTH_no_co_sufrit
+				}
+				if = {
+					limit = {
+						has_idea = CTH_political_instability_2
+					}
+					swap_ideas = {
+						remove_idea = CTH_political_instability_2
+						add_idea = CTH_political_instability
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = CTH_political_instability
+						}
+					}
+					add_ideas = CTH_political_instability
+				}
+				hidden_effect = {
+					remove_ideas = {
+						CTH_batrun_zaryes
+						CTH_baltazar_zakbar
+						CTH_zaron_zorrel
+					}
+					every_unit_leader = {
+						limit = {
+							has_trait = zarcid_supporter
+						}
+						set_nationality = SOL
+					}
+				}
+
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = communism }
+			}
+
+			ROOT = {
+				load_focus_tree = { tree = generic_zebra_focus keep_completed = yes }
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_government = fascism }
+			}
+
+			ROOT = {
+				clr_country_flag = CTH_colthage_zarcaid
+				clr_country_flag = CTH_colthage_constitutionalist
+				clr_country_flag = CTH_colthage_scientifids
+				clr_country_flag = CTH_colthage_harmonite
+				set_country_flag = CTH_colthage_militarists
+				drop_cosmetic_tag = yes
+				add_country_leader_role = {
+					character = CTH_batrun_zaryes
+					country_leader = {
+						desc = CTH_batrun_zaryes_desc
+						expire = "1965.1.1"
+						ideology = stratocracy
+					}
+					promote_leader = yes
+				}
+				load_focus_tree = {
+					tree = colthage_militarist_focus_tree
+					keep_completed = yes
+				}
+				set_variable = { CTH_military_faction_power = 5 } #out of 5
+				set_variable = { CTH_military_faction_loyalty = 100 } #out of 100
+				set_variable = { CTH_military_army_organisation_factor_var = 0.1 }
+				set_variable = { CTH_military_surrender_limit_factor_var = 0.1 }
+				set_variable = { CTH_scientifid_loyalty = 50 } #out of 100
+				set_party_name = {
+					ideology = fascism
+					long_name = CTH_military_party_long
+					name = CTH_military_party
+				}
+				clr_country_flag = CTH_baltazar_zakbar_flag
+				clr_country_flag = CTH_zaron_zorrel_flag
+				clr_country_flag = CTH_batrun_zaryes_flag
+				clr_country_flag = CTH_cosufrit_zaphod_flag
+				clr_country_flag = CTH_cosufrit_zarvad_flag
+				if = {
+					limit = {
+						has_idea = CTH_political_instability_2
+					}
+					swap_ideas = {
+						remove_idea = CTH_political_instability_2
+						add_idea = CTH_political_instability
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = CTH_political_instability
+						}
+					}
+					add_ideas = CTH_political_instability
+				}
+				set_country_flag = CTH_no_co_sufrit_flag
+				if = {
+					limit = {
+						NOT = {
+							has_idea = CTH_no_co_sufrit
+						}
+					}
+					remove_ideas = {
+						CTH_batrun_zaryes
+						CTH_baltazar_zakbar
+						CTH_zaron_zorrel
+					}
+					activate_advisor = CTH_no_co_sufrit
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							has_character = CTH_zalathel_zarca
+						}
+						CTH_zalathel_zarca = {
+							set_nationality = SOL
+						}
+					}
+					every_character = {
+						limit = {
+							has_trait = zarcid_supporter
+						}
+						set_nationality = SOL
+					}
+					remove_ideas = {
+						CTH_batrun_zaryes
+						CTH_baltazar_zakbar
+						CTH_zaron_zorrel
+						CTH_zaphod_sufrit
+						CTH_zarvad_sufrit
+					}
+				}
+
+			}
+		}
+	}
+}
+SON_load_ideology_focus = {
+	if = {
+		limit = {
+			ROOT = { original_tag = SON }
+		}
+		load_focus_tree = { tree = generic_zebra_focus keep_completed = yes }
+	}
+}
+
+#JUN_handle_puppet = {
+#	if = {
+#		limit = {
+#			original_tag = JUN
+#			OR = {
+#				AND = {
+#					NOT = { has_completed_focus = JUN_alone }
+#					OR = {
+#						has_country_leader = { ruling_only = yes name = "Caballeron" }
+#						FROM = { AND = { original_tag = CHN has_government = fascism } }
+#						FROM = { AND = { original_tag = EQS has_government = democratic } }
+#					}
+#				}
+#				AND = {
+#					FROM = {
+#						OR = {
+#							original_tag = EQS
+#							original_tag = CHN
+#						}
+#						is_ai = yes
+#					}
+#				}
+#			}
+#		}
+#		FROM = { country_event = jungle.17 }
+#	}
+#}
+
+handle_twilight_escaping = {
+	if = {
+		limit = {
+			has_country_flag = EQS_CRY_has_twilight
+			FROM = { tag = event_target:solar_empire }
+		}
+		if = {
+			limit = {
+				tag = event_target:equestria
+			}
+			FROM = { country_event = solarempire.22 }
+		}
+		else_if = {
+			limit = {
+				original_tag = CRY
+			}
+			FROM = { news_event = solarempire.26 }
+		}
+	}
+}
+
+AI_puppet_to_annex = {
+	if = {
+		limit = { tag = DED }
+		FROM = {
+			annex_country = { target = ROOT }
+			country_event = { id = deadempire.29 days = 1 }
+		}
+	}
+	else_if = {
+		limit = { tag = EWI }
+		FROM = {
+			annex_country = { target = ROOT }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = { FROM = { original_tag = NLR } original_tag = EQS }
+				AND = { FROM = { original_tag = EQS } original_tag = NLR }
+			}
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				tag = BAL
+				tag = JUN
+				tag = NMS
+				tag = CES
+			}
+			FROM = {
+				OR = {
+					tag = BAL
+					tag = JUN
+					tag = NMS
+					tag = CES
+				}
+			}
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				OR = {
+					original_tag = EQS
+					original_tag = NLR
+				}
+				is_ai = yes
+			}
+			original_tag = STG
+			is_ai = yes
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				original_tag = STG
+				is_ai = yes
+			}
+			OR = {
+				original_tag = EQS
+				original_tag = NLR
+			}
+			is_ai = yes
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = { original_tag = MIT }
+			ROOT = { original_tag = CYA }
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = { original_tag = GRW }
+			ROOT = { original_tag = BRF }
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = { original_tag = BRF }
+			ROOT = { original_tag = GRW }
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = { original_tag = CHN }
+			ROOT = { original_tag = CCN }
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = { original_tag = CCN }
+			ROOT = { original_tag = CHN }
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				tag = GRW
+			}
+			original_tag = BOI
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				OR = {
+					is_riverlands_country = yes
+					original_tag = OLV
+				}
+			}
+			original_tag = BAR
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				tag = SIC
+				has_war_together_with = MIT
+			}
+			tag = CYA
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = GRF
+			}
+			ROOT = {
+				original_tag = GFF
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = YAK
+			}
+			ROOT = {
+				original_tag = JAK
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = JAK
+			}
+			ROOT = {
+				original_tag = YAK
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				tag = FAT
+			}
+			ROOT = {
+				OR = {
+					tag = GRI
+					tag = SRS
+					tag = MNC
+				}
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				is_eqs_civil_war_tag = yes
+				NOT = { original_tag = JUN }
+			}
+			ROOT = {
+				is_eqs_civil_war_tag = yes
+				NOT = { original_tag = JUN }
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = JER
+			}
+			OR = {
+				original_tag = HEL
+				original_tag = FLO
+				original_tag = POM
+				original_tag = AET
+				original_tag = FEZ
+				original_tag = JEB
+				original_tag = JES
+				original_tag = JRR
+				original_tag = VIN
+				original_tag = JFT
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = RCT
+				NOT = { has_government = democratic }
+			}
+			is_riverlands_country = yes
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				OR = {
+					original_tag = JEB
+					original_tag = JRR
+					original_tag = VIN
+					original_tag = JFT
+				}
+			}
+			original_tag = JER
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = ZES
+				has_government = democratic
+			}
+			ROOT = {
+				OR = {
+					original_tag = OLV
+					original_tag = BAR
+					original_tag = WIT
+					original_tag = FRE
+					AND = {
+						original_tag = NIM
+						FROM = { has_country_leader = { ruling_only = yes character = ZES_altu_kexa } }
+					}
+					AND = {
+						original_tag = GRU
+						FROM = {
+							OR = {
+								has_country_leader = { ruling_only = yes character = ZES_altu_kexa }
+								has_country_leader = { ruling_only = yes character = ZES_pasarinha }
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = { annex_country = { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = TRD
+			}
+			OR = {
+				original_tag = FEZ
+				original_tag = HAU
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			is_griffon_empire_country = yes
+			FROM = { is_ai = yes is_griffon_continent_country = yes }
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				original_tag = LNS
+				original_tag = LSM
+				original_tag = LSC
+				original_tag = HLQ
+			}
+			FROM = {
+				is_ai = yes
+				OR = {
+					original_tag = LNS
+					original_tag = LSM
+					original_tag = LSC
+					original_tag = HLQ
+				}
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				original_tag = ARA
+				original_tag = FRN
+				original_tag = SIC
+				original_tag = FAL
+				original_tag = WNG
+				original_tag = TAL
+				original_tag = CYA
+				original_tag = MIT
+			}
+			FROM = {
+				is_ai = yes
+				original_tag = EQC
+				has_government = fascism
+				OR = {
+					has_completed_focus = EQC_stand_against_griffons
+					has_completed_focus = EQC_the_silver_crescent_doctrine
+					has_completed_focus = EQC_a_deal_with_the_duce
+					has_completed_focus = EQC_the_new_mareland_century
+				}
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			original_tag = FAL
+			FROM = {
+				is_ai = yes
+				original_tag = WNG
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			original_tag = WNG
+			FROM = {
+				is_ai = yes
+				original_tag = FAL
+			}
+		}
+		FROM = { annex_country = { target = ROOT transfer_troops = no } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_ai = yes
+				original_tag = BAK
+				OR = {
+					has_government = fascism
+					has_country_leader = {
+						ruling_only = yes
+						character = BAK_cobalt_wind
+					}
+				}
+			}
+			ROOT = {
+				OR = {
+					original_tag = DMT
+					original_tag = NCH
+				}
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				original_tag = JHZ
+				original_tag = JNG
+				original_tag = JGF
+				original_tag = JKR
+				original_tag = JOS
+				original_tag = JHP
+				original_tag = JRV
+				original_tag = JAS
+				original_tag = JEV
+			}
+		}
+		ROOT = {
+			for_each_scope_loop = {
+				array = core_states
+				remove_core_of = ROOT
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				is_great_lakes_country = yes
+			}
+			ROOT = {
+				is_great_lakes_country = yes
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				original_tag = SON
+			}
+			ROOT = {
+				OR = {
+					original_tag = SLC
+					original_tag = THU
+					original_tag = STM
+					original_tag = GYZ
+					original_tag = HYE
+					original_tag = GAR
+					original_tag = CNT
+					original_tag = YMN
+					original_tag = HMR
+					original_tag = OSQ
+					original_tag = MTA
+					original_tag = MKS
+					original_tag = REE
+					original_tag = CZR
+				}
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				tag = NIM
+			}
+			ROOT = {
+				OR = {
+					original_tag = OLV
+					original_tag = ZES
+				}
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			is_storm_king_country = yes
+			FROM = {
+				is_storm_king_country = yes
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				original_tag = SLC
+				has_dynamic_modifier = {
+					modifier = SLC_cbc_fervour_dynmod
+				}
+			}
+		}
+		FROM = { annex_country =  { target = ROOT } }
+	}
+	if = {
+		limit = { FROM = { is_ai = yes } }
+		if = {
+			limit = {
+				ROOT = {
+					all_owned_state = {
+						OR = {
+							is_core_of = FROM
+							is_claimed_by = FROM
+						}
+					}
+				}
+			}
+			FROM = { annex_country = { target = ROOT } }
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = FROM
+						is_claimed_by = FROM
+					}
+				}
+				FROM = { transfer_state = PREV }
+			}
+		}
+	}
+}
+
+NIM_load_focus_tree_on_puppet = {
+	remove_ideas = {
+		NIM_caste_system_neutrality
+		NIM_caste_system_fascism
+		NIM_caste_system_fascism2
+		NIM_caste_system_fascism3
+		NIM_caste_system_democratic
+		NIM_caste_system_democratic2
+		NIM_caste_system_democratic3
+		NIM_caste_system_democratic4
+	}
+	set_technology = {
+		popup = no
+		NIM_fascism_focus_1_Tech = 0
+		NIM_fascism_focus_2_Tech = 0
+		NIM_fascism_focus_6_Tech = 0
+		NIM_with_your_shield_tech = 0
+		NIM_unicorn_corps_tech = 0
+	}
+	add_ideas = NIM_caste_system
+	if = {
+		limit = {
+			FROM = { has_government = democratic }
+			NOT = { has_focus_tree = Nimbusian_league_focus_dem }
+		}
+		load_focus_tree = Nimbusian_league_focus_dem
+	}
+	else_if = {
+		limit = {
+			FROM = { has_government = neutrality }
+			NOT = { has_focus_tree = Nimbusian_league_focus_neu }
+		}
+		load_focus_tree = Nimbusian_league_focus_neu
+	}
+	else = {
+		load_focus_tree = Nimbusian_league_focus
+	}
+}
+
+GRY_load_focus_tree_on_puppet = {
+	log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] GRY_load_focus_tree_on_puppet"
+	load_focus_tree = GRY_focus
+	if = {
+		limit = {
+			FROM = {
+				has_government = communism
+			}
+		}
+		complete_national_focus = GRY_young_socialists
+		GRY_cornilo_khurshevich = {
+			promote_character = leninism
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government = democratic
+			}
+		}
+		complete_national_focus = GRY_volnoye
+		GRY_borad_grifnitsky = {
+			promote_character = fascism_ideology
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+		complete_national_focus = GRY_stronger_together
+		GRY_yeven_krawvelets = {
+			promote_character = fascism_ideology
+		}
+	}
+}
+
+FIR_FBK_on_govt_change = {
+	if = {
+		limit = {
+			is_subject = yes
+		}
+		if = {
+			limit = {
+				ROOT = {
+					original_tag = FIR
+				}
+			}
+			load_focus_tree = FIR_focus
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					original_tag = FBK
+				}
+			}
+			load_focus_tree = FBK_focus
+			if = {
+				limit = { has_government = fascism }
+				complete_national_focus = FBK_imperialism
+			}
+			else_if = {
+				limit = { has_government = communism }
+				complete_national_focus = FBK_new_manifesto
+			}
+			else_if = {
+				limit = { has_government = democratic }
+				complete_national_focus = FBK_internal_threats
+				complete_national_focus = FBK_external_threats_handled
+			}
+		}
+	}
+}
+
+CHN_handle_fascist_communist_overlord = {
+	if = {
+		limit = { FROM = { has_government = fascism } }
+		fire_CHN_fascist_overlord = yes
+	}
+	# if = {
+	# 	limit = { FROM = { has_government = communism } }
+	# 	complete_national_focus = seize_production
+	# 	complete_national_focus = equality_for_all_CHN
+	# 	complete_national_focus = battleforthehives_chn
+	# }
+}
+
+immortality = {
+	#:^)
+}
+
+transfer_society_and_science_ideas_when_released = {
+	hidden_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_idea = modern_society }
+				}
+			}
+			FROM = { ROOT = { transfer_society_ideas = yes } }
+		}
+		else = {
+			add_ideas = modern_society
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_idea = proper_science_base }
+				}
+			}
+			FROM = { ROOT = { transfer_science_ideas = yes } }
+		}
+		else = {
+			add_ideas = proper_science_base
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_idea = no_poverty }
+				}
+			}
+			FROM = { ROOT = { transfer_poverty_ideas = yes } }
+		}
+		else = {
+			add_ideas = no_poverty
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { has_idea = no_lack_of_scientists }
+				}
+			}
+			FROM = { ROOT = { transfer_illiteracy_ideas = yes } }
+		}
+		else = {
+			add_ideas = no_lack_of_scientists
+		}
+	}
+}
+
+handle_generic_griffon_ideas_on_govt_change = {
+	if = {
+		limit = {
+			OR = {
+				has_idea = griffon_neutrality_support_idea
+				has_idea = griffon_monarchy_support_idea
+			}
+			NOT = { has_government = neutrality }
+		}
+		remove_ideas = { griffon_monarchy_support_idea griffon_neutrality_support_idea }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = griffon_monarchy_dem_support_idea
+				has_idea = griffon_harmony_support_idea
+			}
+			NOT = { has_government = democratic }
+		}
+		remove_ideas = { griffon_monarchy_dem_support_idea griffon_harmony_support_idea }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = griffon_fascism_support_idea
+				has_idea = griffon_monarchy_fas_support_idea
+			}
+			NOT = { has_government = fascism }
+		}
+		remove_ideas = { griffon_monarchy_fas_support_idea griffon_fascism_support_idea }
+	}
+	if = {
+		limit = {
+			has_idea = griffon_communism_support_idea
+			NOT = { has_government = communism }
+		}
+		remove_ideas = griffon_communism_support_idea
+	}
+}
+
+handle_op_paperclip = {
+	for_each_scope_loop = {
+		array = FROM.core_states
+		add_to_variable = { FROM.industry_value = industrial_complex_level }
+		add_to_variable = { FROM.industry_value = arms_factory_level }
+	}
+	for_each_scope_loop = {
+		array = FROM.core_states
+		set_state_flag = op_paperclip_state
+		set_variable = { previous_owner = FROM.id }
+		set_variable = { previous_owner_industry_value = FROM.industry_value }
+	}
+	FROM = { clear_variable = industry_value }
+	country_event = oppaperclip.1
+}
+
+set_have_regular_puppets = {
+	if = {
+		limit = {
+			is_feudal_vassal = yes
+			NOT = {
+				has_country_flag = have_regular_puppets
+			}
+			FROM = { has_country_flag = have_regular_puppets }
+		}
+		#kill_country_leader = yes
+		set_country_flag = have_regular_puppets
+	}
+}
+
+# research workaround to apply the pre 1.6 research speed function by Yard1
+# before 1.6, research speed was linear, and had the equation:
+#
+# time = (cost-(cost/100)*x)/(speed)
+#
+# the research speed modifier was applied to the tech cost, so if we had a tech that had a base cost of 100 days, a research speed modifier of +50% would bring that to 50 days
+# after 1.6, the equation changed to:
+#
+# time = (cost)/(speed-(speed/100)*x)
+#
+# now the research speed modifier was applied to the speed itself (aka daily research gain). Which meant that, if we had a +50% research speed modifier, the 100 days tech would take 66.67 days
+# this modifier adds just the right amount of the research speed modifier to make the new equation give the same results as the old one. Without it, we would not be able to have
+# very large maluses, as the research would take an infinite amount of days
+adjust_research_modifier = {
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = research_pre_ironclad_modifier
+				}
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = research_pre_ironclad_modifier
+		}
+	}
+	set_temp_variable = { research_speed = modifier@research_speed_factor }
+	subtract_from_temp_variable = { research_speed = var_research_adjustment_pre_ironclad }
+	if = {
+		limit = {
+			check_variable = { research_speed < -0.1 }
+		}
+		set_temp_variable = { var_research_adjustment_pre_ironclad_temp = 1 }
+		set_variable = { var_research_adjustment_pre_ironclad = 1 }
+		subtract_from_temp_variable = { var_research_adjustment_pre_ironclad_temp = research_speed }
+		if = {
+			limit = {
+				check_variable = {
+					var = research_speed
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+			set_temp_variable = { var_research_adjustment_pre_ironclad_temp = 0.001 }
+		}
+		divide_variable = { var_research_adjustment_pre_ironclad = var_research_adjustment_pre_ironclad_temp }
+		subtract_from_variable = { var_research_adjustment_pre_ironclad = 1 }
+		subtract_from_variable = { var_research_adjustment_pre_ironclad = research_speed }
+	}
+	else = {
+		set_variable = { var_research_adjustment_pre_ironclad = 0 }
+	}
+}
+
+print_majors_array = {
+	for_each_scope_loop = {
+		array = global.majors
+		log = "global.majors: [This.GetName]"
+	}
+}
+
+# in on_daily, ran for every country
+update_river_fed_array = {
+	if = {
+		limit = {
+			is_river_fed_member = yes
+			var:faction_leader = {
+				is_river_fed_member = yes
+			}
+			NOT = {
+				is_in_array = {
+					array = global.river_coalition_members
+					value = THIS
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = river_federation_founded
+			}
+			add_to_array = {
+				global.river_coalition_members = THIS
+			}
+		}
+		else = {
+			# make sure the array is always sorted
+			set_temp_variable = { index_to_insert = global.river_coalition_members^num }
+			for_each_loop = {
+				array = global.river_coalition_members
+				if = {
+					limit = {
+						check_variable = {
+							RIV_fed_race > v:RIV_fed_race
+						}
+					}
+					set_temp_variable = { index_to_insert = i }
+					set_temp_variable = { break = 1 }
+				}
+			}
+			add_to_array = {
+				array = global.river_coalition_members
+				value = THIS
+				index = index_to_insert
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_river_fed_member = no
+				var:faction_leader = {
+					is_river_fed_member = no
+				}
+			}
+			is_in_array = {
+				array = global.river_coalition_members
+				value = THIS
+			}
+		}
+		remove_from_array = {
+			array = global.river_coalition_members
+			value = THIS
+		}
+	}
+}
+
+update_river_fed_array_all = {
+	RIV = {
+		update_river_fed_array = yes
+		for_each_scope_loop = {
+			array = faction_members
+			update_river_fed_array = yes
+		}
+	}
+}
+
+print_river_fed_array = {
+	for_each_scope_loop = {
+		array = global.river_coalition_members
+		log = "global.river_coalition_members: [This.GetName] [?RIV_fed_race]"
+	}
+}
+
+# for one country
+update_global_arrays = {
+	update_river_fed_array = yes
+}
+
+update_global_arrays_all = {
+	every_country = {
+		update_river_fed_array = yes
+	}
+}
+
+remove_from_global_arrays_on_annex = {
+	if = {
+		limit = {
+			is_in_array = {
+				array = global.river_coalition_members
+				value = THIS
+			}
+		}
+		remove_from_array = {
+			array = global.river_coalition_members
+			value = THIS
+		}
+	}
+	remove_from_attaches_arrays = yes
+}
+
+remove_from_attaches_arrays = {
+	remove_from_attaches_arrays_do = yes
+
+	# this event fires the above scripted effect again after a day to remove attaches properly after a peace
+	country_event = {
+		id = utility.15
+		days = 1
+	}
+}
+
+remove_from_attaches_arrays_do = {
+	for_each_scope_loop = {
+		array = global.countries_that_sent_attaches
+		if = {
+			limit = {
+				check_variable = {
+					attaches_sent_to^num > 0
+				}
+				PREV = {
+					NOT = {
+						has_attache_from = PREV
+					}
+				}
+			}
+			remove_from_array = { attaches_sent_to = PREV }
+			if = {
+				limit = {
+					check_variable = {
+						attaches_sent_to^num = 0
+					}
+				}
+				add_to_temp_array = {
+					countries_that_sent_attaches_to_remove = THIS
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_in_array = {
+				global.countries_that_sent_attaches = THIS
+			}
+			NOT = {
+				any_country = {
+					has_attache_from = PREV
+				}
+			}
+		}
+		add_to_temp_array = {
+			countries_that_sent_attaches_to_remove = THIS
+		}
+	}
+	for_each_loop = {
+		array = countries_that_sent_attaches_to_remove
+		remove_from_array = {
+			global.countries_that_sent_attaches = v
+		}
+	}
+}
+
+WORKAROUND_civil_war_load_tree_for_revolter = {
+	hidden_effect = {
+		if = {
+			limit = { original_tag = BUF }
+			load_focus_tree = Buffalo_tree
+		}
+		else_if = {
+			limit = {
+				original_tag = CRY
+			}
+			if = {
+				limit = {
+					has_government = fascism
+					CRY_sombra = { is_country_leader = yes }
+				}
+				load_focus_tree = crystalempire_sombra
+			}
+			else = {
+				load_focus_tree = crystalempire
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = EQC
+			}
+			if = {
+				limit = {has_country_flag = equalist_eqc }
+				load_focus_tree = eqc_equalists_focus
+
+			}
+			else_if = {
+				limit = { has_country_flag = is_maresoc }
+				load_focus_tree = eqc_equalists_focus
+
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_subject_of = NLR
+						has_country_flag = supported_NLR
+					}
+				}
+				load_focus_tree = eqc_nlr_focus
+
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_subject_of = event_target:solar_empire
+						has_country_flag = supported_SOL
+					}
+				}
+				load_focus_tree = eqc_sol_focus
+
+			}
+			load_focus_tree = new_mareland_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = EQS
+			}
+			load_focus_tree = equestria_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = FIR
+			}
+			if = {
+				limit = { has_country_flag = FIR_possessed }
+				load_focus_tree = FIR_focus_spirits
+
+			}
+			else_if = {
+				limit = { has_government = neutrality }
+				load_focus_tree = FIR_focus_generals
+
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = FIR_newsociety
+						has_country_flag = FIR_is_raider
+					}
+				}
+				load_focus_tree = FIR_focus_evilmagic
+
+			}
+			else_if = {
+				limit = { has_country_flag = FIR_fed_path }
+				load_focus_tree = FIR_focus_federation
+
+			}
+			else = {
+				load_focus_tree = FIR_focus
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = GRY
+			}
+			if = {
+				limit = { has_country_flag = GRY_neutral_rebellion }
+				load_focus_tree = GRY_focus_neutral_rebellion
+
+			}
+			else = {
+				load_focus_tree = GRY_focus
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = OLE
+			}
+			load_focus_tree = olenia
+		}
+		else_if = {
+			limit = {
+				original_tag = PNG
+			}
+			load_focus_tree = penguin_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = VAN
+			}
+			load_focus_tree = Vanhoover
+		}
+		else_if = {
+			limit = {
+				original_tag = WNG
+			}
+			load_focus_tree = wingbardy_focus_tree
+		}
+		else_if = {
+			limit = {
+				original_tag = FBK
+				has_government = neutrality
+			}
+			if = {
+				limit = { has_government = neutrality }
+				load_focus_tree = FBK_focus_generals
+
+			}
+			else_if = {
+				limit = { has_country_flag = FBK_anprim_disaster }
+				load_focus_tree = FBK_focus_anprim
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = RCT
+			}
+			if = {
+				limit = {
+					has_country_flag = RCT_hector_revolt
+					has_government = neutrality
+				}
+				load_focus_tree = RCT_hector
+
+			}
+			else_if = {
+				limit = {
+					has_country_flag = RCT_caramel_revolt
+					has_government = communism
+				}
+				load_focus_tree = RCT_caramel
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_griffon_continent_country = yes
+					original_tag = HAU
+				}
+			}
+			load_focus_tree = generic_griffon_focus
+		}
+	}
+}
+
+GRI_give_released_puppet_special_cosmetic_tags = {
+	if = {
+		limit = {
+			FROM = { tag = GRI }
+		}
+		if = {
+			limit = {
+				original_tag = FAT
+			}
+			set_cosmetic_tag = FAT_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = SRS
+			}
+			set_cosmetic_tag = SRS_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = MIT
+			}
+			set_cosmetic_tag = MIT_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = KAT
+			}
+			set_cosmetic_tag = KAT_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = STW
+			}
+			set_cosmetic_tag = STW_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = MNC
+			}
+			set_cosmetic_tag = MNC_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = YAL
+			}
+			set_cosmetic_tag = YAL_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = PYT
+			}
+			set_cosmetic_tag = PYT_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = HAU
+			}
+			set_cosmetic_tag = HAU_GRI_puppet
+			load_focus_tree = generic_griffon_focus
+		}
+		else_if = {
+			limit = {
+				original_tag = TRD
+			}
+			set_cosmetic_tag = TRD_GRI_conquered_puppet ## Justification: Unlikely that GRI will reinstate the Free City of Skyfall after what they did; better to marginalise the city and reduce its power ##
+			set_capital = { state = 380 remember_old_capital = no }
+			load_focus_tree = generic_griffon_focus
+		}
+	}
+}
+
+GRU_give_released_puppet_special_cosmetic_tags = {
+	if = {
+		limit = {
+			FROM = {
+				tag = GRU
+				has_country_flag = GRU_company_intervention
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { tag = ZES }
+			}
+			ROOT = { set_cosmetic_tag = ZES_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = OLV }
+			}
+			ROOT = { set_cosmetic_tag = OLV_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = BAR }
+			}
+			ROOT = { set_cosmetic_tag = BAR_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = BRF }
+			}
+			ROOT = { set_cosmetic_tag = BRF_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = GRW }
+			}
+			ROOT = { set_cosmetic_tag = GRW_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = GRY }
+			}
+			ROOT = { set_cosmetic_tag = GRY_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = WIT }
+			}
+			ROOT = { set_cosmetic_tag = WIT_GRU_company  }
+		}
+		else_if = {
+			limit = {
+				ROOT = { tag = FRE }
+			}
+			ROOT = { set_cosmetic_tag = FRE_GRU_company  }
+		}
+	}
+}
+
+# HoI4 State Land Connection Indexer by Yard1
+# Provides a simple way to check if two states share a land connection
+# Call the scripted effect below in on_startup from a country scope (any will do, I suggest random_country)
+# In order to check if two states have a land connection to each other, compare their state_land_connection_index variables. If they are the same, then they have a land connection.
+mark_land_connected_states = {
+	random_country = {
+		set_variable = { global.current_state_land_connection_index = 1 }
+		every_state = {
+			add_to_array = { global.unchecked_land_connection_states = THIS }
+		}
+		while_loop_effect = {
+			limit = {
+				check_variable = { global.unchecked_land_connection_states^num > 0 }
+			}
+			#log = "Run land connection loop with index [?global.current_state_land_connection_index|0], [?global.unchecked_land_connection_states^num|0] states left to index"
+			var:global.unchecked_land_connection_states^0 = {
+				#log = "Adding index [?global.current_state_land_connection_index|0] to [?this.GetName]"
+				set_variable = { state_land_connection_index = global.current_state_land_connection_index }
+				every_neighbor_state = {
+					#log = "Adding index [?global.current_state_land_connection_index|0] to [?this.GetName], neighbor of [?prev.GetName]"
+					set_variable = { state_land_connection_index = global.current_state_land_connection_index }
+					if = {
+						limit = { is_in_array = { global.unchecked_land_connection_states = THIS } }
+						remove_from_array = { global.unchecked_land_connection_states = THIS }
+					}
+				}
+				remove_from_array = { global.unchecked_land_connection_states = THIS }
+			}
+			set_temp_variable = { temp_lc_state = 0 }
+			while_loop_effect = {
+				limit = {
+					any_of = {
+						array = global.unchecked_land_connection_states
+						var:v = {
+							any_neighbor_state = { has_variable = state_land_connection_index }
+						}
+						set_temp_variable = { global.temp_lc_state = v }
+					}
+				}
+				if = {
+					limit = { NOT = { check_variable = { temp_lc_state = 0 } } }
+					#log = "Found [?temp_lc_state.GetName] as a neighbor of an indexed state"
+					var:temp_lc_state = {
+						#log = "Adding index [?global.current_state_land_connection_index|0] to [?this.GetName]"
+						set_variable = { state_land_connection_index = global.current_state_land_connection_index }
+						remove_from_array = { global.unchecked_land_connection_states = THIS }
+						every_neighbor_state = {
+							#log = "Adding index [?global.current_state_land_connection_index|0] to [?this.GetName], neighbor of [?prev.GetName]"
+							set_variable = { state_land_connection_index = global.current_state_land_connection_index }
+							if = {
+								limit = { is_in_array = { global.unchecked_land_connection_states = THIS } }
+								remove_from_array = { global.unchecked_land_connection_states = THIS }
+							}
+						}
+					}
+				}
+			}
+			#log = "Land connection loop done, [?global.unchecked_land_connection_states^num|0] states left to index"
+			#log = "----"
+			add_to_variable = { global.current_state_land_connection_index = 1 }
+		}
+		clear_variable = global.current_state_land_connection_index
+		clear_array = global.unchecked_land_connection_states
+	}
+}
+
+# We want to be able to determine whether a puppet wargoal was used during peace conferences
+# however, declaring war makes wargoals poof. This works around that
+# FROM is war target
+save_puppet_wargoals = {
+	clear_puppet_wargoals = yes
+	if = {
+		limit = {
+			has_wargoal_against = { target = FROM type = puppet_wargoal_focus }
+			NOT = {
+				is_in_array = {
+					puppet_wargoals_war = FROM
+				}
+			}
+		}
+		add_to_array = {
+			puppet_wargoals_war = FROM
+		}
+	}
+}
+
+clear_puppet_wargoals = {
+	country_event = {
+		id = utility.16
+		hours = 1
+	}
+}
+
+clear_puppet_wargoals_do = {
+	clear_temp_array = puppet_wargoals_war_to_remove
+	for_each_scope_loop = {
+		array = puppet_wargoals_war
+		if = {
+			limit = {
+				OR = {
+					exists = no
+					has_war = no
+				}
+			}
+			add_to_temp_array = { puppet_wargoals_war_to_remove = THIS }
+		}
+	}
+	for_each_loop = {
+		array = puppet_wargoals_war_to_remove
+		remove_from_array = {
+			array = puppet_wargoals_war
+			value = var:v
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { puppet_wargoals_war^num = 0 }
+		}
+		clear_array = puppet_wargoals_war
+	}
+}
+FRN_reduce_tarrin_resistance = {
+	if = {
+		limit = {
+			AND = {
+				owns_state = 487
+				owns_state = 652
+				owns_state = 521
+			}
+		}
+		FRN = {
+			set_variable = { FRN_tarrin_resistance_variable = 0.15 }
+		}
+	}
+}
+
+transfer_impassible_states_back = {
+	for_each_scope_loop = {
+		array = global.stolen_impassables
+		# Calculate the best owner
+		set_temp_variable = { impassable_former_owner_temp = impassable_former_owner }
+		set_temp_variable = { impassable_best_owner = 0 }
+		# 1 - original owner
+		# 2 - original tag of original owner
+		# 3 - root (winner in peace deal)
+		# 4 - country with a core allied with root
+		# 5 - country with a core
+		# fallback - current owner (PDX logic)
+		set_temp_variable = { impassable_best_owner_type = 0 }
+
+		if = {
+			limit = {
+				owner = {
+					NOT = { tag = temp_var:impassable_former_owner_temp }
+				}
+			}
+			log = "[GetDateText]: Impassable [This.GetName] was stolen from [?impassable_former_owner.GetTag] by [?owner.GetTag]"
+
+			every_neighbor_state = {
+				limit = {
+					impassable = no
+					owner = {
+						NOT = {
+							has_war_with = ROOT
+							has_war_with = FROM
+						}
+					}
+				}
+				owner = {
+					if = {
+						limit = {
+							NOT = {
+								check_variable = { impassable_best_owner_type > 1 }
+							}
+							tag = temp_var:impassable_former_owner_temp
+						}
+						log = "[GetDateText]: Setting best owner as previous owner [?this.GetTag]"
+						set_temp_variable = { impassable_best_owner = THIS }
+						set_temp_variable = { impassable_best_owner_type = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { impassable_best_owner_type > 2 }
+							original_tag = temp_var:impassable_former_owner_temp
+						}
+						log = "[GetDateText]: Setting best owner as same original tag as previous owner [?this.GetTag]"
+						set_temp_variable = { impassable_best_owner = THIS }
+						set_temp_variable = { impassable_best_owner_type = 2 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { impassable_best_owner_type > 3 }
+							tag = ROOT
+						}
+						log = "[GetDateText]: Setting best owner as root (winner) [?this.GetTag]"
+						set_temp_variable = { impassable_best_owner = THIS }
+						set_temp_variable = { impassable_best_owner_type = 3 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { impassable_best_owner_type > 4 }
+							PREV = { is_core_of = PREV }
+							is_ally_with = ROOT
+						}
+						log = "[GetDateText]: Setting best owner as core owner allied to root [?this.GetTag]"
+						set_temp_variable = { impassable_best_owner = THIS }
+						set_temp_variable = { impassable_best_owner_type = 4 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { impassable_best_owner_type > 5 }
+							PREV = { is_core_of = PREV }
+						}
+						log = "[GetDateText]: Setting best owner as core owner [?this.GetTag]"
+						set_temp_variable = { impassable_best_owner = THIS }
+						set_temp_variable = { impassable_best_owner_type = 5 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = { impassable_best_owner = 0 }
+					}
+				}
+				log = "[GetDateText]: Impassable [This.GetName] transferring to [?impassable_best_owner.GetTag]"
+				transfer_state_to = temp_var:impassable_best_owner
+			}
+		}
+		clear_variable = impassable_former_owner
+	}
+	clear_array = global.stolen_impassables
+}
+
+save_owner_of_impassible_states = {
+	FROM = {
+		every_owned_state = {
+			limit = {
+				impassable = yes
+			}
+			set_variable = {
+				impassable_former_owner = FROM
+			}
+			add_to_array = {
+				global.stolen_impassables = THIS
+			}
+		}
+	}
+}
+
+startup_set_state_culture = {
+	if = {
+		limit = {
+			is_state_main_culture_changeling = yes
+		}
+		set_variable = { culture_map_mode_value = 0 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_olenian = yes
+		}
+		set_variable = { culture_map_mode_value = 1 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_old_olenian = yes
+		}
+		set_variable = { culture_map_mode_value = 2 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_diamond_dog = yes
+		}
+		set_variable = { culture_map_mode_value = 3 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_dragon = yes
+		}
+		set_variable = { culture_map_mode_value = 4 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_bear = yes
+		}
+		set_variable = { culture_map_mode_value = 5 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_buffalo = yes
+		}
+		set_variable = { culture_map_mode_value = 6 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_aquileian = yes
+		}
+		set_variable = { culture_map_mode_value = 7 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_equestrian = yes
+		}
+		set_variable = { culture_map_mode_value = 8 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_evi_valley = yes
+		}
+		set_variable = { culture_map_mode_value = 9 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_herzlander = yes
+		}
+		set_variable = { culture_map_mode_value = 10 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_minotaur = yes
+		}
+		set_variable = { culture_map_mode_value = 11 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_northerner = yes
+		}
+		set_variable = { culture_map_mode_value = 12 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_penguin = yes
+		}
+		set_variable = { culture_map_mode_value = 13 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_riverlander = yes
+		}
+		set_variable = { culture_map_mode_value = 14 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_southerner = yes
+		}
+		set_variable = { culture_map_mode_value = 15 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_undead = yes
+		}
+		set_variable = { culture_map_mode_value = 16 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_yak = yes
+		}
+		set_variable = { culture_map_mode_value = 17 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_zebra = yes
+		}
+		set_variable = { culture_map_mode_value = 18 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_zebrides = yes
+		}
+		set_variable = { culture_map_mode_value = 19 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_north_zebrican_zebra = yes
+		}
+		set_variable = { culture_map_mode_value = 20 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_north_zebrican_pony = yes
+		}
+		set_variable = { culture_map_mode_value = 21 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_hestrayan = yes
+		}
+		set_variable = { culture_map_mode_value = 22 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_yeti = yes
+		}
+		set_variable = { culture_map_mode_value = 23 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_harpy = yes
+		}
+		set_variable = { culture_map_mode_value = 24 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_llama = yes
+		}
+		set_variable = { culture_map_mode_value = 25 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_kirin = yes
+		}
+		set_variable = { culture_map_mode_value = 26 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_hyena = yes
+		}
+		set_variable = { culture_map_mode_value = 27 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_horse = yes
+		}
+		set_variable = { culture_map_mode_value = 28 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_hippogriff = yes
+		}
+		set_variable = { culture_map_mode_value = 29 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_great_laker = yes
+		}
+		set_variable = { culture_map_mode_value = 30 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_herzlander_colony = yes
+		}
+		set_variable = { culture_map_mode_value = 31 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_nova_griffonian = yes
+		}
+		set_variable = { culture_map_mode_value = 32 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_donkey = yes
+		}
+		set_variable = { culture_map_mode_value = 33 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_cat = yes
+		}
+		set_variable = { culture_map_mode_value = 34 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_camel = yes
+		}
+		set_variable = { culture_map_mode_value = 35 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_ancient_pact = yes
+		}
+		set_variable = { culture_map_mode_value = 36 }
+	}
+	else_if = {
+		limit = {
+			is_state_main_culture_oleno_hindian = yes
+		}
+		set_variable = { culture_map_mode_value = 37 }
+	}
+	else = {
+		set_variable = { culture_map_mode_value = 38 }
+	}
+}
+
+initialize_culture_map_mod_color_array = {
+	add_to_array = { global.map_culture_color_red = .235 }
+	add_to_array = { global.map_culture_color_green = .25 }
+	add_to_array = { global.map_culture_color_blue = .337 }
+	add_to_array = { global.map_culture_color_red = .878 }
+	add_to_array = { global.map_culture_color_green = .882 }
+	add_to_array = { global.map_culture_color_blue = .976 }
+	add_to_array = { global.map_culture_color_red = .898 }
+	add_to_array = { global.map_culture_color_green = .8 }
+	add_to_array = { global.map_culture_color_blue = 1 }
+	add_to_array = { global.map_culture_color_red = .552 }
+	add_to_array = { global.map_culture_color_green = .619 }
+	add_to_array = { global.map_culture_color_blue = .663 }
+	add_to_array = { global.map_culture_color_red = .663 }
+	add_to_array = { global.map_culture_color_green = .764 }
+	add_to_array = { global.map_culture_color_blue = .643 }
+	add_to_array = { global.map_culture_color_red = .58 }
+	add_to_array = { global.map_culture_color_green = .572 }
+	add_to_array = { global.map_culture_color_blue = .643 }
+	add_to_array = { global.map_culture_color_red = .549 }
+	add_to_array = { global.map_culture_color_green = .439 }
+	add_to_array = { global.map_culture_color_blue = .333 }
+	add_to_array = { global.map_culture_color_red = .552 }
+	add_to_array = { global.map_culture_color_green = .262 }
+	add_to_array = { global.map_culture_color_blue = .369 }
+	add_to_array = { global.map_culture_color_red = .184 }
+	add_to_array = { global.map_culture_color_green = .619 }
+	add_to_array = { global.map_culture_color_blue = .388 }
+	add_to_array = { global.map_culture_color_red = .815 }
+	add_to_array = { global.map_culture_color_green = .576 }
+	add_to_array = { global.map_culture_color_blue = .223 }
+	add_to_array = { global.map_culture_color_red = .898 }
+	add_to_array = { global.map_culture_color_green = .867 }
+	add_to_array = { global.map_culture_color_blue = .470 }
+	add_to_array = { global.map_culture_color_red = .556 }
+	add_to_array = { global.map_culture_color_green = .909 }
+	add_to_array = { global.map_culture_color_blue = .6 }
+	add_to_array = { global.map_culture_color_red = .341 }
+	add_to_array = { global.map_culture_color_green = .643 }
+	add_to_array = { global.map_culture_color_blue = .443 }
+	add_to_array = { global.map_culture_color_red = .647 }
+	add_to_array = { global.map_culture_color_green = .576 }
+	add_to_array = { global.map_culture_color_blue = .98 }
+	add_to_array = { global.map_culture_color_red = .227 }
+	add_to_array = { global.map_culture_color_green = .745 }
+	add_to_array = { global.map_culture_color_blue = .372 }
+	add_to_array = { global.map_culture_color_red = .592 }
+	add_to_array = { global.map_culture_color_green = .431 }
+	add_to_array = { global.map_culture_color_blue = 1 }
+	add_to_array = { global.map_culture_color_red = .259 }
+	add_to_array = { global.map_culture_color_green = .267 }
+	add_to_array = { global.map_culture_color_blue = .416 }
+	add_to_array = { global.map_culture_color_red = .486 }
+	add_to_array = { global.map_culture_color_green = .776 }
+	add_to_array = { global.map_culture_color_blue = .941 }
+	add_to_array = { global.map_culture_color_red = .976 }
+	add_to_array = { global.map_culture_color_green = .976 }
+	add_to_array = { global.map_culture_color_blue = .239 }
+	add_to_array = { global.map_culture_color_red = 1.000 }
+	add_to_array = { global.map_culture_color_green = .749 }
+	add_to_array = { global.map_culture_color_blue = .063 }
+	add_to_array = { global.map_culture_color_red = 1.000 }
+	add_to_array = { global.map_culture_color_green = .988 }
+	add_to_array = { global.map_culture_color_blue = .757 }
+	add_to_array = { global.map_culture_color_red = .000 }
+	add_to_array = { global.map_culture_color_green = .129 }
+	add_to_array = { global.map_culture_color_blue = .278 }
+	add_to_array = { global.map_culture_color_red = .325 }
+	add_to_array = { global.map_culture_color_green = .196 }
+	add_to_array = { global.map_culture_color_blue = .584 }
+	add_to_array = { global.map_culture_color_red = .000 }
+	add_to_array = { global.map_culture_color_green = .271 }
+	add_to_array = { global.map_culture_color_blue = .529 }
+	add_to_array = { global.map_culture_color_red = .298 }
+	add_to_array = { global.map_culture_color_green = .569 }
+	add_to_array = { global.map_culture_color_blue = .247 }
+	add_to_array = { global.map_culture_color_red = .694 }
+	add_to_array = { global.map_culture_color_green = .812 }
+	add_to_array = { global.map_culture_color_blue = .804 }
+	add_to_array = { global.map_culture_color_red = .929 }
+	add_to_array = { global.map_culture_color_green = .176 }
+	add_to_array = { global.map_culture_color_blue = .000 }
+	add_to_array = { global.map_culture_color_red = .749 }
+	add_to_array = { global.map_culture_color_green = .639 }
+	add_to_array = { global.map_culture_color_blue = .545 }
+	add_to_array = { global.map_culture_color_red = .000 }
+	add_to_array = { global.map_culture_color_green = .424 }
+	add_to_array = { global.map_culture_color_blue = .208 }
+	add_to_array = { global.map_culture_color_red = .506 }
+	add_to_array = { global.map_culture_color_green = .890 }
+	add_to_array = { global.map_culture_color_blue = .933 }
+	add_to_array = { global.map_culture_color_red = .902 }
+	add_to_array = { global.map_culture_color_green = .906 }
+	add_to_array = { global.map_culture_color_blue = .243 }
+	add_to_array = { global.map_culture_color_red = .549 }
+	add_to_array = { global.map_culture_color_green = .718 }
+	add_to_array = { global.map_culture_color_blue = .604 }
+	add_to_array = { global.map_culture_color_red = .883 }
+	add_to_array = { global.map_culture_color_green = .637 }
+	add_to_array = { global.map_culture_color_blue = .309 }
+	add_to_array = { global.map_culture_color_red = .392 }
+	add_to_array = { global.map_culture_color_green = .392 }
+	add_to_array = { global.map_culture_color_blue = .588 }
+	add_to_array = { global.map_culture_color_red = .220 }
+	add_to_array = { global.map_culture_color_green = .471 }
+	add_to_array = { global.map_culture_color_blue = .749 }
+	add_to_array = { global.map_culture_color_red = 1.000 }
+	add_to_array = { global.map_culture_color_green = .698 }
+	add_to_array = { global.map_culture_color_blue = .400 }
+	add_to_array = { global.map_culture_color_red = .784 }
+	add_to_array = { global.map_culture_color_green = .016 }
+	add_to_array = { global.map_culture_color_blue = .000 }
+	add_to_array = { global.map_culture_color_red = 1.000 }
+	add_to_array = { global.map_culture_color_green = .467 }
+	add_to_array = { global.map_culture_color_blue = .467 }
+	add_to_array = { global.map_culture_color_red = 0 }
+	add_to_array = { global.map_culture_color_green = 0 }
+	add_to_array = { global.map_culture_color_blue = 0 }
+}
+
+miniaturized_nukes_increased_production_effect = {
+	if = {
+		limit ={
+			has_dynamic_modifier = {
+				modifier = miniaturized_nukes_increased_production
+			}
+		}
+		set_variable = {
+			var_miniaturized_nukes_increased_production = 0
+		}
+		if = {
+			limit = {
+				has_tech = isotope_separation_centrifugal
+			}
+			add_to_variable = {
+				var_miniaturized_nukes_increased_production = 0.5
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				nuclear_reactor > 0
+			}
+			ROOT = {
+				add_to_variable = {
+					var_miniaturized_nukes_increased_production = 3
+				}
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				nuclear_reactor_heavy_water > 0
+			}
+			ROOT = {
+				add_to_variable = {
+					var_miniaturized_nukes_increased_production = 2
+				}
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				commercial_nuclear_reactor > 0
+			}
+			ROOT = {
+				add_to_variable = {
+					var_miniaturized_nukes_increased_production = 3
+				}
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				modern_commercial_nuclear_reactor > 0
+			}
+			ROOT = {
+				add_to_variable = {
+					var_miniaturized_nukes_increased_production = 4
+				}
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				modern_nuclear_reactor > 0
+			}
+			ROOT = {
+				add_to_variable = {
+					var_miniaturized_nukes_increased_production = 5
+				}
+			}
+		}
+	}
+}
+miscellaneous_on_weekly_effects = {
+	if = {
+		limit ={
+			original_tag = FAW
+			NOT = {
+				has_government = fascism
+			}
+			FAT = {
+				exists = yes
+				NOT = {
+					has_war_with = FAW
+				}
+				has_government = ROOT
+			}
+		}
+		FAT = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				change_tag_from = ROOT
+			}
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+	}
+
+}
+
+BRF_communist_GRW_not_communist = {
+	if = {
+		limit = {
+			exists = yes
+			OR = {
+				AND = {
+					tag = BRF
+					has_government = communism
+				}
+				AND = {
+					tag = GRW
+					NOT = { has_government = communism }
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = BRF
+			}
+			if = {
+				limit = {
+					GRW = {
+						exists = yes
+					}
+				}
+				set_global_flag = GRW_exists
+			}
+			if = {
+				limit = { is_subject = yes }
+				GRW = { get_current_autonomy_level_of_PREV = yes }
+				overlord = { set_country_flag = BRF_GRW_master }
+			}
+			else_if = {
+				limit = { is_in_faction = yes }
+				var:faction_leader = {
+					set_country_flag = BRF_GRW_faction_leader
+				}
+			}
+			if = {
+				limit = { is_ai = no }
+				GRW = { change_tag_from = ROOT }
+			}
+			GRW = {
+				transfer_technology = yes
+				annex_country = { target = ROOT transfer_troops = yes }
+				ROOT = {
+					every_core_state = {
+						add_core_of = GRW
+					}
+				}
+				every_state = {
+					limit = { is_claimed_by = ROOT }
+					add_claim_by = GRW
+				}
+				GRW_Theresa = {
+					set_nationality = GRW
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = GRW_exists } }
+				GRW = {
+					if = {
+						limit = { any_country = { has_country_flag = BRF_GRW_master } }
+						random_other_country = {
+							limit = { has_country_flag = BRF_GRW_master }
+							puppet = GRW
+							clr_country_flag = BRF_GRW_master
+						}
+						set_previous_autonomy_level = yes
+					}
+					else_if = {
+						limit = { any_country = { has_country_flag = BRF_GRW_faction_leader } }
+						random_other_country = {
+							limit = { has_country_flag = BRF_GRW_faction_leader }
+							add_to_faction = GRW
+							clr_country_flag = BRF_GRW_faction_leader
+						}
+					}
+				}
+			}
+			clr_global_flag = GRW_exists
+		}
+
+		if = {
+			limit = {
+				tag = GRW
+			}
+			if = {
+				limit = {
+					BRF = {
+						exists = yes
+					}
+				}
+				set_global_flag = BRF_exists
+			}
+			if = {
+				limit = { is_subject = yes }
+				BRF = { get_current_autonomy_level_of_PREV = yes }
+				overlord = { set_country_flag = BRF_GRW_master }
+			}
+			else_if = {
+				limit = { is_in_faction = yes }
+				var:faction_leader = {
+					set_country_flag = BRF_GRW_faction_leader
+				}
+			}
+			if = {
+				limit = { is_ai = no }
+				BRF = { change_tag_from = ROOT }
+			}
+			BRF = {
+				country_event = { id = brodfeld.27 }
+				transfer_technology = yes
+				ROOT = {
+					every_core_state = {
+						add_core_of = BRF
+					}
+				}
+				every_state = {
+					limit = { is_claimed_by = ROOT }
+					add_claim_by = BRF
+				}
+				annex_country = { target = ROOT transfer_troops = yes }
+			}
+			if = {
+				limit = { NOT = { has_global_flag = BRF_exists } }
+				BRF = {
+					if = {
+						limit = { any_country = { has_country_flag = BRF_GRW_master } }
+						random_other_country = {
+							limit = { has_country_flag = BRF_GRW_master }
+							puppet = BRF
+							clr_country_flag = BRF_GRW_master
+						}
+						set_previous_autonomy_level = yes
+					}
+					else_if = {
+						limit = { any_country = { has_country_flag = BRF_GRW_faction_leader } }
+						random_other_country = {
+							limit = { has_country_flag = BRF_GRW_faction_leader }
+							add_to_faction = BRF
+							clr_country_flag = BRF_GRW_faction_leader
+						}
+					}
+				}
+			}
+			BRF = {
+				if = {
+					limit = { has_government = democratic }
+					load_focus_tree = BRF_Mason_Tree
+				}
+			}
+			clr_global_flag = BRF_exists
+		}
+	}
+}
+
+YAK_nationalist_JAK_progressive = {
+	if = {
+		limit = { # This condition already exists in the on_action - possible remove over there for code clarity?
+			exists = yes
+			OR = {
+				AND = {
+					tag = JAK
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+				AND = {
+					tag = YAK
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+			}
+		}
+		
+		# General remark: We use global flags and variables to remove issues with scoping
+		# Step 1: We set a global variable with our target tag. ROOT is the current tag
+		if = {
+			limit = {
+				tag = JAK
+			}
+			set_variable = { global.YAK_JAK_target_TAG = YAK }
+		}
+		else_if = {
+			limit = {
+				tag = YAK
+			}
+			set_variable = { global.YAK_JAK_target_TAG = JAK }
+		}
+		
+		# Step 2: We figure out if the other tag already exists
+		if = {
+			limit = {
+				var:global.YAK_JAK_target_TAG = {
+					exists = yes
+				}
+			}
+			set_global_flag = YAK_JAK_target_exists
+			log = "[GetDateText]: ROOT: [Root.GetName] target exists"
+		}
+		
+		# Step 3: We figure out an overlord/faction leader and save the result as a variable
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			set_global_flag = YAK_JAK_is_puppet
+			set_variable = { global.YAK_JAK_overlord_tag = overlord }
+			var:global.YAK_JAK_target_TAG = { get_current_autonomy_level_of_PREV = yes }
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			set_global_flag = YAK_JAK_is_in_faction
+			set_variable = { global.YAK_JAK_overlord_tag = var:faction_leader }
+		}
+		
+		# Step 4: Annex ROOT into the target tag and give appropriate cores
+		var:global.YAK_JAK_target_TAG = {
+			transfer_technology = yes
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			every_state = { # Every state, even not owned ones. The non-target tag should vanish entirely
+				limit = {
+					OR = {
+						is_core_of = YAK
+						is_core_of = JAK
+					}
+				}
+				add_core_of = PREV
+				remove_core_of = ROOT
+			}
+			every_state = { # Same goes for any possible claims
+				limit = {
+					OR = {
+						is_claimed_by = YAK
+						is_claimed_by = JAK
+					}
+				}
+				add_claim_by = PREV
+				remove_claim_by = ROOT
+			}
+		}
+		
+		# Step 5: If ROOT was a puppet, add the target as a puppet, same with faction member
+		if = {
+			limit = {
+				has_global_flag = YAK_JAK_is_puppet
+				# NOT = { has_global_flag = YAK_JAK_target_exists } # Hrrmm... what if the target exists and is a puppet of a different nation? Not clear
+			}
+			var:global.YAK_JAK_overlord_tag = {
+				puppet = global.YAK_JAK_target_TAG
+			}
+			var:global.YAK_JAK_target_TAG = {
+				set_previous_autonomy_level = yes
+			}
+			clr_global_flag = YAK_JAK_is_puppet
+		}
+		else_if = {
+			limit = {
+				has_global_flag = YAK_JAK_is_in_faction
+			}
+			var:global.YAK_JAK_overlord_tag = {
+				add_to_faction = global.YAK_JAK_target_TAG
+			}
+			clr_global_flag = YAK_JAK_is_in_faction
+		}
+		
+		# Step 6: Set appropriate focus tree
+		var:global.YAK_JAK_target_TAG = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				load_focus_tree = YAK_communist_tree
+			}
+			else_if = {
+				limit = {
+					has_government = democratic
+				}
+				load_focus_tree = YAK_harmonist_tree
+			}
+			else_if = {
+				limit = {
+					has_government = fascism
+				}
+				load_focus_tree = JAK_koletiv_tree
+			}
+			else = {
+				load_focus_tree = JAK_bradford_tree
+			}
+		}
+		
+		clr_global_flag = YAK_JAK_target_exists
+		# Used variables can't be removed, but we can safely assume they get overwritten the next time this effect is called
+	}
+}
+
+GRF_remove_has_equipment_market_trade_desire_ai_strategy = {
+	if = {
+		limit = {
+			original_tag = GRF
+			has_country_flag = GRF_has_equipment_market_trade_desire_ai_strategy
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					character = GRF_skeiron
+				}
+			}
+		}
+		clr_country_flag = GRF_has_equipment_market_trade_desire_ai_strategy
+		every_possible_country = {
+			ROOT = {
+				add_ai_strategy = {
+					type = befriend
+					id = PREV
+					value = -25
+				}
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = PREV
+					value = 25
+				}
+				add_ai_strategy = {
+					type = equipment_market_trade_desire
+					id = PREV
+					value = -100
+				}
+			}
+		}
+	}
+}
