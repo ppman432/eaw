@@ -1,9 +1,0 @@
-﻿air_wings = {
-	485 = {
-		small_plane_airframe_0 = {
-			owner = "FAT"
-			amount = 20
-			version_name = "Fluggerät Heureka"
-		}
-	}
-}

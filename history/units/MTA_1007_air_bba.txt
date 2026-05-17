@@ -1,9 +1,0 @@
-﻿air_wings = {
-	995 = {
-		small_plane_airframe_0 = {
-			owner = "MTA"
-			amount = 25
-			version_name = "Early Fighter"
-		}
-	}	
-}
