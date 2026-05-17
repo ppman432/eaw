@@ -1,5 +1,0 @@
-use_legacy_ai_pp_spend = yes
-graphical_culture = deer_gfx
-graphical_culture_2d = hindia_2d
-
-color = { 1 204 103 }

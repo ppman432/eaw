@@ -1,5 +1,0 @@
-use_legacy_ai_pp_spend = no
-graphical_culture = african_gfx
-graphical_culture_2d = african_2d
-
-color = { 255 252 193 }
